@@ -21,15 +21,13 @@
     if(strpos($field,'password')!==false)
         continue;
 ?>
-    <div class="type-text">
+    <p>
         <?php echo "<?php echo \$form->label(\$".lcfirst($modelClass).",'{$column->name}'); ?>\n"; ?>
         <?php echo "<?php ".$this->generateActiveField($modelClass,$column)."; ?>\n"; ?>
-    </div>
+    </p>
 
 <?php endforeach; ?>
-    <div class="type-button">
-        <?php echo "<?php echo CHtml::submitButton('Search'); ?>\n"; ?>
-    </div>
+    <?php echo "<?php echo CHtml::submitButton('Search'); ?>\n"; ?>
 
 <?php echo "<?php \$this->endWidget(); ?>\n"; ?>
 

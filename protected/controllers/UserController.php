@@ -1,15 +1,6 @@
 <?php
-/**
- * This is the template for generating the controller class file for crud.
- * The following variables are available in this template:
- * - $ID: the primary key name
- * - $controllerClass: the controller class name
- * - $modelClass: the model class name
- */
-?>
-<?php echo "<?php\n"; ?>
 
-class <?php echo $controllerClass; ?> extends Controller
+class UserController extends Controller
 {
 
     /**
@@ -60,7 +51,7 @@ class <?php echo $controllerClass; ?> extends Controller
     public function actionView()
     {
         $this->render('view',array(
-          '<?php echo lcfirst($modelClass)?>' => $this->loadModel(),
+          'user' => $this->loadModel(),
         ));
     }
 
@@ -70,20 +61,20 @@ class <?php echo $controllerClass; ?> extends Controller
      */
     public function actionCreate()
     {
-        $<?php echo lcfirst($modelClass)?> = new <?php echo $modelClass; ?>;
+        $user = new User;
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($<?php echo lcfirst($modelClass)?>);
+        $this->performAjaxValidation($user);
 
-        if (isset($_POST['<?php echo $modelClass; ?>'])) {
-            $<?php echo lcfirst($modelClass)?>->attributes = $_POST['<?php echo $modelClass; ?>'];
-            if ($<?php echo lcfirst($modelClass)?>->save()) {
-                $this->redirect(array('view','id' => $<?php echo lcfirst($modelClass)?>-><?php echo $ID; ?>));
+        if (isset($_POST['User'])) {
+            $user->attributes = $_POST['User'];
+            if ($user->save()) {
+                $this->redirect(array('view','id' => $user->id));
             }
         }
 
         $this->render('create',array(
-          '<?php echo lcfirst($modelClass)?>' => $<?php echo lcfirst($modelClass)?>,
+          'user' => $user,
         ));
     }
 
@@ -93,20 +84,20 @@ class <?php echo $controllerClass; ?> extends Controller
      */
     public function actionUpdate()
     {
-        $<?php echo lcfirst($modelClass)?> = $this->loadModel();
+        $user = $this->loadModel();
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($<?php echo lcfirst($modelClass)?>);
+        $this->performAjaxValidation($user);
 
-        if (isset($_POST['<?php echo $modelClass; ?>'])) {
-            $<?php echo lcfirst($modelClass)?>->attributes = $_POST['<?php echo $modelClass; ?>'];
-            if($<?php echo lcfirst($modelClass)?>->save()){
-                $this->redirect(array('view','id' => $<?php echo lcfirst($modelClass)?>-><?php echo $ID; ?>));
+        if (isset($_POST['User'])) {
+            $user->attributes = $_POST['User'];
+            if($user->save()){
+                $this->redirect(array('view','id' => $user->id));
             }
         }
 
         $this->render('update',array(
-          '<?php echo lcfirst($modelClass)?>'=>$<?php echo lcfirst($modelClass)?>,
+          'user'=>$user,
         ));
     }
 
@@ -134,7 +125,7 @@ class <?php echo $controllerClass; ?> extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider=new CActiveDataProvider('<?php echo $modelClass; ?>');
+        $dataProvider=new CActiveDataProvider('User');
         $this->render('index',array(
           'dataProvider'=>$dataProvider,
         ));
@@ -145,13 +136,13 @@ class <?php echo $controllerClass; ?> extends Controller
      */
     public function actionAdmin()
     {
-        $<?php echo lcfirst($modelClass)?>=new <?php echo $modelClass; ?>('search');
-        if (isset($_GET['<?php echo $modelClass; ?>'])) {
-            $<?php echo lcfirst($modelClass)?>->attributes=$_GET['<?php echo $modelClass; ?>'];
+        $user=new User('search');
+        if (isset($_GET['User'])) {
+            $user->attributes=$_GET['User'];
         }
         
         $this->render('admin',array(
-          '<?php echo lcfirst($modelClass)?>'=>$<?php echo lcfirst($modelClass)?>,
+          'user'=>$user,
         ));
     }
 
@@ -163,7 +154,7 @@ class <?php echo $controllerClass; ?> extends Controller
     {
         if ($this->_model===null) {
             if(isset($_GET['id'])) {
-                $this->_model=<?php echo $modelClass; ?>::model()->findbyPk($_GET['id']);
+                $this->_model=User::model()->findbyPk($_GET['id']);
             }
             if($this->_model===null) {
                 throw new CHttpException(404,'The requested page does not exist.');
@@ -176,10 +167,10 @@ class <?php echo $controllerClass; ?> extends Controller
      * Performs the AJAX validation.
      * @param CModel the model to be validated
      */
-    protected function performAjaxValidation($<?php echo lcfirst($modelClass)?>)
+    protected function performAjaxValidation($user)
     {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === '<?php echo $this->class2id($modelClass); ?>-form') {
-            echo CActiveForm::validate($<?php echo lcfirst($modelClass)?>);
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'user-form') {
+            echo CActiveForm::validate($user);
             Yii::app()->end();
         }
     }

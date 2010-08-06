@@ -22,9 +22,9 @@ $this->menu=array(
 );
 ?>
 
-<h2><?php echo "<?php echo Yii::t('app','List $modelClass')?>"?></h2>
-
-<?php echo "<?php"; ?> $this->widget('zii.widgets.CListView', array(
-    'dataProvider'=>$dataProvider,
-    'itemView'=>'_view',
-)); ?>
+<div class="box">
+    <?php echo "<?php"; ?> $this->widget('zii.widgets.CListView', array(
+        'dataProvider'=>$dataProvider,
+        'itemView'=>'_view',
+    )); ?>
+</div>

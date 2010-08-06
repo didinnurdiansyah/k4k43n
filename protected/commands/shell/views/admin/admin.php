@@ -15,6 +15,7 @@ echo "\$this->breadcrumbs=array(
     'Manage',
 );\n";
 ?>
+
 $this->menu=array(
     array('label'=>'List <?php echo $modelClass; ?>', 'url'=>array('index')),
     array('label'=>'Create <?php echo $modelClass; ?>', 'url'=>array('create')),
@@ -33,12 +34,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-           
-            
-<h2><?php echo "<?php echo Yii::t('app','Manage $modelClass')?>"?></h2>
-<p>You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.</p>
-
+<div class="box">
 <?php echo "<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>"; ?>
 <div class="search-form" style="display:none">
     <?php echo "<?php \$this->renderPartial('_search',array(
@@ -67,4 +63,4 @@ if($count>=7)
         ),
     ),
 )); ?>
-            
+</div>

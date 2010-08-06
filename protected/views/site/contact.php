@@ -1,70 +1,70 @@
 <?php
 $this->pageTitle=Yii::app()->name . ' - Contact Us';
 $this->breadcrumbs=array(
-	'Contact',
+    'Contact',
 );
 ?>
+<h2 id="page-heading"><?php echo Yii::t('app','Contact Us')?></h2>
+<div class="box">
+    <?php if(Yii::app()->user->hasFlash('contact')): ?>
+    <div class="flash-success">
+        <?php echo Yii::app()->user->getFlash('contact'); ?>
+    </div>
+    <?php else: ?>
+    
+    <div class="block" id="forms">
 
-<h1>Contact Us</h1>
+    <?php $form=$this->beginWidget('CActiveForm'); ?>
+        <fieldset class="login">
+            <p class="note">
+                <label>&nbsp;</label>
+                Fields with <span class="required">*</span> are required.
+            </p>
+            
 
-<?php if(Yii::app()->user->hasFlash('contact')): ?>
+            <?php echo $form->errorSummary($model); ?>
 
-<div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('contact'); ?>
+            <p>
+                <?php echo $form->labelEx($model,'name'); ?>
+                <?php echo $form->textField($model,'name'); ?>
+            </p>
+
+            <p>
+                <?php echo $form->labelEx($model,'email'); ?>
+                <?php echo $form->textField($model,'email'); ?>
+            </p>
+
+            <p>
+                <?php echo $form->labelEx($model,'subject'); ?>
+                <?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
+            </p>
+
+            <p>
+                <?php echo $form->labelEx($model,'body'); ?>
+                <?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
+            </p>
+
+            <?php if(extension_loaded('gd')): ?>
+            <p>
+                <label>&nbsp;</label>
+                <?php $this->widget('CCaptcha'); ?>
+            </p>
+            <p>
+                <?php echo $form->labelEx($model,'verifyCode'); ?>
+                <?php echo $form->textField($model,'verifyCode'); ?>
+            </p>
+            <p>
+                <label>&nbsp;</label>
+                Please enter the letters as they are shown in the image above.
+                <br/>Letters are not case-sensitive
+            </p>
+            <?php endif; ?>
+            
+            <?php echo CHtml::submitButton('Submit',array('class'=>'login button')); ?>
+        </fieldset>
+    <?php $this->endWidget(); ?>
+
+    </div><!-- forms -->
+
+    <?php endif; ?>
 </div>
-
-<?php else: ?>
-
-<p>
-If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
-</p>
-
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm'); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'subject'); ?>
-		<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'body'); ?>
-		<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<?php if(extension_loaded('gd')): ?>
-	<div class="row">
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
-		<div>
-		<?php $this->widget('CCaptcha'); ?>
-		<?php echo $form->textField($model,'verifyCode'); ?>
-		</div>
-		<div class="hint">Please enter the letters as they are shown in the image above.
-		<br/>Letters are not case-sensitive.</div>
-	</div>
-	<?php endif; ?>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
-
-<?php endif; ?>

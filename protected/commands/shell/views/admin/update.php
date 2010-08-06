@@ -25,6 +25,6 @@ $this->menu=array(
 );
 ?>
 
-<h2><?php echo "<?php echo Yii::t('app','Update $modelClass')?>"?></h2>
-
-<?php echo "<?php echo \$this->renderPartial('_form', array('".lcfirst($modelClass)."'=>\$".lcfirst($modelClass).")); ?>"; ?>
+<div class="box">
+    <?php echo "<?php echo \$this->renderPartial('_form', array('".lcfirst($modelClass)."'=>\$".lcfirst($modelClass).")); ?>"; ?>
+</div>
