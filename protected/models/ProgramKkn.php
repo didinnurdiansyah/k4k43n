@@ -33,11 +33,11 @@ class ProgramKkn extends ActiveRecord
      * @return array validation rules for model attributes.
      */
     public function rules()
-    {
+    { 
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('id, nama, deskripsi', 'required'),
+            array('id, nama, deskripsi, created, modified', 'required'),
             array('id', 'length', 'max'=>20),
             array('nama', 'length', 'max'=>255),
             // The following rule is used by search().
@@ -63,11 +63,11 @@ class ProgramKkn extends ActiveRecord
     public function attributeLabels()
     {
         return array(
-            'id' => 'Id',
-            'nama' => 'Nama',
-            'deskripsi' => 'Deskripsi',
-            'created' => 'Created',
-            'modified' => 'Modified',
+            'id' => Yii::t('app','ID'),
+            'nama' => Yii::t('app','Nama'),
+            'deskripsi' => Yii::t('app','Deskripsi'),
+            'created' => Yii::t('app','Created'),
+            'modified' => Yii::t('app','Modified'),
         );
     }
 
@@ -81,18 +81,13 @@ class ProgramKkn extends ActiveRecord
         // should not be searched.
 
         $criteria=new CDbCriteria;
-
         $criteria->compare('id',$this->id,true);
-
         $criteria->compare('nama',$this->nama,true);
-
         $criteria->compare('deskripsi',$this->deskripsi,true);
-
         $criteria->compare('created',$this->created,true);
-
         $criteria->compare('modified',$this->modified,true);
 
-        return new CActiveDataProvider('ProgramKkn', array(
+        return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
     }

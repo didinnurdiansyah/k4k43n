@@ -34,11 +34,11 @@ class Kelompok extends ActiveRecord
      * @return array validation rules for model attributes.
      */
     public function rules()
-    {
+    { 
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kabupatenId, kecamatanId', 'required'),
+            array('nama, kabupatenId, kecamatanId, created, modified', 'required'),
             array('nama', 'length', 'max'=>255),
             array('kabupatenId, kecamatanId', 'length', 'max'=>20),
             // The following rule is used by search().
@@ -55,8 +55,6 @@ class Kelompok extends ActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'kecamatan' => array(self::BELONGS_TO, 'Kecamatan','kecamatanId'),
-            'kabupaten' => array(self::BELONGS_TO, 'Kabupaten','kebupatenId'),
         );
     }
 
@@ -66,12 +64,12 @@ class Kelompok extends ActiveRecord
     public function attributeLabels()
     {
         return array(
-            'id' => 'Id',
-            'nama' => 'Nama',
-            'kabupatenId' => 'Kabupaten',
-            'kecamatanId' => 'Kecamatan',
-            'created' => 'Created',
-            'modified' => 'Modified',
+            'id' => Yii::t('app','ID'),
+            'nama' => Yii::t('app','Nama'),
+            'kabupatenId' => Yii::t('app','Kabupaten'),
+            'kecamatanId' => Yii::t('app','Kecamatan'),
+            'created' => Yii::t('app','Created'),
+            'modified' => Yii::t('app','Modified'),
         );
     }
 
@@ -85,20 +83,14 @@ class Kelompok extends ActiveRecord
         // should not be searched.
 
         $criteria=new CDbCriteria;
-
         $criteria->compare('id',$this->id,true);
-
         $criteria->compare('nama',$this->nama,true);
-
         $criteria->compare('kabupatenId',$this->kabupatenId,true);
-
         $criteria->compare('kecamatanId',$this->kecamatanId,true);
-
         $criteria->compare('created',$this->created,true);
-
         $criteria->compare('modified',$this->modified,true);
 
-        return new CActiveDataProvider('Kelompok', array(
+        return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
     }

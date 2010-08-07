@@ -34,16 +34,16 @@ class Jurusan extends ActiveRecord
      * @return array validation rules for model attributes.
      */
     public function rules()
-    {
+    { 
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kode, fakultasId', 'required'),
-            array('nama', 'length', 'max'=>255),
+            array('nama, kode, fakultasId, created, modified', 'required'),
+            array('nama, kode', 'length', 'max'=>255),
             array('fakultasId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, nama, fakultasId, created, modified', 'safe', 'on'=>'search'),
+            array('id, nama, kode, fakultasId, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -55,7 +55,6 @@ class Jurusan extends ActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'fakultas' => array(self::BELONGS_TO, 'Fakultas','fakultasId'),
         );
     }
 
@@ -65,11 +64,12 @@ class Jurusan extends ActiveRecord
     public function attributeLabels()
     {
         return array(
-            'id' => 'Id',
-            'nama' => 'Nama',
-            'fakultasId' => 'Fakultas',
-            'created' => 'Created',
-            'modified' => 'Modified',
+            'id' => Yii::t('app','ID'),
+            'nama' => Yii::t('app','Nama'),
+            'kode' => Yii::t('app','Kode'),
+            'fakultasId' => Yii::t('app','Fakultas'),
+            'created' => Yii::t('app','Created'),
+            'modified' => Yii::t('app','Modified'),
         );
     }
 
@@ -83,18 +83,14 @@ class Jurusan extends ActiveRecord
         // should not be searched.
 
         $criteria=new CDbCriteria;
-
         $criteria->compare('id',$this->id,true);
-
         $criteria->compare('nama',$this->nama,true);
-
+        $criteria->compare('kode',$this->kode,true);
         $criteria->compare('fakultasId',$this->fakultasId,true);
-
         $criteria->compare('created',$this->created,true);
-
         $criteria->compare('modified',$this->modified,true);
 
-        return new CActiveDataProvider('Jurusan', array(
+        return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
     }

@@ -38,11 +38,11 @@ class Mahasiswa extends ActiveRecord
      * @return array validation rules for model attributes.
      */
     public function rules()
-    {
+    { 
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, programStudiId, jenisKelamin', 'required'),
+            array('namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, programStudiId, jenisKelamin, created, modified', 'required'),
             array('jenisKelamin', 'numerical', 'integerOnly'=>true),
             array('namaLengkap, alamatAsal, alamatTinggal', 'length', 'max'=>255),
             array('fakultasId, jurusanId, programStudiId', 'length', 'max'=>20),
@@ -60,9 +60,6 @@ class Mahasiswa extends ActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'fakultas' => array(self::BELONGS_TO, 'Fakultas','fakultasId'),
-            'jurusan' => array(self::BELONGS_TO, 'Jurusan','jurusanId'),
-            'programStudi' => array(self::BELONGS_TO, 'ProgramStudi','programStudiId'),
         );
     }
 
@@ -72,16 +69,16 @@ class Mahasiswa extends ActiveRecord
     public function attributeLabels()
     {
         return array(
-            'id' => 'Id',
-            'namaLengkap' => 'Nama Lengkap',
-            'alamatAsal' => 'Alamat Asal',
-            'alamatTinggal' => 'Alamat Tinggal',
-            'fakultasId' => 'Fakultas',
-            'jurusanId' => 'Jurusan',
-            'programStudiId' => 'Program Studi',
-            'jenisKelamin' => 'Jenis Kelamin',
-            'created' => 'Created',
-            'modified' => 'Modified',
+            'id' => Yii::t('app','ID'),
+            'namaLengkap' => Yii::t('app','Nama Lengkap'),
+            'alamatAsal' => Yii::t('app','Alamat Asal'),
+            'alamatTinggal' => Yii::t('app','Alamat Tinggal'),
+            'fakultasId' => Yii::t('app','Fakultas'),
+            'jurusanId' => Yii::t('app','Jurusan'),
+            'programStudiId' => Yii::t('app','Program Studi'),
+            'jenisKelamin' => Yii::t('app','Jenis Kelamin'),
+            'created' => Yii::t('app','Created'),
+            'modified' => Yii::t('app','Modified'),
         );
     }
 
@@ -95,28 +92,18 @@ class Mahasiswa extends ActiveRecord
         // should not be searched.
 
         $criteria=new CDbCriteria;
-
         $criteria->compare('id',$this->id,true);
-
         $criteria->compare('namaLengkap',$this->namaLengkap,true);
-
         $criteria->compare('alamatAsal',$this->alamatAsal,true);
-
         $criteria->compare('alamatTinggal',$this->alamatTinggal,true);
-
         $criteria->compare('fakultasId',$this->fakultasId,true);
-
         $criteria->compare('jurusanId',$this->jurusanId,true);
-
         $criteria->compare('programStudiId',$this->programStudiId,true);
-
         $criteria->compare('jenisKelamin',$this->jenisKelamin);
-
         $criteria->compare('created',$this->created,true);
-
         $criteria->compare('modified',$this->modified,true);
 
-        return new CActiveDataProvider('Mahasiswa', array(
+        return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
     }

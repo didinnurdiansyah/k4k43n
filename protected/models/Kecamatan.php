@@ -33,7 +33,7 @@ class Kecamatan extends ActiveRecord
      * @return array validation rules for model attributes.
      */
     public function rules()
-    {
+    { 
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
@@ -54,7 +54,6 @@ class Kecamatan extends ActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'kabupaten' => array(self::BELONGS_TO, 'Kabupaten','kebupatenId'),
         );
     }
 
@@ -64,11 +63,11 @@ class Kecamatan extends ActiveRecord
     public function attributeLabels()
     {
         return array(
-            'id' => 'Id',
-            'nama' => 'Nama',
-            'kabupatenId' => 'Kabupaten',
-            'created' => 'Created',
-            'modified' => 'Modified',
+            'id' => Yii::t('app','ID'),
+            'nama' => Yii::t('app','Nama'),
+            'kabupatenId' => Yii::t('app','Kabupaten'),
+            'created' => Yii::t('app','Created'),
+            'modified' => Yii::t('app','Modified'),
         );
     }
 
@@ -82,18 +81,13 @@ class Kecamatan extends ActiveRecord
         // should not be searched.
 
         $criteria=new CDbCriteria;
-
         $criteria->compare('id',$this->id,true);
-
         $criteria->compare('nama',$this->nama,true);
-
         $criteria->compare('kabupatenId',$this->kabupatenId,true);
-
         $criteria->compare('created',$this->created,true);
-
         $criteria->compare('modified',$this->modified,true);
 
-        return new CActiveDataProvider('Kecamatan', array(
+        return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
     }

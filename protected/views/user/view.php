@@ -3,6 +3,7 @@ $this->breadcrumbs=array(
     'Users'=>array('index'),
     $user->id,
 );
+
 $this->menu=array(
     array('label'=>'List User', 'url'=>array('index')),
     array('label'=>'Create User', 'url'=>array('create')),
@@ -12,17 +13,16 @@ $this->menu=array(
 );
 ?>
 
+<h2><?php echo Yii::t('app','Detail User') ?></h2>
 
-<div class="box">
-    <?php $this->widget('zii.widgets.CDetailView', array(
-        'data'=>$user,
-        'attributes'=>array(
-    		'id',
-		'username',
-		'password',
-		'email',
-		'created',
-		'modified',
-        ),
-    )); ?>
-</div>
+<?php $this->widget('zii.widgets.CDetailView', array(
+    'data'=>$user,
+    'attributes'=>array(
+        'id',
+        'username',
+        'password',
+        'email',
+        'created',
+        'modified',
+    ),
+)); ?>

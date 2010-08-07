@@ -2,12 +2,16 @@
 
 class UserController extends Controller
 {
+    /**
+     * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
+     * using two-column layout. See 'protected/views/layouts/column2.php'.
+     */
+    public $layout='//layouts/column2';
 
     /**
      * @var CActiveRecord the currently loaded data model instance.
      */
-    private $_model;
-    public $layout = 'column2';
+    private $_user;
 
     /**
      * @return array action filters
@@ -15,7 +19,7 @@ class UserController extends Controller
     public function filters()
     {
         return array(
-          'accessControl', // perform access control for CRUD operations
+            'accessControl', // perform access control for CRUD operations
         );
     }
 
@@ -27,21 +31,21 @@ class UserController extends Controller
     public function accessRules()
     {
         return array(
-          array('allow',  // allow all users to perform 'index' and 'view' actions
-            'actions' => array('index','view'),
-            'users' => array('*'),
-          ),
-          array('allow', // allow authenticated user to perform 'create' and 'update' actions
-            'actions' => array('create','update'),
-            'users' => array('@'),
-          ),
-          array('allow', // allow admin user to perform 'admin' and 'delete' actions
-            'actions' => array('admin','delete'),
-            'users' => array('admin'),
-          ),
-          array('deny',  // deny all users
-            'users' => array('*'),
-          ),
+            array('allow',  // allow all users to perform 'index' and 'view' actions
+                'actions'=>array('index','view'),
+                'users'=>array('*'),
+            ),
+            array('allow', // allow authenticated user to perform 'create' and 'update' actions
+                'actions'=>array('create','update'),
+                'users'=>array('@'),
+            ),
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions'=>array('admin','delete'),
+                'users'=>array('admin'),
+            ),
+            array('deny',  // deny all users
+                'users'=>array('*'),
+            ),
         );
     }
 
@@ -51,7 +55,7 @@ class UserController extends Controller
     public function actionView()
     {
         $this->render('view',array(
-          'user' => $this->loadModel(),
+            'user'=>$this->loadModel(),
         ));
     }
 
@@ -61,20 +65,20 @@ class UserController extends Controller
      */
     public function actionCreate()
     {
-        $user = new User;
+        $user=new User;
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($user);
+        // $this->performAjaxValidation($user);
 
-        if (isset($_POST['User'])) {
-            $user->attributes = $_POST['User'];
-            if ($user->save()) {
-                $this->redirect(array('view','id' => $user->id));
-            }
+        if(isset($_POST['User']))
+        {
+            $user->attributes=$_POST['User'];
+            if($user->save())
+                $this->redirect(array('view','id'=>$user->id));
         }
 
         $this->render('create',array(
-          'user' => $user,
+            'user'=>$user,
         ));
     }
 
@@ -84,20 +88,20 @@ class UserController extends Controller
      */
     public function actionUpdate()
     {
-        $user = $this->loadModel();
+        $user=$this->loadModel();
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($user);
+        // $this->performAjaxValidation($user);
 
-        if (isset($_POST['User'])) {
-            $user->attributes = $_POST['User'];
-            if($user->save()){
-                $this->redirect(array('view','id' => $user->id));
-            }
+        if(isset($_POST['User']))
+        {
+            $user->attributes=$_POST['User'];
+            if($user->save())
+                $this->redirect(array('view','id'=>$user->id));
         }
 
         $this->render('update',array(
-          'user'=>$user,
+            'user'=>$user,
         ));
     }
 
@@ -107,17 +111,17 @@ class UserController extends Controller
      */
     public function actionDelete()
     {
-        if (Yii::app()->request->isPostRequest) {
+        if(Yii::app()->request->isPostRequest)
+        {
             // we only allow deletion via POST request
             $this->loadModel()->delete();
 
             // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-            if (!isset($_GET['ajax'])) {
-                $this->redirect(array('index'));
-            }
-        } else {
-            throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+            if(!isset($_GET['ajax']))
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
         }
+        else
+            throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
     }
 
     /**
@@ -127,7 +131,7 @@ class UserController extends Controller
     {
         $dataProvider=new CActiveDataProvider('User');
         $this->render('index',array(
-          'dataProvider'=>$dataProvider,
+            'dataProvider'=>$dataProvider,
         ));
     }
 
@@ -137,12 +141,12 @@ class UserController extends Controller
     public function actionAdmin()
     {
         $user=new User('search');
-        if (isset($_GET['User'])) {
+        $user->unsetAttributes();  // clear any default values
+        if(isset($_GET['User']))
             $user->attributes=$_GET['User'];
-        }
-        
+
         $this->render('admin',array(
-          'user'=>$user,
+            'user'=>$user,
         ));
     }
 
@@ -152,15 +156,14 @@ class UserController extends Controller
      */
     public function loadModel()
     {
-        if ($this->_model===null) {
-            if(isset($_GET['id'])) {
-                $this->_model=User::model()->findbyPk($_GET['id']);
-            }
-            if($this->_model===null) {
+        if($this->_user===null)
+        {
+            if(isset($_GET['id']))
+                $this->_user=User::model()->findbyPk($_GET['id']);
+            if($this->_user===null)
                 throw new CHttpException(404,'The requested page does not exist.');
-            }
         }
-        return $this->_model;
+        return $this->_user;
     }
 
     /**
@@ -169,7 +172,8 @@ class UserController extends Controller
      */
     protected function performAjaxValidation($user)
     {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'user-form') {
+        if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+        { 
             echo CActiveForm::validate($user);
             Yii::app()->end();
         }

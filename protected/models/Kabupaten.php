@@ -32,11 +32,11 @@ class Kabupaten extends ActiveRecord
      * @return array validation rules for model attributes.
      */
     public function rules()
-    {
+    { 
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama', 'required'),
+            array('nama, created, modified', 'required'),
             array('nama', 'length', 'max'=>255),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
@@ -61,10 +61,10 @@ class Kabupaten extends ActiveRecord
     public function attributeLabels()
     {
         return array(
-            'id' => 'Id',
-            'nama' => 'Nama',
-            'created' => 'Created',
-            'modified' => 'Modified',
+            'id' => Yii::t('app','ID'),
+            'nama' => Yii::t('app','Nama'),
+            'created' => Yii::t('app','Created'),
+            'modified' => Yii::t('app','Modified'),
         );
     }
 
@@ -78,16 +78,12 @@ class Kabupaten extends ActiveRecord
         // should not be searched.
 
         $criteria=new CDbCriteria;
-
         $criteria->compare('id',$this->id,true);
-
         $criteria->compare('nama',$this->nama,true);
-
         $criteria->compare('created',$this->created,true);
-
         $criteria->compare('modified',$this->modified,true);
 
-        return new CActiveDataProvider('Kabupaten', array(
+        return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
     }

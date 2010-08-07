@@ -33,15 +33,15 @@ class Fakultas extends ActiveRecord
      * @return array validation rules for model attributes.
      */
     public function rules()
-    {
+    { 
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kode', 'required'),
-            array('nama', 'length', 'max'=>255),
+            array('nama, kode, created, modified', 'required'),
+            array('nama, kode', 'length', 'max'=>255),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, nama, created, modified', 'safe', 'on'=>'search'),
+            array('id, nama, kode, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -62,10 +62,11 @@ class Fakultas extends ActiveRecord
     public function attributeLabels()
     {
         return array(
-            'id' => 'Id',
-            'nama' => 'Nama',
-            'created' => 'Created',
-            'modified' => 'Modified',
+            'id' => Yii::t('app','ID'),
+            'nama' => Yii::t('app','Nama'),
+            'kode' => Yii::t('app','Kode'),
+            'created' => Yii::t('app','Created'),
+            'modified' => Yii::t('app','Modified'),
         );
     }
 
@@ -79,16 +80,13 @@ class Fakultas extends ActiveRecord
         // should not be searched.
 
         $criteria=new CDbCriteria;
-
         $criteria->compare('id',$this->id,true);
-
         $criteria->compare('nama',$this->nama,true);
-
+        $criteria->compare('kode',$this->kode,true);
         $criteria->compare('created',$this->created,true);
-
         $criteria->compare('modified',$this->modified,true);
 
-        return new CActiveDataProvider('Fakultas', array(
+        return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
     }
