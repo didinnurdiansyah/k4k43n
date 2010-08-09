@@ -65,7 +65,7 @@ class Kecamatan extends ActiveRecord
         return array(
             'id' => Yii::t('app','ID'),
             'nama' => Yii::t('app','Nama'),
-            'kabupatenId' => Yii::t('app','Kabupaten'),
+            'kabupatenId' => Yii::t('app','Kabupaten/Kota'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
         );
