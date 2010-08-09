@@ -13,12 +13,12 @@ echo "\$this->breadcrumbs=array(
 ?>
 
 $this->menu=array(
-    array('label'=>'Create <?php echo $this->modelClass; ?>', 'url'=>array('create')),
-    array('label'=>'Manage <?php echo $this->modelClass; ?>', 'url'=>array('admin')),
+    array('label' => Yii::t('app','Create <?php echo $this->modelClass; ?>'), 'url' => array('create')),
+    array('label' => Yii::t('app','Manage <?php echo $this->modelClass; ?>'), 'url' => array('admin')),
 );
 ?>
 
-<h2><?php echo "<?php echo Yii::t('app','Daftar {$this->class2name($this->modelClass)}') ?>"?></h2>
+<h2><?php echo "<?php echo Yii::t('app','List of {$this->class2name($this->modelClass)}') ?>"?></h2>
 
 <?php echo "<?php"; ?> $this->widget('zii.widgets.CListView', array(
     'dataProvider'=>$dataProvider,

@@ -14,8 +14,8 @@ echo "\$this->breadcrumbs=array(
 ?>
 
 $this->menu=array(
-    array('label'=>'List <?php echo $this->modelClass; ?>', 'url'=>array('index')),
-    array('label'=>'Create <?php echo $this->modelClass; ?>', 'url'=>array('create')),
+    array('label' => Yii::t('app','List <?php echo $this->modelClass; ?>'), 'url' => array('index')),
+    array('label' => Yii::t('app','Create <?php echo $this->modelClass; ?>'), 'url' => array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -32,13 +32,13 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h2><?php echo "<?php echo Yii::t('app','Manajemen {$this->class2name($this->modelClass)}') ?>"?></h2>
+<h2><?php echo "<?php echo Yii::t('app','Management {$this->class2name($this->modelClass)}') ?>"?></h2>
 
-<?php echo "<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>"; ?>
+<?php echo "<?php echo CHtml::link(Yii::t('app','Advanced Search'),'#',array('class'=>'search-button')); ?>"; ?>
 
 <div class="search-form" style="display:none">
 <?php echo "<?php \$this->renderPartial('_search',array(
-    'user'=>\${$this->modelId},
+    '{$this->modelId}'=>\${$this->modelId},
 )); ?>\n"; ?>
 </div><!-- search-form -->
 

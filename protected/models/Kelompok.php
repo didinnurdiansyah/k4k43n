@@ -8,6 +8,7 @@
  * @property string $nama
  * @property string $kabupatenId
  * @property string $kecamatanId
+ * @property string $programKknId
  * @property string $created
  * @property string $modified
  */
@@ -38,12 +39,12 @@ class Kelompok extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kabupatenId, kecamatanId, created, modified', 'required'),
+            array('nama, kabupatenId, kecamatanId, programKknId, created, modified', 'required'),
             array('nama', 'length', 'max'=>255),
-            array('kabupatenId, kecamatanId', 'length', 'max'=>20),
+            array('kabupatenId, kecamatanId, programKknId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, nama, kabupatenId, kecamatanId, created, modified', 'safe', 'on'=>'search'),
+            array('id, nama, kabupatenId, kecamatanId, programKknId, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -68,6 +69,7 @@ class Kelompok extends ActiveRecord
             'nama' => Yii::t('app','Nama'),
             'kabupatenId' => Yii::t('app','Kabupaten'),
             'kecamatanId' => Yii::t('app','Kecamatan'),
+            'programKknId' => Yii::t('app','Program Kkn'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
         );
@@ -87,6 +89,7 @@ class Kelompok extends ActiveRecord
         $criteria->compare('nama',$this->nama,true);
         $criteria->compare('kabupatenId',$this->kabupatenId,true);
         $criteria->compare('kecamatanId',$this->kecamatanId,true);
+        $criteria->compare('programKknId',$this->programKknId,true);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);
 

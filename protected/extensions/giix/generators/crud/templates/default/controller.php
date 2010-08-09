@@ -18,7 +18,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
     /**
      * @var CActiveRecord the currently loaded data model instance.
      */
-    private $_<?php echo $this->modelId?>;
+    private $_model;
 
     /**
      * @return array action filters
@@ -39,19 +39,19 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
     {
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('index','view'),
-                'users'=>array('*'),
+                'actions' => array('index','view'),
+                'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('create','update'),
-                'users'=>array('@'),
+                'actions' => array('create','update'),
+                'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions'=>array('admin','delete'),
-                'users'=>array('admin'),
+                'actions' => array('admin','delete'),
+                'users' => array('admin'),
             ),
             array('deny',  // deny all users
-                'users'=>array('*'),
+                'users' => array('*'),
             ),
         );
     }
@@ -62,7 +62,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
     public function actionView()
     {
         $this->render('view',array(
-            '<?php echo $this->modelId?>'=>$this->loadModel(),
+            '<?php echo $this->modelId?>' => $this->loadModel(),
         ));
     }
 
@@ -72,20 +72,20 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionCreate()
     {
-        $<?php echo $this->modelId?>=new <?php echo $this->modelClass; ?>;
+        $<?php echo $this->modelId?> = new <?php echo $this->modelClass; ?>;
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($<?php echo $this->modelId?>);
+        $this->performAjaxValidation($<?php echo $this->modelId?>);
 
-        if(isset($_POST['<?php echo $this->modelClass; ?>']))
-        {
+        if (isset($_POST['<?php echo $this->modelClass; ?>'])) {
             $<?php echo $this->modelId?>->attributes=$_POST['<?php echo $this->modelClass; ?>'];
-            if($<?php echo $this->modelId?>->save())
-                $this->redirect(array('view','id'=>$<?php echo $this->modelId?>-><?php echo $this->tableSchema->primaryKey; ?>));
+            if ($<?php echo $this->modelId?>->save()) {
+                $this->redirect(array('view','id' => $<?php echo $this->modelId?>-><?php echo $this->tableSchema->primaryKey; ?>));
+            }
         }
 
         $this->render('create',array(
-            '<?php echo $this->modelId?>'=>$<?php echo $this->modelId?>,
+            '<?php echo $this->modelId?>' => $<?php echo $this->modelId?>,
         ));
     }
 
@@ -95,20 +95,20 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionUpdate()
     {
-        $<?php echo $this->modelId?>=$this->loadModel();
+        $<?php echo $this->modelId?> = $this->loadModel();
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($<?php echo $this->modelId?>);
+        $this->performAjaxValidation($<?php echo $this->modelId?>);
 
-        if(isset($_POST['<?php echo $this->modelClass; ?>']))
-        {
+        if (isset($_POST['<?php echo $this->modelClass; ?>'])) {
             $<?php echo $this->modelId?>->attributes=$_POST['<?php echo $this->modelClass; ?>'];
-            if($<?php echo $this->modelId?>->save())
-                $this->redirect(array('view','id'=>$<?php echo $this->modelId?>-><?php echo $this->tableSchema->primaryKey; ?>));
+            if ($<?php echo $this->modelId?>->save()) {
+                $this->redirect(array('view','id' => $<?php echo $this->modelId?>-><?php echo $this->tableSchema->primaryKey; ?>));
+            }
         }
 
         $this->render('update',array(
-            '<?php echo $this->modelId?>'=>$<?php echo $this->modelId?>,
+            '<?php echo $this->modelId?>' => $<?php echo $this->modelId?>,
         ));
     }
 
@@ -118,17 +118,17 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionDelete()
     {
-        if(Yii::app()->request->isPostRequest)
-        {
+        if (Yii::app()->request->isPostRequest) {
             // we only allow deletion via POST request
             $this->loadModel()->delete();
 
             // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-            if(!isset($_GET['ajax']))
+            if (!isset($_GET['ajax'])) {
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-        }
-        else
+            }
+        } else {
             throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+        }
     }
 
     /**
@@ -136,9 +136,9 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionIndex()
     {
-        $dataProvider=new CActiveDataProvider('<?php echo $this->modelClass; ?>');
+        $dataProvider = new CActiveDataProvider('<?php echo $this->modelClass; ?>');
         $this->render('index',array(
-            'dataProvider'=>$dataProvider,
+            'dataProvider' => $dataProvider,
         ));
     }
 
@@ -147,13 +147,14 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionAdmin()
     {
-        $<?php echo $this->modelId?>=new <?php echo $this->modelClass; ?>('search');
+        $<?php echo $this->modelId?> = new <?php echo $this->modelClass; ?>('search');
         $<?php echo $this->modelId?>->unsetAttributes();  // clear any default values
-        if(isset($_GET['<?php echo $this->modelClass; ?>']))
-            $<?php echo $this->modelId?>->attributes=$_GET['<?php echo $this->modelClass; ?>'];
+        if (isset($_GET['<?php echo $this->modelClass; ?>'])) {
+            $<?php echo $this->modelId?>->attributes = $_GET['<?php echo $this->modelClass; ?>'];
+        }
 
         $this->render('admin',array(
-            '<?php echo $this->modelId?>'=>$<?php echo $this->modelId?>,
+            '<?php echo $this->modelId?>' => $<?php echo $this->modelId?>,
         ));
     }
 
@@ -163,14 +164,15 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function loadModel()
     {
-        if($this->_<?php echo $this->modelId?>===null)
-        {
-            if(isset($_GET['id']))
-                $this->_<?php echo $this->modelId?>=<?php echo $this->modelClass; ?>::model()->findbyPk($_GET['id']);
-            if($this->_<?php echo $this->modelId?>===null)
+        if ($this->_model === null) {
+            if (isset($_GET['id'])) {
+                $this->_model = <?php echo $this->modelClass; ?>::model()->findbyPk($_GET['id']);
+            }
+            if ($this->_model === null) {
                 throw new CHttpException(404,'The requested page does not exist.');
+            }
         }
-        return $this->_<?php echo $this->modelId?>;
+        return $this->_model;
     }
 
     /**
@@ -179,8 +181,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     protected function performAjaxValidation($<?php echo $this->modelId?>)
     {
-        if(isset($_POST['ajax']) && $_POST['ajax']==='<?php echo $this->class2id($this->modelClass); ?>-form')
-        { 
+        if (isset($_POST['ajax']) && $_POST['ajax'] === '<?php echo $this->class2id($this->modelClass); ?>-form') { 
             echo CActiveForm::validate($<?php echo $this->modelId?>);
             Yii::app()->end();
         }

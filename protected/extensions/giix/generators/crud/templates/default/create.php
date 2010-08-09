@@ -14,11 +14,11 @@ echo "\$this->breadcrumbs=array(
 ?>
 
 $this->menu=array(
-    array('label'=>'List <?php echo $this->modelClass; ?>', 'url'=>array('index')),
-    array('label'=>'Manage <?php echo $this->modelClass; ?>', 'url'=>array('admin')),
+    array('label' => Yii::t('app','List <?php echo $this->modelClass; ?>'), 'url' => array('index')),
+    array('label' => Yii::t('app','Manage <?php echo $this->modelClass; ?>'), 'url' => array('admin')),
 );
 ?>
 
-<h2><?php echo "<?php echo Yii::t('app','Membuat {$this->class2name($this->modelClass)} Baru') ?>"?></h2>
+<h2><?php echo "<?php echo Yii::t('app','Create New {$this->class2name($this->modelClass)}') ?>"?></h2>
 
 <?php echo "<?php echo \$this->renderPartial('_form', array('{$this->modelId}'=>\${$this->modelId})); ?>"; ?>

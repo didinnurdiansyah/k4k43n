@@ -192,3 +192,23 @@ REQUEST_URI=/kkn/user/1/update
 in /home/ata/Project/kkn/protected/views/user/update.php (11)
 in /home/ata/Project/kkn/protected/controllers/UserController.php (105)
 in /home/ata/Project/kkn/index.php (13)
+2010/08/07 23:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact.do".' in /home/ata/Project/kkn/framework/web/CController.php:439
+Stack trace:
+#0 /home/ata/Project/kkn/framework/web/CController.php(262): CController->missingAction('contact.do')
+#1 /home/ata/Project/kkn/framework/web/CWebApplication.php(324): CController->run('contact.do')
+#2 /home/ata/Project/kkn/framework/web/CWebApplication.php(121): CWebApplication->runController('site/contact.do')
+#3 /home/ata/Project/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#4 /home/ata/Project/kkn/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/kkn/site/contact.do
+2010/08/07 23:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/crud".' in /home/ata/Project/kkn/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /home/ata/Project/kkn/framework/web/CWebApplication.php(121): CWebApplication->runController('gii/crud')
+#1 /home/ata/Project/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /home/ata/Project/kkn/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/kkn/gii/crud
+2010/08/07 23:38:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /home/ata/Project/kkn/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /home/ata/Project/kkn/framework/web/CWebApplication.php(121): CWebApplication->runController('gii')
+#1 /home/ata/Project/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /home/ata/Project/kkn/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/kkn/gii

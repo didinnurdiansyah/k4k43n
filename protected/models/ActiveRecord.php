@@ -4,17 +4,16 @@ abstract class ActiveRecord extends CActiveRecord
 {
     public function behaviors(){
         return array(
-            /*
-            'CAdvancedArBehavior' => array(
-                'class' => 'ext.behaviors.CAdvancedArBehavior'
+            'CSaveRelationsBehavior' => array(
+                'class' => 'application.components.CSaveRelationsBehavior'
             ),
-            */
             'CTimestampBehavior' => array(
                 'class' => 'zii.behaviors.CTimestampBehavior',
                 'createAttribute' => 'created',
                 'updateAttribute' => 'modified',
-        )
+            )
         );
+        
     }
     
     public function __toString()

@@ -6,9 +6,9 @@
 ?>
 <div class="form">
 
-<?php echo "<?php \$form=\$this->beginWidget('CActiveForm', array(
-    'id'=>'".$this->class2id($this->modelClass)."-form',
-    'enableAjaxValidation'=>false,
+<?php echo "<?php \$form = \$this->beginWidget('CActiveForm', array(
+    'id' => '".$this->class2id($this->modelClass)."-form',
+    'enableAjaxValidation' => true,
 )); ?>\n"; ?>
 
     <p class="note">Fields with <span class="required">*</span> are required.</p>

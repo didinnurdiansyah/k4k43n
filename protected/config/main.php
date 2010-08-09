@@ -28,6 +28,7 @@ return array(
         'urlManager'=>array(
             'urlFormat'=>'path',
             'showScriptName' => false,
+            'urlSuffix' => '.html',
             'rules'=>array(
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<id:\d+>/<action:\w+>'=>'<controller>/<action>',
@@ -65,6 +66,13 @@ return array(
                     'class'=>'CWebLogRoute',
                 ),
                 */
+            ),
+        ),
+        'widgetFactory'=>array(
+            'widgets'=>array(
+                'CGridView'=>array(
+                    //'cssFile' => false,
+                ),
             ),
         ),
     ),
