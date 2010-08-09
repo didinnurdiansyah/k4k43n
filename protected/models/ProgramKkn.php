@@ -37,7 +37,7 @@ class ProgramKkn extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('id, nama, deskripsi, created, modified', 'required'),
+            array('id, nama, deskripsi', 'required'),
             array('id', 'length', 'max'=>20),
             array('nama', 'length', 'max'=>255),
             // The following rule is used by search().

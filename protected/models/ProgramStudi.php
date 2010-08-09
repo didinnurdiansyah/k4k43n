@@ -37,7 +37,7 @@ class ProgramStudi extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, jurusanId, created, modified', 'required'),
+            array('nama, jurusanId', 'required'),
             array('nama', 'length', 'max'=>255),
             array('jurusanId', 'length', 'max'=>20),
             // The following rule is used by search().

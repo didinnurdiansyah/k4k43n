@@ -42,7 +42,7 @@ class Mahasiswa extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, programStudiId, jenisKelamin, created, modified', 'required'),
+            array('namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, programStudiId, jenisKelamin', 'required'),
             array('jenisKelamin', 'numerical', 'integerOnly'=>true),
             array('namaLengkap, alamatAsal, alamatTinggal', 'length', 'max'=>255),
             array('fakultasId, jurusanId, programStudiId', 'length', 'max'=>20),

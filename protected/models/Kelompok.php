@@ -39,7 +39,7 @@ class Kelompok extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kabupatenId, kecamatanId, programKknId, created, modified', 'required'),
+            array('nama, kabupatenId, kecamatanId, programKknId', 'required'),
             array('nama', 'length', 'max'=>255),
             array('kabupatenId, kecamatanId, programKknId', 'length', 'max'=>20),
             // The following rule is used by search().

@@ -38,7 +38,7 @@ class Jurusan extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kode, fakultasId, created, modified', 'required'),
+            array('nama, kode, fakultasId', 'required'),
             array('nama, kode', 'length', 'max'=>255),
             array('fakultasId', 'length', 'max'=>20),
             // The following rule is used by search().

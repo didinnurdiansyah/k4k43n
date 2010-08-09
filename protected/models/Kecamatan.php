@@ -37,7 +37,7 @@ class Kecamatan extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kabupatenId, created, modified', 'required'),
+            array('nama, kabupatenId', 'required'),
             array('nama', 'length', 'max'=>255),
             array('kabupatenId', 'length', 'max'=>20),
             // The following rule is used by search().
