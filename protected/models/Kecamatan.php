@@ -9,6 +9,7 @@
  * @property string $kabupatenId
  * @property string $created
  * @property string $modified
+ * 
  */
 class Kecamatan extends ActiveRecord
 {
