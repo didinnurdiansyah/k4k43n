@@ -30,17 +30,14 @@ return array(
             'showScriptName' => false,
             'urlSuffix' => '.html',
             'rules'=>array(
+                'admin/<controller:\w+>/<id:\d+>'=>'admin/<controller>/view',
+                'admin/<controller:\w+>/<id:\d+>/<action:\w+>'=>'admin/<controller>/<action>',
+                'admin/<controller:\w+>/<action:\w+>'=>'admin/<controller>/<action>',
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<id:\d+>/<action:\w+>'=>'<controller>/<action>',
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             ),
         ),
-        /*
-        'db'=>array(
-            'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-        ),
-        */
-        // uncomment the following to use a MySQL database
         
         'db'=>array(
             'connectionString' => 'mysql:host=localhost;dbname=kkn',
@@ -74,6 +71,16 @@ return array(
                     //'cssFile' => false,
                 ),
             ),
+        ),
+        'mailer' => array(
+            'class' => 'application.extensions.mailer.EMailer',
+            'Mailer' => 'smtp',
+            'SMTPAuth' => true,
+            'Host' => 'mail.javan.co.id',
+            'Username' => 'ata+javan.co.id',
+            'Password' => 'ata@javan.co.id',
+            'From' => 'ata@nevisa.co.id',
+            'FromName' => 'Penjaga Kebon Binatang'
         ),
     ),
     

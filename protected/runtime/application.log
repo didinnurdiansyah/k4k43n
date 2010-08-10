@@ -271,3 +271,27 @@ Stack trace:
 #22 /Applications/MAMP/htdocs/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
 #23 /Applications/MAMP/htdocs/kkn/index.php(13): CApplication->run()
 #24 {main} REQUEST_URI=/kkn/gii/default/login.html
+2010/08/10 09:53:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "theme/ngomik".' in /home/ata/Project/kkn/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /home/ata/Project/kkn/framework/web/CWebApplication.php(121): CWebApplication->runController('theme/ngomik')
+#1 /home/ata/Project/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /home/ata/Project/kkn/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/kkn/theme/ngomik
+2010/08/10 09:54:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "theme/ngomik/example".' in /home/ata/Project/kkn/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /home/ata/Project/kkn/framework/web/CWebApplication.php(121): CWebApplication->runController('theme/ngomik/ex...')
+#1 /home/ata/Project/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /home/ata/Project/kkn/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/kkn/theme/ngomik/example
+2010/08/10 09:54:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ngomik/example".' in /home/ata/Project/kkn/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /home/ata/Project/kkn/framework/web/CWebApplication.php(121): CWebApplication->runController('themes/ngomik/e...')
+#1 /home/ata/Project/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /home/ata/Project/kkn/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/kkn/themes/ngomik/example
+2010/08/10 09:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ngomik/example/index".' in /home/ata/Project/kkn/framework/web/CWebApplication.php:328
+Stack trace:
+#0 /home/ata/Project/kkn/framework/web/CWebApplication.php(121): CWebApplication->runController('themes/ngomik/e...')
+#1 /home/ata/Project/kkn/framework/base/CApplication.php(135): CWebApplication->processRequest()
+#2 /home/ata/Project/kkn/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/kkn/themes/ngomik/example/index.html

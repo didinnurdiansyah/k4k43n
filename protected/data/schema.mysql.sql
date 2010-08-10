@@ -1,28 +1,216 @@
-CREATE TABLE tbl_user (
-    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(128) NOT NULL,
-    password VARCHAR(128) NOT NULL,
-    email VARCHAR(128) NOT NULL
-);
+-- phpMyAdmin SQL Dump
+-- version 2.11.8.1deb5+lenny4
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Aug 10, 2010 at 10:36 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.3.3-0.dotdeb.0
 
-INSERT INTO tbl_user (username, password, email) VALUES ('test1', 'pass1', 'test1@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test2', 'pass2', 'test2@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test3', 'pass3', 'test3@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test4', 'pass4', 'test4@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test5', 'pass5', 'test5@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test6', 'pass6', 'test6@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test7', 'pass7', 'test7@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test8', 'pass8', 'test8@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test9', 'pass9', 'test9@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test10', 'pass10', 'test10@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test11', 'pass11', 'test11@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test12', 'pass12', 'test12@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test13', 'pass13', 'test13@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test14', 'pass14', 'test14@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test15', 'pass15', 'test15@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test16', 'pass16', 'test16@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test17', 'pass17', 'test17@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test18', 'pass18', 'test18example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test19', 'pass19', 'test19example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test20', 'pass20', 'test20@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test21', 'pass21', 'test21@example.com');
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `kkn`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fakultas`
+--
+
+CREATE TABLE IF NOT EXISTS `fakultas` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `nama` varchar(255) NOT NULL,
+  `kode` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `fakultas`
+--
+
+INSERT INTO `fakultas` (`id`, `nama`, `kode`, `created`, `modified`) VALUES
+(1, 'Fakultas Matematika dan Ilmu Pengetahuan Alam', 'FPMIPA', '2010-07-17 13:27:41', '2010-07-17 13:43:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jurusan`
+--
+
+CREATE TABLE IF NOT EXISTS `jurusan` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `nama` varchar(255) NOT NULL,
+  `kode` varchar(255) NOT NULL,
+  `fakultasId` bigint(20) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `fakultasId` (`fakultasId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `jurusan`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kabupaten`
+--
+
+CREATE TABLE IF NOT EXISTS `kabupaten` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `nama` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `kabupaten`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kecamatan`
+--
+
+CREATE TABLE IF NOT EXISTS `kecamatan` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `nama` varchar(255) NOT NULL,
+  `kabupatenId` bigint(20) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `kabupatenId` (`kabupatenId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `kecamatan`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kelompok`
+--
+
+CREATE TABLE IF NOT EXISTS `kelompok` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `lokasi` varchar(255) NOT NULL,
+  `kabupatenId` bigint(20) NOT NULL,
+  `kecamatanId` bigint(20) NOT NULL,
+  `programKknId` bigint(20) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `kabupatenId` (`kabupatenId`,`kecamatanId`,`programKknId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `kelompok`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mahasiswa`
+--
+
+CREATE TABLE IF NOT EXISTS `mahasiswa` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `namaLengkap` varchar(255) NOT NULL,
+  `alamatAsal` varchar(255) NOT NULL,
+  `alamatTinggal` varchar(255) NOT NULL,
+  `fakultasId` bigint(20) NOT NULL,
+  `jurusanId` bigint(20) NOT NULL,
+  `programStudiId` bigint(20) NOT NULL,
+  `jenisKelamin` tinyint(1) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `fakultasId` (`fakultasId`,`jurusanId`,`programStudiId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `mahasiswa`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `program_kkn`
+--
+
+CREATE TABLE IF NOT EXISTS `program_kkn` (
+  `id` bigint(20) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `program_kkn`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `program_studi`
+--
+
+CREATE TABLE IF NOT EXISTS `program_studi` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `nama` varchar(255) NOT NULL,
+  `jurusanId` bigint(20) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `program_studi`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `email`, `created`, `modified`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'ata@nevisa.co.id', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
