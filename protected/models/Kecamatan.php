@@ -92,4 +92,9 @@ class Kecamatan extends ActiveRecord
             'criteria'=>$criteria,
         ));
     }
+    protected function beforeSave()
+    {
+        $this->nama = strtoupper($this->nama);
+        return true;
+    }
 }
