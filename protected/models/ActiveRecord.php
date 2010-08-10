@@ -2,6 +2,8 @@
 
 abstract class ActiveRecord extends CActiveRecord
 {
+    protected $_displayField = null;
+    
     public function behaviors(){
         return array(
             'CSaveRelationsBehavior' => array(
@@ -33,6 +35,26 @@ abstract class ActiveRecord extends CActiveRecord
     public function toJSON()
     {
         return CJSON::encode($this->attributes);
+    }
+    
+    public function getDisplayField()
+    {
+        if ($this->_displayField !== null) {
+            return $this->_displayField;
+        } else {
+            throw new CException(Yii::t('app','Isi property $_displayField pada class {class} dengan column yang akan ditampilkan menjadi text data',array(
+                '{class}' => get_class($this)
+            )));
+        }
+        
+    }
+    public function setDisplayField($field)
+    {
+        $this->_displayField = $field;
+    }
+    public function getListData()
+    {
+        return CHtml::listData($this->findAll(),'id',$this->displayField);
     }
     
 }

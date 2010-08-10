@@ -13,6 +13,7 @@
  */
 class User extends ActiveRecord
 {
+    protected $_displayField = 'username';
     /**
      * Returns the static model of the specified AR class.
      * @return User the static model class
