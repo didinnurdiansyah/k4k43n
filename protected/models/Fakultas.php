@@ -12,6 +12,7 @@
  */
 class Fakultas extends ActiveRecord
 {
+    protected $_displayField = 'nama';
     /**
      * Returns the static model of the specified AR class.
      * @return Fakultas the static model class
