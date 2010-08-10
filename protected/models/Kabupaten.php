@@ -11,6 +11,7 @@
  */
 class Kabupaten extends ActiveRecord
 {
+    protected $_displayField = 'nama';
     /**
      * Returns the static model of the specified AR class.
      * @return Kabupaten the static model class
