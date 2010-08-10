@@ -30,6 +30,7 @@ return array(
             'showScriptName' => false,
             'urlSuffix' => '.html',
             'rules'=>array(
+                'admin' => 'admin/default/index',
                 'admin/<controller:\w+>/<id:\d+>'=>'admin/<controller>/view',
                 'admin/<controller:\w+>/<id:\d+>/<action:\w+>'=>'admin/<controller>/<action>',
                 'admin/<controller:\w+>/<action:\w+>'=>'admin/<controller>/<action>',

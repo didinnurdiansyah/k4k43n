@@ -1,6 +1,6 @@
 <?php
 
-class JurusanController extends Controller
+class JurusanController extends AdminController
 {
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
