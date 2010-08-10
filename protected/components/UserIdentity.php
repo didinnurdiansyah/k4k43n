@@ -21,12 +21,10 @@ class UserIdentity extends CUserIdentity
     public function authenticate()
     {
         $user=User::model()->find('(username = LOWER(:username) 
-            OR email = LOWER(:email)) AND password = :password 
-            AND  status = :status',array(
+            OR email = LOWER(:email)) AND password = :password ',array(
             'username' => $this->username,
             'email' => $this->username,
-            'password' => md5($this->password),
-            'status' => User::ACTIVE
+            'password' => md5($this->password)
         ));
         
         if($user){
