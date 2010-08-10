@@ -39,13 +39,8 @@ return array(
             ),
         ),
         
-        'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=kkn',
-            'emulatePrepare' => true,
-            'username' => 'root',
-            'password' => 'root',
-            'charset' => 'utf8',
-        ),
+        'db'=> include('database.php'),
+        
         'errorHandler'=>array(
             // use 'site/error' action to display errors
             'errorAction'=>'site/error',
