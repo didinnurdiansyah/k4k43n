@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','List ProgramStudi'), 'url' => array('index')),
-    array('label' => Yii::t('app','Manage ProgramStudi'), 'url' => array('admin')),
+    array('label' => Yii::t('app','List Program Studi'), 'url' => array('index')),
+    array('label' => Yii::t('app','Manage Program Studi'), 'url' => array('admin')),
 );
 ?>
 

@@ -1,13 +1,6 @@
 <?php
-/**
- * This is the template for generating a controller class file for CRUD feature.
- * The following variables are available in this template:
- * - $this: the CrudCode object
- */
-?>
-<?php echo "<?php\n"; ?>
 
-class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseControllerClass."\n"; ?>
+class FakultasController extends AdminController
 {
     /**
      * @var CActiveRecord the currently loaded data model instance.
@@ -20,7 +13,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
     public function actionView()
     {
         $this->render('view',array(
-            '<?php echo $this->modelId?>' => $this->loadModel(),
+            'fakultas' => $this->loadModel(),
         ));
     }
 
@@ -30,20 +23,20 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionCreate()
     {
-        $<?php echo $this->modelId?> = new <?php echo $this->modelClass; ?>;
+        $fakultas = new Fakultas;
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($<?php echo $this->modelId?>);
+        $this->performAjaxValidation($fakultas);
 
-        if (isset($_POST['<?php echo $this->modelClass; ?>'])) {
-            $<?php echo $this->modelId?>->attributes=$_POST['<?php echo $this->modelClass; ?>'];
-            if ($<?php echo $this->modelId?>->save()) {
-                $this->redirect(array('view','id' => $<?php echo $this->modelId?>-><?php echo $this->tableSchema->primaryKey; ?>));
+        if (isset($_POST['Fakultas'])) {
+            $fakultas->attributes=$_POST['Fakultas'];
+            if ($fakultas->save()) {
+                $this->redirect(array('view','id' => $fakultas->id));
             }
         }
 
         $this->render('create',array(
-            '<?php echo $this->modelId?>' => $<?php echo $this->modelId?>,
+            'fakultas' => $fakultas,
         ));
     }
 
@@ -53,20 +46,20 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionUpdate()
     {
-        $<?php echo $this->modelId?> = $this->loadModel();
+        $fakultas = $this->loadModel();
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($<?php echo $this->modelId?>);
+        $this->performAjaxValidation($fakultas);
 
-        if (isset($_POST['<?php echo $this->modelClass; ?>'])) {
-            $<?php echo $this->modelId?>->attributes=$_POST['<?php echo $this->modelClass; ?>'];
-            if ($<?php echo $this->modelId?>->save()) {
-                $this->redirect(array('view','id' => $<?php echo $this->modelId?>-><?php echo $this->tableSchema->primaryKey; ?>));
+        if (isset($_POST['Fakultas'])) {
+            $fakultas->attributes=$_POST['Fakultas'];
+            if ($fakultas->save()) {
+                $this->redirect(array('view','id' => $fakultas->id));
             }
         }
 
         $this->render('update',array(
-            '<?php echo $this->modelId?>' => $<?php echo $this->modelId?>,
+            'fakultas' => $fakultas,
         ));
     }
 
@@ -94,7 +87,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionIndex()
     {
-        $dataProvider = new CActiveDataProvider('<?php echo $this->modelClass; ?>');
+        $dataProvider = new CActiveDataProvider('Fakultas');
         $this->render('index',array(
             'dataProvider' => $dataProvider,
         ));
@@ -105,14 +98,14 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      */
     public function actionAdmin()
     {
-        $<?php echo $this->modelId?> = new <?php echo $this->modelClass; ?>('search');
-        $<?php echo $this->modelId?>->unsetAttributes();  // clear any default values
-        if (isset($_GET['<?php echo $this->modelClass; ?>'])) {
-            $<?php echo $this->modelId?>->attributes = $_GET['<?php echo $this->modelClass; ?>'];
+        $fakultas = new Fakultas('search');
+        $fakultas->unsetAttributes();  // clear any default values
+        if (isset($_GET['Fakultas'])) {
+            $fakultas->attributes = $_GET['Fakultas'];
         }
 
         $this->render('admin',array(
-            '<?php echo $this->modelId?>' => $<?php echo $this->modelId?>,
+            'fakultas' => $fakultas,
         ));
     }
 
@@ -124,7 +117,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
     {
         if ($this->_model === null) {
             if (isset($_GET['id'])) {
-                $this->_model = <?php echo $this->modelClass; ?>::model()->findbyPk($_GET['id']);
+                $this->_model = Fakultas::model()->findbyPk($_GET['id']);
             }
             if ($this->_model === null) {
                 throw new CHttpException(404,'The requested page does not exist.');
@@ -137,10 +130,10 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
      * Performs the AJAX validation.
      * @param CModel the model to be validated
      */
-    protected function performAjaxValidation($<?php echo $this->modelId?>)
+    protected function performAjaxValidation($fakultas)
     {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === '<?php echo $this->class2id($this->modelClass); ?>-form') { 
-            echo CActiveForm::validate($<?php echo $this->modelId?>);
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'fakultas-form') { 
+            echo CActiveForm::validate($fakultas);
             Yii::app()->end();
         }
     }

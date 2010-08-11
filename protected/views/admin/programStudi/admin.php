@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','List ProgramStudi'), 'url' => array('index')),
-    array('label' => Yii::t('app','Create ProgramStudi'), 'url' => array('create')),
+    array('label' => Yii::t('app','List Program Studi'), 'url' => array('index')),
+    array('label' => Yii::t('app','Create Program Studi'), 'url' => array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

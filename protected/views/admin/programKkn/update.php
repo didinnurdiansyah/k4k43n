@@ -6,10 +6,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label'=>Yii::t('app','List ProgramKkn'), 'url'=>array('index')),
-    array('label'=>Yii::t('app','Create ProgramKkn'), 'url'=>array('create')),
-    array('label'=>Yii::t('app','View ProgramKkn'), 'url'=>array('view', 'id'=>$programKkn->id)),
-    array('label'=>Yii::t('app','Manage ProgramKkn'), 'url'=>array('admin')),
+    array('label'=>Yii::t('app','List Program Kkn'), 'url'=>array('index')),
+    array('label'=>Yii::t('app','Create Program Kkn'), 'url'=>array('create')),
+    array('label'=>Yii::t('app','View Program Kkn'), 'url'=>array('view', 'id'=>$programKkn->id)),
+    array('label'=>Yii::t('app','Manage Program Kkn'), 'url'=>array('admin')),
 );
 ?>
 

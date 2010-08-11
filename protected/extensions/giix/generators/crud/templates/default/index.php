@@ -13,8 +13,8 @@ echo "\$this->breadcrumbs=array(
 ?>
 
 $this->menu=array(
-    array('label' => Yii::t('app','Create <?php echo $this->modelClass; ?>'), 'url' => array('create')),
-    array('label' => Yii::t('app','Manage <?php echo $this->modelClass; ?>'), 'url' => array('admin')),
+    array('label' => Yii::t('app','Create <?php echo $this->class2name($this->modelClass)?>'), 'url' => array('create')),
+    array('label' => Yii::t('app','Manage <?php echo $this->class2name($this->modelClass)?>'), 'url' => array('admin')),
 );
 ?>
 

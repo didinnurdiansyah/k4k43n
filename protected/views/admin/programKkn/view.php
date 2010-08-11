@@ -5,11 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label'=>Yii::t('app','List ProgramKkn'), 'url'=>array('index')),
-    array('label'=>Yii::t('app','Create ProgramKkn'), 'url'=>array('create')),
-    array('label'=>Yii::t('app','Update ProgramKkn'), 'url'=>array('update', 'id'=>$programKkn->id)),
-    array('label'=>Yii::t('app','Delete ProgramKkn'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$programKkn->id),'confirm'=>'Are you sure you want to delete this item?')),
-    array('label'=>Yii::t('app','Manage ProgramKkn'), 'url'=>array('admin')),
+    array('label'=>Yii::t('app','List Program Kkn'), 'url'=>array('index')),
+    array('label'=>Yii::t('app','Create Program Kkn'), 'url'=>array('create')),
+    array('label'=>Yii::t('app','Update Program Kkn'), 'url'=>array('update', 'id'=>$programKkn->id)),
+    array('label'=>Yii::t('app','Delete Program Kkn'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$programKkn->id),'confirm'=>'Are you sure you want to delete this item?')),
+    array('label'=>Yii::t('app','Manage Program Kkn'), 'url'=>array('admin')),
 );
 ?>
 

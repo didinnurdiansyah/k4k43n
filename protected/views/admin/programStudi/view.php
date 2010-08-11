@@ -5,11 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label'=>Yii::t('app','List ProgramStudi'), 'url'=>array('index')),
-    array('label'=>Yii::t('app','Create ProgramStudi'), 'url'=>array('create')),
-    array('label'=>Yii::t('app','Update ProgramStudi'), 'url'=>array('update', 'id'=>$programStudi->id)),
-    array('label'=>Yii::t('app','Delete ProgramStudi'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$programStudi->id),'confirm'=>'Are you sure you want to delete this item?')),
-    array('label'=>Yii::t('app','Manage ProgramStudi'), 'url'=>array('admin')),
+    array('label'=>Yii::t('app','List Program Studi'), 'url'=>array('index')),
+    array('label'=>Yii::t('app','Create Program Studi'), 'url'=>array('create')),
+    array('label'=>Yii::t('app','Update Program Studi'), 'url'=>array('update', 'id'=>$programStudi->id)),
+    array('label'=>Yii::t('app','Delete Program Studi'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$programStudi->id),'confirm'=>'Are you sure you want to delete this item?')),
+    array('label'=>Yii::t('app','Manage Program Studi'), 'url'=>array('admin')),
 );
 ?>
 

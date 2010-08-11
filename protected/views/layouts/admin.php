@@ -23,7 +23,7 @@
                 'items'=>array(
                     array('label' => 'Fakultas','url' => array('admin/fakultas')),
                     array('label' => 'Jurusan','url' => array('admin/jurusan')),
-                    array('label' => 'Program Studi','url' => array('admin/jurusan')),
+                    array('label' => 'Program Studi','url' => array('admin/programStudi')),
                     array('label' => 'Kabupaten','url' => array('admin/kabupaten')),
                     array('label' => 'Kecamatan','url' => array('admin/kecamatan')),
                     array('label' => 'Program KKN','url' => array('admin/programKkn')),

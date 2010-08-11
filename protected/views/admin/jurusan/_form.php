@@ -23,7 +23,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($jurusan,'fakultasId'); ?>
-        <?php echo $form->dropDownList($jurusan,'fakultasId',Fakultas::model()->listData); ?>
+        <?php echo $form->textField($jurusan,'fakultasId',array('size'=>20,'maxlength'=>20)); ?>
         <?php echo $form->error($jurusan,'fakultasId'); ?>
     </div>
 

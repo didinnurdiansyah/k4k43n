@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','Create ProgramKkn'), 'url' => array('create')),
-    array('label' => Yii::t('app','Manage ProgramKkn'), 'url' => array('admin')),
+    array('label' => Yii::t('app','Create Program Kkn'), 'url' => array('create')),
+    array('label' => Yii::t('app','Manage Program Kkn'), 'url' => array('admin')),
 );
 ?>
 

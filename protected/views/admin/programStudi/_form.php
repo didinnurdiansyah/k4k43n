@@ -17,7 +17,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($programStudi,'jurusanId'); ?>
-        <?php echo $form->dropDownList($programStudi,'jurusanId',Jurusan::model()->listData); ?>
+        <?php echo $form->textField($programStudi,'jurusanId',array('size'=>20,'maxlength'=>20)); ?>
         <?php echo $form->error($programStudi,'jurusanId'); ?>
     </div>
 

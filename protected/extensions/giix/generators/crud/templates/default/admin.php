@@ -14,8 +14,8 @@ echo "\$this->breadcrumbs=array(
 ?>
 
 $this->menu=array(
-    array('label' => Yii::t('app','List <?php echo $this->modelClass; ?>'), 'url' => array('index')),
-    array('label' => Yii::t('app','Create <?php echo $this->modelClass; ?>'), 'url' => array('create')),
+    array('label' => Yii::t('app','List <?php echo $this->class2name($this->modelClass)?>'), 'url' => array('index')),
+    array('label' => Yii::t('app','Create <?php echo $this->class2name($this->modelClass)?>'), 'url' => array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

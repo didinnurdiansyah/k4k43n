@@ -17,7 +17,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($kecamatan,'kabupatenId'); ?>
-        <?php echo $form->dropDownList($kecamatan,'kabupatenId',Kabupaten::model()->listData); ?>
+        <?php echo $form->textField($kecamatan,'kabupatenId',array('size'=>20,'maxlength'=>20)); ?>
         <?php echo $form->error($kecamatan,'kabupatenId'); ?>
     </div>
 
