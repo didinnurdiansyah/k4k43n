@@ -30,6 +30,7 @@ return array(
             'showScriptName' => false,
             'urlSuffix' => '.html',
             'rules'=>array(
+                'admin' => 'admin/default/index',
                 'admin/<controller:\w+>/<id:\d+>'=>'admin/<controller>/view',
                 'admin/<controller:\w+>/<id:\d+>/<action:\w+>'=>'admin/<controller>/<action>',
                 'admin/<controller:\w+>/<action:\w+>'=>'admin/<controller>/<action>',
@@ -39,13 +40,8 @@ return array(
             ),
         ),
         
-        'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=kkn',
-            'emulatePrepare' => true,
-            'username' => 'root',
-            'password' => 'root',
-            'charset' => 'utf8',
-        ),
+        'db'=> include('database.php'),
+        
         'errorHandler'=>array(
             // use 'site/error' action to display errors
             'errorAction'=>'site/error',
