@@ -2,7 +2,7 @@
 
 abstract class ActiveRecord extends CActiveRecord
 {
-    protected $_displayField = null;
+    protected $displayField = 'name';
     
     public function behaviors(){
         return array(
@@ -23,38 +23,28 @@ abstract class ActiveRecord extends CActiveRecord
         return $this->name?$this->name:$this->id;
     }
     
-    public function formatCurrency($number, $currency = 'IDR')
-    {
-        if(Yii::app()->language === 'id'){
-            
-            return $currency . ' ' . number_format($number,2,',','.');
-        }
-        return $currency . ' ' . number_format($number,2,'.',',');
-    }
+    
     
     public function toJSON()
     {
         return CJSON::encode($this->attributes);
     }
     
-    public function getDisplayField()
+    public function displayField()
     {
-        if ($this->_displayField !== null) {
-            return $this->_displayField;
+        if ($this->displayField !== null) {
+            return $this->displayField;
         } else {
-            throw new CException(Yii::t('app','Isi property $_displayField pada class {class} dengan column yang akan ditampilkan menjadi text data',array(
+            throw new CException(Yii::t('app','Isi property $displayField pada class {class} dengan column yang akan ditampilkan menjadi text data',array(
                 '{class}' => get_class($this)
             )));
         }
         
     }
-    public function setDisplayField($field)
-    {
-        $this->_displayField = $field;
-    }
+    
     public function getListData()
     {
-        return CHtml::listData($this->findAll(),'id',$this->displayField);
+        return CHtml::listData($this->findAll(),'id',$this->displayField());
     }
     
 }
