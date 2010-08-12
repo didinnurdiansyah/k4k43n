@@ -87,10 +87,7 @@ class ProgramStudiController extends AdminController
      */
     public function actionIndex()
     {
-        $dataProvider = new CActiveDataProvider('ProgramStudi');
-        $this->render('index',array(
-            'dataProvider' => $dataProvider,
-        ));
+        $this->actionAdmin();
     }
 
     /**

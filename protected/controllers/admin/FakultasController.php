@@ -87,10 +87,7 @@ class FakultasController extends AdminController
      */
     public function actionIndex()
     {
-        $dataProvider = new CActiveDataProvider('Fakultas');
-        $this->render('index',array(
-            'dataProvider' => $dataProvider,
-        ));
+        $this->actionAdmin();
     }
 
     /**

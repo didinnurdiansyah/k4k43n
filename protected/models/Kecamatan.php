@@ -55,6 +55,7 @@ class Kecamatan extends ActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
+            'kabupaten' => array(self::BELONGS_TO, 'Kabupaten', 'kabupatenId')
         );
     }
 
@@ -95,6 +96,6 @@ class Kecamatan extends ActiveRecord
     protected function beforeSave()
     {
         $this->nama = strtoupper($this->nama);
-        return true;
+        return parent::beforeSave();
     }
 }

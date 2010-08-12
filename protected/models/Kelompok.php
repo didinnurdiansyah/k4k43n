@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'kelompok':
  * @property string $id
- * @property string $nama
+ * @property string $lokasi
  * @property string $kabupatenId
  * @property string $kecamatanId
  * @property string $programKknId
@@ -39,12 +39,12 @@ class Kelompok extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kabupatenId, kecamatanId, programKknId', 'required'),
-            array('nama', 'length', 'max'=>255),
+            array('lokasi, kabupatenId, kecamatanId, programKknId', 'required'),
+            array('lokasi', 'length', 'max'=>255),
             array('kabupatenId, kecamatanId, programKknId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, nama, kabupatenId, kecamatanId, programKknId, created, modified', 'safe', 'on'=>'search'),
+            array('id, lokasi, kabupatenId, kecamatanId, programKknId, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -56,6 +56,9 @@ class Kelompok extends ActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
+            'kabupaten' => array(self::BELONGS_TO, 'Kabupaten', 'kabupatenId'),
+            'kecamatan' => array(self::BELONGS_TO, 'Kecamatan', 'kecamatanId'),
+            'anggota' => array(self::HAS_MANY, 'Mahasiswa','kelompokId'),
         );
     }
 
@@ -66,7 +69,7 @@ class Kelompok extends ActiveRecord
     {
         return array(
             'id' => Yii::t('app','ID'),
-            'nama' => Yii::t('app','Nama'),
+            'lokasi' => Yii::t('app','Lokasi'),
             'kabupatenId' => Yii::t('app','Kabupaten'),
             'kecamatanId' => Yii::t('app','Kecamatan'),
             'programKknId' => Yii::t('app','Program Kkn'),
@@ -86,7 +89,7 @@ class Kelompok extends ActiveRecord
 
         $criteria=new CDbCriteria;
         $criteria->compare('id',$this->id,true);
-        $criteria->compare('nama',$this->nama,true);
+        $criteria->compare('lokasi',$this->lokasi,true);
         $criteria->compare('kabupatenId',$this->kabupatenId,true);
         $criteria->compare('kecamatanId',$this->kecamatanId,true);
         $criteria->compare('programKknId',$this->programKknId,true);

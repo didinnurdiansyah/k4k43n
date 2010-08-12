@@ -27,8 +27,9 @@
                     array('label' => 'Kabupaten','url' => array('admin/kabupaten')),
                     array('label' => 'Kecamatan','url' => array('admin/kecamatan')),
                     array('label' => 'Program KKN','url' => array('admin/programKkn')),
+                    array('label' => 'Kelompok','url' => array('admin/kelompok')),
                 ),
-                'htmlOptions'=>array('class'=>'menuadmin'),
+                'htmlOptions'=>array('class'=>'sidemenu'),
             ));
             $this->endWidget();
         ?>

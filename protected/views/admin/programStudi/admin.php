@@ -10,12 +10,12 @@ $this->menu=array(
 );
 
 Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-    $('.search-form').toggle();
+jQuery('.search-button').click(function(){
+    jQuery('.search-form').toggle();
     return false;
 });
-$('.search-form form').submit(function(){
-    $.fn.yiiGridView.update('program-studi-grid', {
+jQuery('.search-form form').submit(function(){
+    jQuery.fn.yiiGridView.update('program-studi-grid', {
         data: $(this).serialize()
     });
     return false;
@@ -37,11 +37,18 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$programStudi->search(),
     'filter'=>$programStudi,
     'columns'=>array(
-		'id',
-		'nama',
-		'jurusanId',
-		'created',
-		'modified',
+        'id',
+        'nama',
+        array(
+            'name' => 'jurusanId',
+            'value' => '$data->jurusan->nama',
+            'filter' => Jurusan::model()->listData,
+        ),
+        array(
+            'name' => 'fakultasId',
+            'value' => '$data->fakultas->nama',
+            'filter' => Fakultas::model()->listData,
+        ),
         array(
             'class'=>'CButtonColumn',
         ),

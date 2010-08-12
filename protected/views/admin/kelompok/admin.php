@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-    'Jurusans'=>array('index'),
+    'Kelompoks'=>array('index'),
     'Manage',
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','List Jurusan'), 'url' => array('index')),
-    array('label' => Yii::t('app','Create Jurusan'), 'url' => array('create')),
+    array('label' => Yii::t('app','List Kelompok'), 'url' => array('index')),
+    array('label' => Yii::t('app','Create Kelompok'), 'url' => array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -15,37 +15,37 @@ $('.search-button').click(function(){
     return false;
 });
 $('.search-form form').submit(function(){
-    $.fn.yiiGridView.update('jurusan-grid', {
+    $.fn.yiiGridView.update('kelompok-grid', {
         data: $(this).serialize()
     });
     return false;
 });
 ");
-
 ?>
 
-<h2><?php echo Yii::t('app','Management Jurusan') ?></h2>
+<h2><?php echo Yii::t('app','Management Kelompok') ?></h2>
 
 <?php echo CHtml::link(Yii::t('app','Advanced Search'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
-    'jurusan'=>$jurusan,
+    'kelompok'=>$kelompok,
 )); ?>
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-    'id'=>'jurusan-grid',
-    'dataProvider'=>$jurusan->search(),
-    'filter'=>$jurusan,
+    'id'=>'kelompok-grid',
+    'dataProvider'=>$kelompok->search(),
+    'filter'=>$kelompok,
     'columns'=>array(
-        'id',
-        'nama',
-        'kode',
-        array(
-            'name' => 'fakultasId',
-            'value' => '$data->fakultas->nama',
-            'filter' => Fakultas::model()->listData,
-        ),
+		'id',
+		'lokasi',
+		'kabupatenId',
+		'kecamatanId',
+		'programKknId',
+		'created',
+		/*
+		'modified',
+		*/
         array(
             'class'=>'CButtonColumn',
         ),

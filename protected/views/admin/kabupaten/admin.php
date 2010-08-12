@@ -37,10 +37,8 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$kabupaten->search(),
     'filter'=>$kabupaten,
     'columns'=>array(
-		'id',
-		'nama',
-		'created',
-		'modified',
+        'id',
+        'nama',
         array(
             'class'=>'CButtonColumn',
         ),

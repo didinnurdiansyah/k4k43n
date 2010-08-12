@@ -37,11 +37,9 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$programKkn->search(),
     'filter'=>$programKkn,
     'columns'=>array(
-		'id',
-		'nama',
-		'deskripsi',
-		'created',
-		'modified',
+        'id',
+        'nama',
+        'deskripsi',
         array(
             'class'=>'CButtonColumn',
         ),

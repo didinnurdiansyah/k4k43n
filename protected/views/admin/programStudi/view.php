@@ -9,7 +9,6 @@ $this->menu=array(
     array('label'=>Yii::t('app','Create Program Studi'), 'url'=>array('create')),
     array('label'=>Yii::t('app','Update Program Studi'), 'url'=>array('update', 'id'=>$programStudi->id)),
     array('label'=>Yii::t('app','Delete Program Studi'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$programStudi->id),'confirm'=>'Are you sure you want to delete this item?')),
-    array('label'=>Yii::t('app','Manage Program Studi'), 'url'=>array('admin')),
 );
 ?>
 
@@ -20,7 +19,15 @@ $this->menu=array(
     'attributes'=>array(
         'id',
         'nama',
-        'jurusanId',
+        'kode',
+        array(
+            'name' => 'jurusanId',
+            'value' => $programStudi->jurusan->nama,
+        ),
+        array(
+            'name' => 'fakultasId',
+            'value' => $programStudi->fakultas->nama,
+        ),
         'created',
         'modified',
     ),

@@ -37,11 +37,13 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$kecamatan->search(),
     'filter'=>$kecamatan,
     'columns'=>array(
-		'id',
-		'nama',
-		'kabupatenId',
-		'created',
-		'modified',
+        'id',
+        'nama',
+        array(
+            'name' => 'kabupatenId',
+            'value' => '$data->kabupaten->nama',
+            'filter' => Kabupaten::model()->listData
+        ),
         array(
             'class'=>'CButtonColumn',
         ),

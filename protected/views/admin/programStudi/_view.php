@@ -8,6 +8,10 @@
 	<?php echo CHtml::encode($data->nama); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fakultasId')); ?>:</b>
+	<?php echo CHtml::encode($data->fakultasId); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('jurusanId')); ?>:</b>
 	<?php echo CHtml::encode($data->jurusanId); ?>
 	<br />

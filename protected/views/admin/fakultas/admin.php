@@ -37,11 +37,9 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$fakultas->search(),
     'filter'=>$fakultas,
     'columns'=>array(
-		'id',
-		'nama',
-		'kode',
-		'created',
-		'modified',
+        'id',
+        'nama',
+        'kode',
         array(
             'class'=>'CButtonColumn',
         ),

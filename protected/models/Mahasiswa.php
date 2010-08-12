@@ -10,6 +10,7 @@
  * @property string $alamatTinggal
  * @property string $fakultasId
  * @property string $jurusanId
+ * @property string $kelompokId
  * @property string $programStudiId
  * @property integer $jenisKelamin
  * @property string $created
@@ -42,13 +43,13 @@ class Mahasiswa extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, programStudiId, jenisKelamin', 'required'),
+            array('namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, programStudiId, jenisKelamin, created, modified', 'required'),
             array('jenisKelamin', 'numerical', 'integerOnly'=>true),
             array('namaLengkap, alamatAsal, alamatTinggal', 'length', 'max'=>255),
-            array('fakultasId, jurusanId, programStudiId', 'length', 'max'=>20),
+            array('fakultasId, jurusanId, kelompokId, programStudiId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, programStudiId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
+            array('id, namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, programStudiId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -75,6 +76,7 @@ class Mahasiswa extends ActiveRecord
             'alamatTinggal' => Yii::t('app','Alamat Tinggal'),
             'fakultasId' => Yii::t('app','Fakultas'),
             'jurusanId' => Yii::t('app','Jurusan'),
+            'kelompokId' => Yii::t('app','Kelompok'),
             'programStudiId' => Yii::t('app','Program Studi'),
             'jenisKelamin' => Yii::t('app','Jenis Kelamin'),
             'created' => Yii::t('app','Created'),
@@ -98,6 +100,7 @@ class Mahasiswa extends ActiveRecord
         $criteria->compare('alamatTinggal',$this->alamatTinggal,true);
         $criteria->compare('fakultasId',$this->fakultasId,true);
         $criteria->compare('jurusanId',$this->jurusanId,true);
+        $criteria->compare('kelompokId',$this->kelompokId,true);
         $criteria->compare('programStudiId',$this->programStudiId,true);
         $criteria->compare('jenisKelamin',$this->jenisKelamin);
         $criteria->compare('created',$this->created,true);

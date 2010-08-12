@@ -87,10 +87,7 @@ class JurusanController extends AdminController
      */
     public function actionIndex()
     {
-        $dataProvider = new CActiveDataProvider('Jurusan');
-        $this->render('index',array(
-            'dataProvider' => $dataProvider,
-        ));
+        $this->actionAdmin();
     }
 
     /**

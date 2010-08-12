@@ -1,6 +1,6 @@
 <?php
 
-class ProgramKknController extends AdminController
+class KelompokController extends AdminController
 {
     /**
      * @var CActiveRecord the currently loaded data model instance.
@@ -13,7 +13,7 @@ class ProgramKknController extends AdminController
     public function actionView()
     {
         $this->render('view',array(
-            'programKkn' => $this->loadModel(),
+            'kelompok' => $this->loadModel(),
         ));
     }
 
@@ -23,20 +23,20 @@ class ProgramKknController extends AdminController
      */
     public function actionCreate()
     {
-        $programKkn = new ProgramKkn;
+        $kelompok = new Kelompok;
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($programKkn);
+        $this->performAjaxValidation($kelompok);
 
-        if (isset($_POST['ProgramKkn'])) {
-            $programKkn->attributes=$_POST['ProgramKkn'];
-            if ($programKkn->save()) {
-                $this->redirect(array('view','id' => $programKkn->id));
+        if (isset($_POST['Kelompok'])) {
+            $kelompok->attributes=$_POST['Kelompok'];
+            if ($kelompok->save()) {
+                $this->redirect(array('view','id' => $kelompok->id));
             }
         }
 
         $this->render('create',array(
-            'programKkn' => $programKkn,
+            'kelompok' => $kelompok,
         ));
     }
 
@@ -46,20 +46,20 @@ class ProgramKknController extends AdminController
      */
     public function actionUpdate()
     {
-        $programKkn = $this->loadModel();
+        $kelompok = $this->loadModel();
 
         // Uncomment the following line if AJAX validation is needed
-        $this->performAjaxValidation($programKkn);
+        $this->performAjaxValidation($kelompok);
 
-        if (isset($_POST['ProgramKkn'])) {
-            $programKkn->attributes=$_POST['ProgramKkn'];
-            if ($programKkn->save()) {
-                $this->redirect(array('view','id' => $programKkn->id));
+        if (isset($_POST['Kelompok'])) {
+            $kelompok->attributes=$_POST['Kelompok'];
+            if ($kelompok->save()) {
+                $this->redirect(array('view','id' => $kelompok->id));
             }
         }
 
         $this->render('update',array(
-            'programKkn' => $programKkn,
+            'kelompok' => $kelompok,
         ));
     }
 
@@ -95,14 +95,14 @@ class ProgramKknController extends AdminController
      */
     public function actionAdmin()
     {
-        $programKkn = new ProgramKkn('search');
-        $programKkn->unsetAttributes();  // clear any default values
-        if (isset($_GET['ProgramKkn'])) {
-            $programKkn->attributes = $_GET['ProgramKkn'];
+        $kelompok = new Kelompok('search');
+        $kelompok->unsetAttributes();  // clear any default values
+        if (isset($_GET['Kelompok'])) {
+            $kelompok->attributes = $_GET['Kelompok'];
         }
 
         $this->render('admin',array(
-            'programKkn' => $programKkn,
+            'kelompok' => $kelompok,
         ));
     }
 
@@ -114,7 +114,7 @@ class ProgramKknController extends AdminController
     {
         if ($this->_model === null) {
             if (isset($_GET['id'])) {
-                $this->_model = ProgramKkn::model()->findbyPk($_GET['id']);
+                $this->_model = Kelompok::model()->findbyPk($_GET['id']);
             }
             if ($this->_model === null) {
                 throw new CHttpException(404,'The requested page does not exist.');
@@ -127,10 +127,10 @@ class ProgramKknController extends AdminController
      * Performs the AJAX validation.
      * @param CModel the model to be validated
      */
-    protected function performAjaxValidation($programKkn)
+    protected function performAjaxValidation($kelompok)
     {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'program-kkn-form') { 
-            echo CActiveForm::validate($programKkn);
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'kelompok-form') { 
+            echo CActiveForm::validate($kelompok);
             Yii::app()->end();
         }
     }

@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'program_kkn':
  * @property string $id
- * @property string $lokasi
+ * @property string $nama
  * @property string $deskripsi
  * @property string $created
  * @property string $modified
@@ -37,12 +37,12 @@ class ProgramKkn extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('lokasi, deskripsi', 'required'),
+            array('nama, deskripsi', 'required'),
             array('id', 'length', 'max'=>20),
-            array('lokasi', 'length', 'max'=>255),
+            array('nama', 'length', 'max'=>255),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, lokasi, deskripsi, created, modified', 'safe', 'on'=>'search'),
+            array('id, nama, deskripsi, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -64,7 +64,7 @@ class ProgramKkn extends ActiveRecord
     {
         return array(
             'id' => Yii::t('app','ID'),
-            'lokasi' => Yii::t('app','Lokasi'),
+            'nama' => Yii::t('app','nama'),
             'deskripsi' => Yii::t('app','Deskripsi'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
@@ -82,7 +82,7 @@ class ProgramKkn extends ActiveRecord
 
         $criteria=new CDbCriteria;
         $criteria->compare('id',$this->id,true);
-        $criteria->compare('lokasi',$this->lokasi,true);
+        $criteria->compare('nama',$this->nama,true);
         $criteria->compare('deskripsi',$this->deskripsi,true);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);

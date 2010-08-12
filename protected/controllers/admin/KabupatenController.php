@@ -87,10 +87,7 @@ class KabupatenController extends AdminController
      */
     public function actionIndex()
     {
-        $dataProvider = new CActiveDataProvider('Kabupaten');
-        $this->render('index',array(
-            'dataProvider' => $dataProvider,
-        ));
+        $this->actionAdmin();
     }
 
     /**

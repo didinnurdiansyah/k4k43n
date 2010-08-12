@@ -91,7 +91,7 @@ class Kabupaten extends ActiveRecord
     protected function beforeSave()
     {
         $this->nama = strtoupper($this->nama);
-        return true;
+        return parent::beforeSave();
     
     }
 }
