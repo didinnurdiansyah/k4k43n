@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 13, 2010 at 05:25 AM
+-- Generation Time: Aug 13, 2010 at 05:31 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.3.3-0.dotdeb.0
 
@@ -157,6 +157,27 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
 
 --
 -- Dumping data for table `mahasiswa`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prioritas`
+--
+
+CREATE TABLE IF NOT EXISTS `prioritas` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `programKknId` bigint(20) NOT NULL,
+  `programStudi` bigint(20) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `programKknId` (`programKknId`,`programStudi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `prioritas`
 --
 
 
