@@ -17,19 +17,19 @@
 
     <div class="row">
         <?php echo $form->labelEx($kelompok,'kabupatenId'); ?>
-        <?php echo $form->textField($kelompok,'kabupatenId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->dropDownList($kelompok,'kabupatenId',Kabupaten::model()->listData); ?>
         <?php echo $form->error($kelompok,'kabupatenId'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($kelompok,'kecamatanId'); ?>
-        <?php echo $form->textField($kelompok,'kecamatanId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->dropDownList($kelompok,'kecamatanId',Kecamatan::model()->listData); ?>
         <?php echo $form->error($kelompok,'kecamatanId'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($kelompok,'programKknId'); ?>
-        <?php echo $form->textField($kelompok,'programKknId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->dropDownList($kelompok,'programKknId',ProgramKkn::model()->listData); ?>
         <?php echo $form->error($kelompok,'programKknId'); ?>
     </div>
 

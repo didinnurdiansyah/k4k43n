@@ -39,9 +39,21 @@ $('.search-form form').submit(function(){
     'columns'=>array(
 		'id',
 		'lokasi',
-		'kabupatenId',
-		'kecamatanId',
-		'programKknId',
+		array(
+			'name'=>'kabupatenId',
+			'value'=>'$data->kabupaten->nama',
+			'filter'=>Kabupaten::model()->listData,
+		), 
+		array(
+			'name'=>'kecamatanId',
+			'value'=>'$data->kecamatan->nama',
+			'filter'=>Kecamatan::model()->listData,
+		),
+		array(
+			'name'=>'programKknId',
+			'value'=>'$data->programKkn->nama',
+			'filter'=>ProgramKkn::model()->listData,
+			  ),
 		'created',
 		/*
 		'modified',

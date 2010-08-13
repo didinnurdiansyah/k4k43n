@@ -59,6 +59,7 @@ class Kelompok extends ActiveRecord
             'kabupaten' => array(self::BELONGS_TO, 'Kabupaten', 'kabupatenId'),
             'kecamatan' => array(self::BELONGS_TO, 'Kecamatan', 'kecamatanId'),
             'anggota' => array(self::HAS_MANY, 'Mahasiswa','kelompokId'),
+            'programKkn'=>array(self::BELONGS_TO,'ProgramKkn','programKknId'),
         );
     }
 
@@ -72,7 +73,7 @@ class Kelompok extends ActiveRecord
             'lokasi' => Yii::t('app','Lokasi'),
             'kabupatenId' => Yii::t('app','Kabupaten'),
             'kecamatanId' => Yii::t('app','Kecamatan'),
-            'programKknId' => Yii::t('app','Program Kkn'),
+            'programKknId' => Yii::t('app','ProgramKkn'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
         );

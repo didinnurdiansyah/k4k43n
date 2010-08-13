@@ -17,6 +17,8 @@ class Kecamatan extends ActiveRecord
      * Returns the static model of the specified AR class.
      * @return Kecamatan the static model class
      */
+    protected $displayField = 'nama';
+    
     public static function model($className=__CLASS__)
     {
         return parent::model($className);
