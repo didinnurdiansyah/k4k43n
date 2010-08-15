@@ -9,6 +9,8 @@
  * @property string $kabupatenId
  * @property string $kecamatanId
  * @property string $programKknId
+ * @property string $latitude
+ * @property string $longitude
  * @property string $created
  * @property string $modified
  */
@@ -41,6 +43,7 @@ class Kelompok extends ActiveRecord
         return array(
             array('lokasi, kabupatenId, kecamatanId, programKknId', 'required'),
             array('lokasi', 'length', 'max'=>255),
+            array('latitude, longitude', 'numerical'),
             array('kabupatenId, kecamatanId, programKknId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
@@ -73,7 +76,7 @@ class Kelompok extends ActiveRecord
             'lokasi' => Yii::t('app','Lokasi'),
             'kabupatenId' => Yii::t('app','Kabupaten'),
             'kecamatanId' => Yii::t('app','Kecamatan'),
-            'programKknId' => Yii::t('app','ProgramKkn'),
+            'programKknId' => Yii::t('app','Program KKN'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
         );

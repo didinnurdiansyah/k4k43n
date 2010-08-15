@@ -6,6 +6,22 @@ class KelompokController extends AdminController
      * @var CActiveRecord the currently loaded data model instance.
      */
     private $_model;
+    
+    public function accessRules()
+    {
+        return array(
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array(
+                    'admin','delete','index','view','create','update',
+                    'dependentSelectKecamatan',
+                ),
+                'users' => array('admin'),
+            ),
+            array('deny',  // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
 
     /**
      * Displays a particular model.
@@ -33,11 +49,25 @@ class KelompokController extends AdminController
             if ($kelompok->save()) {
                 $this->redirect(array('view','id' => $kelompok->id));
             }
+        } else {
+            $kelompok->latitude = -6.906659;
+            $kelompok->longitude = 107.605591;
         }
 
         $this->render('create',array(
             'kelompok' => $kelompok,
         ));
+    }
+    
+    public function actionDependentSelectKecamatan()
+    {
+        echo CHtml::activeDropDownList(Kelompok::model(),'kecamatanId', 
+            CHtml::listData(Kecamatan::model()->findByKabupatenId($_GET['kabupatenId']),'id','nama'),
+            array('empty' => Yii::t('app','Select Kecamatan'))
+        );
+        
+        //echo $_GET['kabupatenId'];
+        Yii::app()->end();
     }
 
     /**

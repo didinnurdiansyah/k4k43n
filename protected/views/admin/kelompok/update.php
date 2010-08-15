@@ -9,7 +9,6 @@ $this->menu=array(
     array('label'=>Yii::t('app','List Kelompok'), 'url'=>array('index')),
     array('label'=>Yii::t('app','Create Kelompok'), 'url'=>array('create')),
     array('label'=>Yii::t('app','View Kelompok'), 'url'=>array('view', 'id'=>$kelompok->id)),
-    array('label'=>Yii::t('app','Manage Kelompok'), 'url'=>array('admin')),
 );
 ?>
 

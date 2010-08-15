@@ -10,7 +10,7 @@ return array(
     'name'=>'KKN',
 
     // preloading 'log' component
-    'preload'=>array('log'),
+    //'preload'=>array('log'),
 
     // autoloading model and component classes
     'import'=>array(
@@ -66,6 +66,12 @@ return array(
             'widgets'=>array(
                 'CGridView'=>array(
                     //'cssFile' => false,
+                ),
+                'CActiveForm' => array(
+                    'clientOptions' => array(
+                        'validateOnSubmit' => true,
+                        'validateOnChange' => false,
+                    ),
                 ),
             ),
         ),

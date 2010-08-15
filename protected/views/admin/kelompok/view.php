@@ -9,7 +9,6 @@ $this->menu=array(
     array('label'=>Yii::t('app','Create Kelompok'), 'url'=>array('create')),
     array('label'=>Yii::t('app','Update Kelompok'), 'url'=>array('update', 'id'=>$kelompok->id)),
     array('label'=>Yii::t('app','Delete Kelompok'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$kelompok->id),'confirm'=>'Are you sure you want to delete this item?')),
-    array('label'=>Yii::t('app','Manage Kelompok'), 'url'=>array('admin')),
 );
 ?>
 
@@ -19,10 +18,19 @@ $this->menu=array(
     'data'=>$kelompok,
     'attributes'=>array(
         'id',
+        array(
+            'name' => 'programKknId',
+            'value' => $kelompok->programKkn->nama
+        ),
+        array(
+            'name' => 'kabupatenId',
+            'value' => $kelompok->kabupaten->nama
+        ),
+        array(
+            'name' => 'kecamatanId',
+            'value' => $kelompok->kecamatan->nama
+        ),
         'lokasi',
-        'kabupatenId',
-        'kecamatanId',
-        'programKknId',
         'created',
         'modified',
     ),

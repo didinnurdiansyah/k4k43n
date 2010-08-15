@@ -5,7 +5,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','List Kelompok'), 'url' => array('index')),
     array('label' => Yii::t('app','Create Kelompok'), 'url' => array('create')),
 );
 
@@ -37,27 +36,23 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$kelompok->search(),
     'filter'=>$kelompok,
     'columns'=>array(
-		'id',
-		'lokasi',
-		array(
-			'name'=>'kabupatenId',
-			'value'=>'$data->kabupaten->nama',
-			'filter'=>Kabupaten::model()->listData,
-		), 
-		array(
-			'name'=>'kecamatanId',
-			'value'=>'$data->kecamatan->nama',
-			'filter'=>Kecamatan::model()->listData,
-		),
-		array(
-			'name'=>'programKknId',
-			'value'=>'$data->programKkn->nama',
-			'filter'=>ProgramKkn::model()->listData,
-			  ),
-		'created',
-		/*
-		'modified',
-		*/
+        'id',
+        array(
+            'name'=>'programKknId',
+            'value'=>'$data->programKkn->nama',
+            'filter'=>ProgramKkn::model()->listData,
+        ),
+        array(
+            'name'=>'kabupatenId',
+            'value'=>'$data->kabupaten->nama',
+            'filter'=>Kabupaten::model()->listData,
+        ), 
+        array(
+            'name'=>'kecamatanId',
+            'value'=>'$data->kecamatan->nama',
+            'filter'=>Kecamatan::model()->listData,
+        ),
+        'lokasi',
         array(
             'class'=>'CButtonColumn',
         ),

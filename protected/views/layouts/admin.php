@@ -21,13 +21,13 @@
             ));
             $this->widget('zii.widgets.CMenu', array(
                 'items'=>array(
-                    array('label' => 'Fakultas','url' => array('admin/fakultas')),
-                    array('label' => 'Jurusan','url' => array('admin/jurusan')),
-                    array('label' => 'Program Studi','url' => array('admin/programStudi')),
-                    array('label' => 'Kabupaten','url' => array('admin/kabupaten')),
-                    array('label' => 'Kecamatan','url' => array('admin/kecamatan')),
-                    array('label' => 'Program KKN','url' => array('admin/programKkn')),
-                    array('label' => 'Kelompok','url' => array('admin/kelompok')),
+                    array('label' => 'Fakultas','url' => array('admin/fakultas/index')),
+                    array('label' => 'Jurusan','url' => array('admin/jurusan/index')),
+                    array('label' => 'Program Studi','url' => array('admin/programStudi/index')),
+                    array('label' => 'Kabupaten','url' => array('admin/kabupaten/index')),
+                    array('label' => 'Kecamatan','url' => array('admin/kecamatan/index')),
+                    array('label' => 'Program KKN','url' => array('admin/programKkn/index')),
+                    array('label' => 'Kelompok','url' => array('admin/kelompok/index')),
                 ),
                 'htmlOptions'=>array('class'=>'sidemenu'),
             ));
