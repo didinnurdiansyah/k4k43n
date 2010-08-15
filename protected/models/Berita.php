@@ -37,7 +37,7 @@ class Berita extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('title, body, created, modified', 'required'),
+            array('title, body', 'required'),
             array('title', 'length', 'max'=>255),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.

@@ -35,3 +35,28 @@ $this->menu=array(
         'modified',
     ),
 )); ?>
+
+<label>Location</label>: <br/>
+<div id="map_canvas" style="height:200px"></div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript">
+    var latlng = new google.maps.LatLng(<?php echo $kelompok->latitude ?>,<?php echo $kelompok->longitude?>);
+    var contentString = '<?php echo Yii::t('app','Your Location')?>';
+    
+    var options = {
+        zoom: 11,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById('map_canvas'), options);
+    var marker = new google.maps.Marker({
+        position: latlng, 
+        map: map,
+        title: contentString,
+        draggable: false
+    });
+    google.maps.event.addListener(marker, 'position_changed', function() {
+        $('#Kelompok_latitude').val(marker.getPosition().lat());
+        $('#Kelompok_longitude').val(marker.getPosition().lng());
+    });
+</script>

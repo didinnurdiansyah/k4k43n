@@ -44,7 +44,7 @@
         <?php echo $form->labelEx($kelompok,'position'); ?>
         <?php echo $form->hiddenField($kelompok,'latitude')?>
         <?php echo $form->hiddenField($kelompok,'longitude')?>
-        <div id="map_canvas" style="height:200px" class="c300r"></div>
+        <div id="map_canvas" style="height:200px"></div>
     </div>
 
     <div class="row buttons">

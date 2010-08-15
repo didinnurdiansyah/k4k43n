@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 15, 2010 at 06:03 PM
+-- Generation Time: Aug 15, 2010 at 11:55 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.3.3-0.dotdeb.0
 
@@ -22,6 +22,28 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `berita`
+--
+
+CREATE TABLE IF NOT EXISTS `berita` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `title` varchar(255) NOT NULL,
+  `body` text NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id`, `title`, `body`, `created`, `modified`) VALUES
+(1, 'Berita baik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ', '2010-08-15 22:51:54', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `fakultas`
 --
 
@@ -32,14 +54,39 @@ CREATE TABLE IF NOT EXISTS `fakultas` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `fakultas`
 --
 
 INSERT INTO `fakultas` (`id`, `nama`, `kode`, `created`, `modified`) VALUES
-(1, 'Fakultas Matematika dan Ilmu Pengetahuan Alam', 'FPMIPA', '2010-07-17 13:27:41', '2010-07-17 13:43:08');
+(1, 'Fakultas Matematika dan Ilmu Pengetahuan Alam', 'FPMIPA', '2010-07-17 13:27:41', '2010-08-15 19:08:15'),
+(2, 'Fakultas Ilmu Pendidikan', 'FIP', '2010-08-15 19:11:12', '0000-00-00 00:00:00'),
+(3, 'Fakultas Pendidikan Ilmu Pengetahuan Sosial', 'FPIPS', '2010-08-15 19:12:00', '0000-00-00 00:00:00'),
+(4, 'Fakultas Pendidikan Bahasa Dan Seni', 'FPBS', '2010-08-15 19:12:57', '0000-00-00 00:00:00'),
+(5, 'Fakultas Pendidikan Teknik Dan Kejuruan', 'FPTK', '2010-08-15 19:14:05', '0000-00-00 00:00:00'),
+(6, 'Fakultas Pendidikan Olahraga Dan Kesehatan', 'FPOK', '2010-08-15 19:14:58', '2010-08-15 21:26:58'),
+(7, 'Sekolah Pascasarjana (S2)', 'SPS', '2010-08-15 19:15:49', '2010-08-15 21:05:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jenjang`
+--
+
+CREATE TABLE IF NOT EXISTS `jenjang` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `nama` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `jenjang`
+--
+
 
 -- --------------------------------------------------------
 
@@ -56,14 +103,96 @@ CREATE TABLE IF NOT EXISTS `jurusan` (
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `fakultasId` (`fakultasId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=85 ;
 
 --
 -- Dumping data for table `jurusan`
 --
 
 INSERT INTO `jurusan` (`id`, `nama`, `kode`, `fakultasId`, `created`, `modified`) VALUES
-(1, 'Matematika', 'MTK', 1, '2010-08-13 04:17:10', '2010-08-13 04:17:24');
+(2, 'Administrasi Pendidikan', 'AP', 2, '2010-08-15 19:18:57', '0000-00-00 00:00:00'),
+(3, 'Psik. Pend. & Bimbingan', 'PB', 2, '2010-08-15 19:19:59', '0000-00-00 00:00:00'),
+(4, 'Pendidikan Luar Sekolah', 'LS', 2, '2010-08-15 19:20:58', '0000-00-00 00:00:00'),
+(5, 'Pendidikan Luar Biasa', 'LB', 2, '2010-08-15 19:23:16', '0000-00-00 00:00:00'),
+(6, 'Teknologi Pendidikan', 'TP', 2, '2010-08-15 19:23:59', '0000-00-00 00:00:00'),
+(7, 'Pendidikan Guru Sekolah Dasar', 'GD', 2, '2010-08-15 19:24:43', '0000-00-00 00:00:00'),
+(8, 'Pendidikan Guru Taman Kanak-Kanak', 'GT', 2, '2010-08-15 19:25:29', '0000-00-00 00:00:00'),
+(9, 'Psikologi', 'PG', 2, '2010-08-15 19:25:59', '0000-00-00 00:00:00'),
+(10, 'Pendidikan Moral Pancasila dan Kewarganegaraan (PMPKN)', 'KN', 3, '2010-08-15 19:27:36', '2010-08-15 19:28:16'),
+(11, 'Pendidikan Sejarah', 'SJ', 3, '2010-08-15 19:28:48', '0000-00-00 00:00:00'),
+(12, 'Pendidikan Geografi', 'GG', 3, '2010-08-15 19:29:14', '0000-00-00 00:00:00'),
+(13, 'Pendidikan Ekonomi', 'PE', 3, '2010-08-15 19:30:09', '0000-00-00 00:00:00'),
+(14, 'Pendididkan Akutansi', 'PA', 3, '2010-08-15 19:30:56', '0000-00-00 00:00:00'),
+(15, 'Pendidikan Tata Niaga', 'TN', 3, '2010-08-15 19:31:26', '0000-00-00 00:00:00'),
+(16, 'Pendidikan Administrasi Perkantoran', 'MK', 3, '2010-08-15 19:32:20', '0000-00-00 00:00:00'),
+(17, 'Pendidikan Ekonomi Dan Koperasi', 'KP', 3, '2010-08-15 19:33:25', '0000-00-00 00:00:00'),
+(18, 'Manajemen', 'MJ', 3, '2010-08-15 19:34:02', '0000-00-00 00:00:00'),
+(19, 'Akutansi', 'AK', 3, '2010-08-15 19:34:35', '0000-00-00 00:00:00'),
+(20, 'Manajemen Pemasaran Turisme', 'MP', 3, '2010-08-15 19:35:52', '0000-00-00 00:00:00'),
+(21, 'Manajemen Industri Katering', 'MI', 3, '2010-08-15 19:36:54', '0000-00-00 00:00:00'),
+(22, 'Manajemen Resort dan Leisure', 'MR', 3, '2010-08-15 19:37:39', '0000-00-00 00:00:00'),
+(23, 'Pendididkan Biologi', 'BI', 1, '2010-08-15 19:38:21', '0000-00-00 00:00:00'),
+(24, 'Pendididkan Fisika', 'FI', 1, '2010-08-15 19:38:48', '0000-00-00 00:00:00'),
+(25, 'Pendididkan Kimia', 'KI', 1, '2010-08-15 19:39:10', '0000-00-00 00:00:00'),
+(26, 'Pendidikan Matematika', 'MT', 1, '2010-08-15 19:39:39', '2010-08-15 21:10:44'),
+(27, 'Pendididkan Ilmu Komputer', 'IK', 1, '2010-08-15 19:40:19', '0000-00-00 00:00:00'),
+(28, 'Biologi', 'BI', 1, '2010-08-15 19:40:45', '0000-00-00 00:00:00'),
+(29, 'Fisika', 'FI', 1, '2010-08-15 19:41:03', '0000-00-00 00:00:00'),
+(30, 'Kimia', 'KI', 1, '2010-08-15 19:41:24', '0000-00-00 00:00:00'),
+(31, 'Matematika', 'MT', 1, '2010-08-15 19:41:48', '0000-00-00 00:00:00'),
+(32, 'Ilmu Komputer', 'IK', 1, '2010-08-15 19:42:08', '0000-00-00 00:00:00'),
+(33, 'Pendidikan Bahasa Indonesia', 'IN', 4, '2010-08-15 20:28:52', '0000-00-00 00:00:00'),
+(34, 'Pendidikan Bahasa Daerah', 'DR', 4, '2010-08-15 20:30:24', '0000-00-00 00:00:00'),
+(35, 'Pendidikan Bahasa Inggris', 'IG', 4, '2010-08-15 20:31:03', '0000-00-00 00:00:00'),
+(36, 'Pendidikan Bahasa Jerman', 'JR', 4, '2010-08-15 20:31:45', '0000-00-00 00:00:00'),
+(37, 'Pendidikan Bahasa Arab', 'AR', 4, '2010-08-15 20:32:41', '0000-00-00 00:00:00'),
+(38, 'Pendidikan Bahasa Jepang', 'JP', 4, '2010-08-15 20:33:07', '0000-00-00 00:00:00'),
+(39, 'Pendidikan Bahasa Perancis', 'PR', 4, '2010-08-15 20:33:32', '0000-00-00 00:00:00'),
+(40, 'Pendidikan Seni Musik', 'SM', 4, '2010-08-15 20:34:22', '0000-00-00 00:00:00'),
+(41, 'Pendidikan Seni Tari', 'ST', 4, '2010-08-15 20:34:42', '0000-00-00 00:00:00'),
+(42, 'Pendidikan Seni Rupa dan Kerajinan', 'RK', 4, '2010-08-15 20:35:19', '0000-00-00 00:00:00'),
+(43, 'Bahasa dan Sastra Indonesia', 'IN', 4, '2010-08-15 20:35:57', '0000-00-00 00:00:00'),
+(44, 'Bahasa dan Sastra Inggris', 'IG', 4, '2010-08-15 20:36:35', '0000-00-00 00:00:00'),
+(45, 'Pendididkan Teknik Bangunan', 'TB', 5, '2010-08-15 20:38:03', '0000-00-00 00:00:00'),
+(46, 'Pendididkan Teknik Sipil', 'TS', 5, '2010-08-15 20:38:34', '0000-00-00 00:00:00'),
+(47, 'Pendididkan Teknik Arsitektur', 'TA', 5, '2010-08-15 20:39:16', '0000-00-00 00:00:00'),
+(48, 'Pendididkan Teknik Mesin', 'TM', 5, '2010-08-15 20:39:39', '0000-00-00 00:00:00'),
+(49, 'Pendidikan Listrik Tenaga', 'LT', 5, '2010-08-15 20:40:12', '0000-00-00 00:00:00'),
+(50, 'Pendididkan Elektronika Komputer', 'EK', 5, '2010-08-15 20:41:07', '0000-00-00 00:00:00'),
+(51, 'Pendididkan Tata Boga', 'BG', 5, '2010-08-15 20:41:59', '0000-00-00 00:00:00'),
+(52, 'Pendididkan Tata Busana', 'BU', 5, '2010-08-15 20:48:58', '0000-00-00 00:00:00'),
+(53, 'Teknik Sipil', 'TS', 5, '2010-08-15 20:49:44', '0000-00-00 00:00:00'),
+(54, 'Teknik Arsitektur', 'TA', 5, '2010-08-15 20:50:14', '0000-00-00 00:00:00'),
+(55, 'Teknik Perumahan', 'TR', 5, '2010-08-15 20:50:53', '0000-00-00 00:00:00'),
+(56, 'Teknik Mesin', 'TM', 5, '2010-08-15 20:51:30', '0000-00-00 00:00:00'),
+(57, 'Teknik Elektro', 'TE', 5, '2010-08-15 20:52:56', '0000-00-00 00:00:00'),
+(58, 'Pendidikan Teknik Produksi dan Perancangan', 'PP', 5, '2010-08-15 20:54:14', '0000-00-00 00:00:00'),
+(59, 'Pendidikan Teknik Otomotif', 'OT', 5, '2010-08-15 20:56:18', '0000-00-00 00:00:00'),
+(60, 'Pendidikan Teknik Refrigasi dan Tata Udara', 'RT', 5, '2010-08-15 20:57:56', '0000-00-00 00:00:00'),
+(61, 'Pendididkan Olahraga', 'OR', 6, '2010-08-15 20:59:16', '0000-00-00 00:00:00'),
+(62, 'Pendidikan kesehatan dan Rekreasi', 'KR', 6, '2010-08-15 21:00:02', '0000-00-00 00:00:00'),
+(63, 'Pendidikan Kepelatihan', 'KP', 6, '2010-08-15 21:00:47', '0000-00-00 00:00:00'),
+(64, 'Pendidikan Guru Penjas', 'GJ', 6, '2010-08-15 21:01:26', '0000-00-00 00:00:00'),
+(65, 'ilmu Keolahragaan', 'IO', 6, '2010-08-15 21:01:51', '0000-00-00 00:00:00'),
+(66, 'Administrasi Pendidikan', 'AP', 7, '2010-08-15 21:02:59', '0000-00-00 00:00:00'),
+(67, 'Pengembangan Kurikulum', 'TK', 7, '2010-08-15 21:03:26', '0000-00-00 00:00:00'),
+(68, 'Bimbingan dan Konseling', 'BK', 7, '2010-08-15 21:04:05', '0000-00-00 00:00:00'),
+(69, 'Pendidikan Luar Sekolah', 'LS', 7, '2010-08-15 21:04:49', '2010-08-15 21:05:03'),
+(70, 'Pendidikan Umum ', 'PU', 7, '2010-08-15 21:07:36', '0000-00-00 00:00:00'),
+(71, 'Pendidikan Kebutuhan Khusus', 'KK', 7, '2010-08-15 21:08:10', '0000-00-00 00:00:00'),
+(72, 'Pendidikan IPA', 'PA', 7, '2010-08-15 21:09:09', '0000-00-00 00:00:00'),
+(73, 'Pendidikan Matematika', 'MT', 7, '2010-08-15 21:10:09', '0000-00-00 00:00:00'),
+(74, 'Pendidikan Bahasa Indonesia', 'IN', 7, '2010-08-15 21:11:38', '0000-00-00 00:00:00'),
+(75, 'Pendidikan Bahasa Inggris', 'IG', 7, '2010-08-15 21:12:17', '0000-00-00 00:00:00'),
+(76, 'Pendidikan Bahasa Jepang', 'JP', 7, '2010-08-15 21:12:45', '0000-00-00 00:00:00'),
+(77, 'Pendidikan Bahasa Perancis', 'PR', 7, '2010-08-15 21:13:21', '0000-00-00 00:00:00'),
+(78, 'Pendidikan IPS', 'SS', 7, '2010-08-15 21:13:47', '0000-00-00 00:00:00'),
+(79, 'Pendidikan Kewarganegaraan', 'KN', 7, '2010-08-15 21:14:40', '0000-00-00 00:00:00'),
+(80, 'Pendidikan Kesenian', 'KS', 7, '2010-08-15 21:15:20', '0000-00-00 00:00:00'),
+(81, 'Pendidikan Teknik Kejuruan', 'KJ', 7, '2010-08-15 21:16:01', '0000-00-00 00:00:00'),
+(82, 'Pendidikan Olahraga', 'OR', 7, '2010-08-15 21:16:36', '0000-00-00 00:00:00'),
+(83, 'Magister Manajemen Bisnis', 'MB', 7, '2010-08-15 21:17:33', '0000-00-00 00:00:00'),
+(84, 'Linguistik', 'LG', 7, '2010-08-15 21:17:59', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -77,15 +206,28 @@ CREATE TABLE IF NOT EXISTS `kabupaten` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `kabupaten`
 --
 
 INSERT INTO `kabupaten` (`id`, `nama`, `created`, `modified`) VALUES
-(1, 'BANDUNG', '0000-00-00 00:00:00', '2010-08-13 05:02:05'),
-(2, 'KABUPATEN BANDUNG', '2010-08-14 22:55:53', '0000-00-00 00:00:00');
+(4, 'Kota Cimahi', '2010-08-15 21:52:45', '0000-00-00 00:00:00'),
+(3, 'Kota Bandung', '2010-08-15 21:52:21', '0000-00-00 00:00:00'),
+(5, 'Bandung', '2010-08-15 21:53:15', '0000-00-00 00:00:00'),
+(6, 'Bandung Barat', '2010-08-15 21:53:43', '0000-00-00 00:00:00'),
+(7, 'Subang', '2010-08-15 21:54:07', '0000-00-00 00:00:00'),
+(8, 'Garut', '2010-08-15 21:54:31', '0000-00-00 00:00:00'),
+(9, 'Sumedang', '2010-08-15 21:55:02', '0000-00-00 00:00:00'),
+(10, 'Purwakarta', '2010-08-15 21:55:21', '0000-00-00 00:00:00'),
+(11, 'Tasikmalaya', '2010-08-15 21:55:50', '0000-00-00 00:00:00'),
+(12, 'Sukabumi', '2010-08-15 21:56:19', '0000-00-00 00:00:00'),
+(13, 'Cianjur', '2010-08-15 21:56:38', '0000-00-00 00:00:00'),
+(14, 'Ciamis', '2010-08-15 21:56:57', '0000-00-00 00:00:00'),
+(15, 'Majalengka', '2010-08-15 21:57:26', '0000-00-00 00:00:00'),
+(16, 'Banjar', '2010-08-15 21:57:45', '0000-00-00 00:00:00'),
+(17, 'Pandeglang', '2010-08-15 21:58:59', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -101,14 +243,31 @@ CREATE TABLE IF NOT EXISTS `kecamatan` (
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `kabupatenId` (`kabupatenId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `kecamatan`
 --
 
 INSERT INTO `kecamatan` (`id`, `nama`, `kabupatenId`, `created`, `modified`) VALUES
-(1, 'KIARA CONDONG', 1, '2010-08-13 05:02:29', '0000-00-00 00:00:00');
+(2, 'Cikalong Wetan', 6, '2010-08-15 22:03:12', '0000-00-00 00:00:00'),
+(3, 'Lembang', 6, '2010-08-15 22:03:59', '0000-00-00 00:00:00'),
+(4, 'Gununghalu', 6, '2010-08-15 22:05:32', '0000-00-00 00:00:00'),
+(5, 'Cipeundeuy', 6, '2010-08-15 22:06:03', '0000-00-00 00:00:00'),
+(6, 'Cililin', 6, '2010-08-15 22:06:34', '0000-00-00 00:00:00'),
+(7, 'Desa Sukamanah Kecamatan Rongga', 6, '2010-08-15 22:07:25', '0000-00-00 00:00:00'),
+(8, 'Desa Batujajar Timur Kecamatan Batujajar', 6, '2010-08-15 22:08:00', '0000-00-00 00:00:00'),
+(9, 'Desa Nyenang Kecamatan Cipeundeuy', 6, '2010-08-15 22:08:42', '0000-00-00 00:00:00'),
+(10, 'Cipatat', 6, '2010-08-15 22:09:15', '0000-00-00 00:00:00'),
+(11, 'Cimahi Tengah', 4, '2010-08-15 22:16:17', '0000-00-00 00:00:00'),
+(12, 'Cigugur Tengah', 4, '2010-08-15 22:20:06', '0000-00-00 00:00:00'),
+(13, 'Baros', 4, '2010-08-15 22:24:20', '0000-00-00 00:00:00'),
+(14, 'Sucinaraja', 8, '2010-08-15 22:31:59', '0000-00-00 00:00:00'),
+(15, 'Wanaraja', 8, '2010-08-15 22:33:13', '0000-00-00 00:00:00'),
+(16, 'Pangatikan', 8, '2010-08-15 22:33:45', '0000-00-00 00:00:00'),
+(17, 'Sukasari', 3, '2010-08-15 22:38:22', '0000-00-00 00:00:00'),
+(18, 'Andir', 3, '2010-08-15 22:38:52', '0000-00-00 00:00:00'),
+(19, 'Sukajadi', 3, '2010-08-15 22:39:31', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -128,14 +287,25 @@ CREATE TABLE IF NOT EXISTS `kelompok` (
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `kabupatenId` (`kabupatenId`,`kecamatanId`,`programKknId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `kelompok`
 --
 
 INSERT INTO `kelompok` (`id`, `lokasi`, `kabupatenId`, `kecamatanId`, `programKknId`, `latitude`, `longitude`, `created`, `modified`) VALUES
-(1, 'Babakan Sari', 1, 1, 1, -6.90611367778491, 107.652969540039, '2010-08-14 23:46:06', '2010-08-14 23:54:52');
+(2, 'Jl. Amd No. 33 Ciraja Desa Mandalasari', 6, 2, 6, -6.906659, 107.605591, '2010-08-15 22:11:05', '2010-08-15 23:53:10'),
+(3, 'Desa Wangunsari Rt 01 Rw. 09', 6, 3, 6, -6.906659, 107.605591, '2010-08-15 22:12:02', '0000-00-00 00:00:00'),
+(4, 'Kp. Paratag Rt. 02 Rw. 21 Desa Gununghalu', 6, 4, 6, -6.906659, 107.605591, '2010-08-15 22:14:02', '0000-00-00 00:00:00'),
+(5, 'Cigugur Tengah Sdn Cimindi 2', 4, 11, 4, -6.906659, 107.605591, '2010-08-15 22:17:11', '2010-08-15 22:18:47'),
+(6, 'Sdn Bina Harapan Cibaligo No. 6 Cimindi', 4, 12, 4, -6.906659, 107.605591, '2010-08-15 22:21:27', '0000-00-00 00:00:00'),
+(7, 'Sdn Kebonsari 1', 4, 13, 4, -6.906659, 107.605591, '2010-08-15 22:25:36', '0000-00-00 00:00:00'),
+(8, 'Sadang', 8, 14, 2, -6.906659, 107.605591, '2010-08-15 22:34:35', '0000-00-00 00:00:00'),
+(9, 'Wanaraja', 8, 15, 2, -6.906659, 107.605591, '2010-08-15 22:35:18', '0000-00-00 00:00:00'),
+(10, 'Sukarasa', 8, 16, 2, -6.906659, 107.605591, '2010-08-15 22:36:05', '0000-00-00 00:00:00'),
+(11, 'Kelurahan Sarijadi "a"', 3, 17, 3, -6.906659, 107.605591, '2010-08-15 22:41:12', '0000-00-00 00:00:00'),
+(12, 'Kelurahan Campaka', 3, 18, 3, -6.906659, 107.605591, '2010-08-15 22:41:49', '0000-00-00 00:00:00'),
+(13, 'Kelurahan Sukawarna', 3, 19, 3, -6.906659, 107.605591, '2010-08-15 22:42:30', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -146,17 +316,18 @@ INSERT INTO `kelompok` (`id`, `lokasi`, `kabupatenId`, `kecamatanId`, `programKk
 CREATE TABLE IF NOT EXISTS `mahasiswa` (
   `id` bigint(20) NOT NULL auto_increment,
   `namaLengkap` varchar(255) NOT NULL,
+  `nim` varchar(255) NOT NULL,
   `alamatAsal` varchar(255) NOT NULL,
   `alamatTinggal` varchar(255) NOT NULL,
   `fakultasId` bigint(20) NOT NULL,
   `jurusanId` bigint(20) NOT NULL,
   `kelompokId` bigint(20) NOT NULL,
-  `programStudiId` bigint(20) NOT NULL,
+  `jenjangId` bigint(20) NOT NULL,
   `jenisKelamin` tinyint(1) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`),
-  KEY `fakultasId` (`fakultasId`,`jurusanId`,`programStudiId`),
+  KEY `fakultasId` (`fakultasId`,`jurusanId`,`jenjangId`),
   KEY `kelompokId` (`kelompokId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -199,14 +370,19 @@ CREATE TABLE IF NOT EXISTS `program_kkn` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `program_kkn`
 --
 
 INSERT INTO `program_kkn` (`id`, `nama`, `deskripsi`, `created`, `modified`) VALUES
-(1, 'MBS', 'bla..bla..', '2010-08-13 05:03:02', '2010-08-13 05:36:47');
+(2, 'Posdaya', 'nanti di isi', '2010-08-15 21:47:58', '2010-08-15 22:29:32'),
+(3, 'Paud', 'nanti di isi', '2010-08-15 21:48:31', '0000-00-00 00:00:00'),
+(4, 'Manajemen Berbasis Sekolah (mbs)', 'nanti di isi', '2010-08-15 21:49:08', '0000-00-00 00:00:00'),
+(5, 'Sadar Hukum (darkum)', 'nanti di isi', '2010-08-15 21:49:49', '0000-00-00 00:00:00'),
+(6, 'Pkbm', 'nanti di isi', '2010-08-15 21:50:35', '0000-00-00 00:00:00'),
+(7, 'Seni Budaya', 'nanti di isi', '2010-08-15 21:51:04', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -225,14 +401,12 @@ CREATE TABLE IF NOT EXISTS `program_studi` (
   PRIMARY KEY  (`id`),
   KEY `fakultasId` (`fakultasId`),
   KEY `jurusanId` (`jurusanId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `program_studi`
 --
 
-INSERT INTO `program_studi` (`id`, `nama`, `kode`, `fakultasId`, `jurusanId`, `created`, `modified`) VALUES
-(1, 'Ilmu Komputer', 'IK', 1, 1, '2010-08-13 04:36:49', '2010-08-13 04:45:24');
 
 -- --------------------------------------------------------
 

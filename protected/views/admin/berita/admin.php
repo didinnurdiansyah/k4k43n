@@ -37,11 +37,14 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$berita->search(),
     'filter'=>$berita,
     'columns'=>array(
-		'id',
-		'title',
-		'body',
-		'created',
-		'modified',
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
+        'title',
+        'created',
+        'modified',
         array(
             'class'=>'CButtonColumn',
         ),
