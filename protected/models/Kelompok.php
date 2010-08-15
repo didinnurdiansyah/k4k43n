@@ -104,4 +104,10 @@ class Kelompok extends ActiveRecord
             'criteria'=>$criteria,
         ));
     }
+    
+    protected function beforeSave()
+    {
+        $this->lokasi = ucwords(strtolower($this->lokasi));
+        return parent::beforeSave();
+    }
 }

@@ -38,9 +38,16 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$jurusan->search(),
     'filter'=>$jurusan,
     'columns'=>array(
-        'id',
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
         'nama',
-        'kode',
+        array(
+            'name' => 'kode',
+            'htmlOptions' => array('width' => '75px'),
+        ),
         array(
             'name' => 'fakultasId',
             'value' => '$data->fakultas->nama',

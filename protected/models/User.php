@@ -94,4 +94,11 @@ class User extends ActiveRecord
             'criteria'=>$criteria,
         ));
     }
+    
+    protected function beforeSave()
+    {
+        $this->username = strtolower($this->username);
+        $this->email = strtolower($this->email);
+        return parent::beforeSave();
+    }
 }

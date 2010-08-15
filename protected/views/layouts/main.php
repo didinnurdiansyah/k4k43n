@@ -23,19 +23,19 @@
 
     <div id="header">
         <div id="logo">
-            <?php echo CHtml::image(Yii::app()->request->baseUrl . '/images/header.jpg',Yii::app()->name);?>
+            <?php echo CHtml::image(Yii::app()->request->baseUrl . '/images/header.gif',Yii::app()->name);?>
         </div>
     </div><!-- header -->
 
     <div id="mainmenu">
         <?php $this->widget('zii.widgets.CMenu',array(
             'items'=>array(
-                array('label'=>'Home', 'url'=>array('/site/index')),
-                array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-                array('label'=>'Contact', 'url'=>array('/site/contact')), 
-                array('label'=>'Administrator', 'url'=>array('/admin'), 'visible'=>Yii::app()->user->name === 'admin'),
-                array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                array('label'=>Yii::t('app','Home'), 'url'=>array('/site/index')),
+                array('label'=>Yii::t('app','About'), 'url'=>array('/site/page', 'view'=>'about')),
+                array('label'=>Yii::t('app','Contact'), 'url'=>array('/site/contact')), 
+                array('label'=>Yii::t('app','Administrator'), 'url'=>array('/admin'), 'visible'=>Yii::app()->user->name === 'admin'),
+                array('label'=>Yii::t('app','Login'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                array('label'=>Yii::t('app','Logout ({user})',array('{user}' => Yii::app()->user->name)), 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
             ),
         )); ?>
     </div><!-- mainmenu -->

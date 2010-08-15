@@ -21,7 +21,10 @@ $this->menu=array(
         'id',
         'nama',
         'kode',
-        'fakultasId',
+        array(
+            'name' => 'fakultasId',
+            'value' => $jurusan->fakultas->nama,
+        ),
         'created',
         'modified',
     ),

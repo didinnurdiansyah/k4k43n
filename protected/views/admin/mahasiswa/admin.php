@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-    'Fakultases'=>array('index'),
+    'Mahasiswas'=>array('index'),
     'Manage',
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','List Fakultas'), 'url' => array('index')),
-    array('label' => Yii::t('app','Create Fakultas'), 'url' => array('create')),
+    array('label' => Yii::t('app','List Mahasiswa'), 'url' => array('index')),
+    array('label' => Yii::t('app','Create Mahasiswa'), 'url' => array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -15,7 +15,7 @@ $('.search-button').click(function(){
     return false;
 });
 $('.search-form form').submit(function(){
-    $.fn.yiiGridView.update('fakultas-grid', {
+    $.fn.yiiGridView.update('mahasiswa-grid', {
         data: $(this).serialize()
     });
     return false;
@@ -23,27 +23,34 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h2><?php echo Yii::t('app','Management Fakultas') ?></h2>
+<h2><?php echo Yii::t('app','Management Mahasiswa') ?></h2>
 
 <?php echo CHtml::link(Yii::t('app','Advanced Search'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
-    'fakultas'=>$fakultas,
+    'mahasiswa'=>$mahasiswa,
 )); ?>
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-    'id'=>'fakultas-grid',
-    'dataProvider'=>$fakultas->search(),
-    'filter'=>$fakultas,
+    'id'=>'mahasiswa-grid',
+    'dataProvider'=>$mahasiswa->search(),
+    'filter'=>$mahasiswa,
     'columns'=>array(
-        array(
-            'header' => 'No',
-            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
-            'htmlOptions' => array('width' => '50px'),
-        ),
-        'nama',
-        'kode',
+		'id',
+		'namaLengkap',
+		'nim',
+		'alamatAsal',
+		'alamatTinggal',
+		'fakultasId',
+		/*
+		'jurusanId',
+		'kelompokId',
+		'jenjangId',
+		'jenisKelamin',
+		'created',
+		'modified',
+		*/
         array(
             'class'=>'CButtonColumn',
         ),

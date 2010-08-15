@@ -6,12 +6,13 @@
  * The followings are the available columns in table 'mahasiswa':
  * @property string $id
  * @property string $namaLengkap
+ * @property string $nim
  * @property string $alamatAsal
  * @property string $alamatTinggal
  * @property string $fakultasId
  * @property string $jurusanId
  * @property string $kelompokId
- * @property string $programStudiId
+ * @property string $jenjangId
  * @property integer $jenisKelamin
  * @property string $created
  * @property string $modified
@@ -43,13 +44,13 @@ class Mahasiswa extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, programStudiId, jenisKelamin, created, modified', 'required'),
+            array('namaLengkap, nim, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'required'),
             array('jenisKelamin', 'numerical', 'integerOnly'=>true),
             array('namaLengkap, alamatAsal, alamatTinggal', 'length', 'max'=>255),
-            array('fakultasId, jurusanId, kelompokId, programStudiId', 'length', 'max'=>20),
+            array('fakultasId, jurusanId, kelompokId, jenjangId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, namaLengkap, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, programStudiId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
+            array('id, namaLengkap, nim,  alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -72,12 +73,13 @@ class Mahasiswa extends ActiveRecord
         return array(
             'id' => Yii::t('app','ID'),
             'namaLengkap' => Yii::t('app','Nama Lengkap'),
+            'nim' => Yii::t('app','NIM'),
             'alamatAsal' => Yii::t('app','Alamat Asal'),
             'alamatTinggal' => Yii::t('app','Alamat Tinggal'),
             'fakultasId' => Yii::t('app','Fakultas'),
             'jurusanId' => Yii::t('app','Jurusan'),
             'kelompokId' => Yii::t('app','Kelompok'),
-            'programStudiId' => Yii::t('app','Program Studi'),
+            'jenjangId' => Yii::t('app','Jenjang'),
             'jenisKelamin' => Yii::t('app','Jenis Kelamin'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
@@ -96,12 +98,13 @@ class Mahasiswa extends ActiveRecord
         $criteria=new CDbCriteria;
         $criteria->compare('id',$this->id,true);
         $criteria->compare('namaLengkap',$this->namaLengkap,true);
+        $criteria->compare('nim',$this->namaLengkap);
         $criteria->compare('alamatAsal',$this->alamatAsal,true);
         $criteria->compare('alamatTinggal',$this->alamatTinggal,true);
-        $criteria->compare('fakultasId',$this->fakultasId,true);
-        $criteria->compare('jurusanId',$this->jurusanId,true);
-        $criteria->compare('kelompokId',$this->kelompokId,true);
-        $criteria->compare('programStudiId',$this->programStudiId,true);
+        $criteria->compare('fakultasId',$this->fakultasId);
+        $criteria->compare('jurusanId',$this->jurusanId);
+        $criteria->compare('kelompokId',$this->kelompokId);
+        $criteria->compare('jenjangId',$this->jenjangId);
         $criteria->compare('jenisKelamin',$this->jenisKelamin);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);
@@ -109,5 +112,11 @@ class Mahasiswa extends ActiveRecord
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
+    }
+    
+    protected function beforeSave()
+    {
+        $this->namaLengkap = ucwords(strtolower($this->namaLengkap));
+        return parent::beforeSave();
     }
 }

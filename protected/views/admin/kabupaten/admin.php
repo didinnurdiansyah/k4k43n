@@ -37,7 +37,11 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$kabupaten->search(),
     'filter'=>$kabupaten,
     'columns'=>array(
-        'id',
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
         'nama',
         array(
             'class'=>'CButtonColumn',

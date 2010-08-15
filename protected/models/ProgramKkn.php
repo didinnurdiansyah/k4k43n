@@ -92,4 +92,9 @@ class ProgramKkn extends ActiveRecord
             'criteria'=>$criteria,
         ));
     }
+    protected function beforeSave()
+    {
+        $this->nama = ucwords(strtolower($this->nama));
+        return parent::beforeSave();
+    }
 }

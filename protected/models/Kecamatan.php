@@ -97,7 +97,7 @@ class Kecamatan extends ActiveRecord
     }
     protected function beforeSave()
     {
-        $this->nama = strtoupper($this->nama);
+        $this->nama = ucwords(strtolower($this->nama));
         return parent::beforeSave();
     }
     

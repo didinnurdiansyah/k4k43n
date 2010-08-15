@@ -88,12 +88,17 @@ class Jurusan extends ActiveRecord
         $criteria->compare('id',$this->id,true);
         $criteria->compare('nama',$this->nama,true);
         $criteria->compare('kode',$this->kode,true);
-        $criteria->compare('fakultasId',$this->fakultasId,true);
+        $criteria->compare('fakultasId',$this->fakultasId);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
         ));
+    }
+    protected function beforeSave()
+    {
+        $this->nama = ucwords(strtolower($this->nama));
+        return parent::beforeSave();
     }
 }

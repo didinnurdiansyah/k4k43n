@@ -37,7 +37,11 @@ jQuery('.search-form form').submit(function(){
     'dataProvider'=>$programStudi->search(),
     'filter'=>$programStudi,
     'columns'=>array(
-        'id',
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
         'nama',
         array(
             'name' => 'jurusanId',

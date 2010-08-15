@@ -36,7 +36,11 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$kelompok->search(),
     'filter'=>$kelompok,
     'columns'=>array(
-        'id',
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
         array(
             'name'=>'programKknId',
             'value'=>'$data->programKkn->nama',
