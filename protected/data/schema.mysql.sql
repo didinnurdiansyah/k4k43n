@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 13, 2010 at 05:31 AM
+-- Generation Time: Aug 15, 2010 at 06:03 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.3.3-0.dotdeb.0
 
@@ -77,14 +77,15 @@ CREATE TABLE IF NOT EXISTS `kabupaten` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `kabupaten`
 --
 
 INSERT INTO `kabupaten` (`id`, `nama`, `created`, `modified`) VALUES
-(1, 'BANDUNG', '0000-00-00 00:00:00', '2010-08-13 05:02:05');
+(1, 'BANDUNG', '0000-00-00 00:00:00', '2010-08-13 05:02:05'),
+(2, 'KABUPATEN BANDUNG', '2010-08-14 22:55:53', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -121,16 +122,20 @@ CREATE TABLE IF NOT EXISTS `kelompok` (
   `kabupatenId` bigint(20) NOT NULL,
   `kecamatanId` bigint(20) NOT NULL,
   `programKknId` bigint(20) NOT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `kabupatenId` (`kabupatenId`,`kecamatanId`,`programKknId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `kelompok`
 --
 
+INSERT INTO `kelompok` (`id`, `lokasi`, `kabupatenId`, `kecamatanId`, `programKknId`, `latitude`, `longitude`, `created`, `modified`) VALUES
+(1, 'Babakan Sari', 1, 1, 1, -6.90611367778491, 107.652969540039, '2010-08-14 23:46:06', '2010-08-14 23:54:52');
 
 -- --------------------------------------------------------
 
@@ -169,11 +174,11 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
 CREATE TABLE IF NOT EXISTS `prioritas` (
   `id` bigint(20) NOT NULL auto_increment,
   `programKknId` bigint(20) NOT NULL,
-  `programStudi` bigint(20) NOT NULL,
+  `programStudiId` bigint(20) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`),
-  KEY `programKknId` (`programKknId`,`programStudi`)
+  KEY `programKknId` (`programKknId`,`programStudiId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
@@ -188,20 +193,20 @@ CREATE TABLE IF NOT EXISTS `prioritas` (
 --
 
 CREATE TABLE IF NOT EXISTS `program_kkn` (
-  `id` bigint(20) NOT NULL,
+  `id` bigint(20) NOT NULL auto_increment,
   `nama` varchar(255) NOT NULL,
   `deskripsi` text NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `program_kkn`
 --
 
 INSERT INTO `program_kkn` (`id`, `nama`, `deskripsi`, `created`, `modified`) VALUES
-(0, 'MBS', 'bla..bla..', '2010-08-13 05:03:02', '0000-00-00 00:00:00');
+(1, 'MBS', 'bla..bla..', '2010-08-13 05:03:02', '2010-08-13 05:36:47');
 
 -- --------------------------------------------------------
 
