@@ -23,8 +23,8 @@ class Mahasiswa extends ActiveRecord
      * Returns the static model of the specified AR class.
      * @return Mahasiswa the static model class
      */
-    const PEREMPUAN = 'Laki-laki';
-    const LAKI_LAKI = 'Perempuan'; 
+    const PEREMPUAN = 'Perempuan';
+    const LAKI_LAKI = 'Laki-laki'; 
     
     public static function model($className=__CLASS__)
     {
@@ -53,7 +53,7 @@ class Mahasiswa extends ActiveRecord
             array('userId, fakultasId, jurusanId, kelompokId, jenjangId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, namaLengkap, nim,  alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
+            array('id, namaLengkap, nim, registered, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -114,6 +114,7 @@ class Mahasiswa extends ActiveRecord
         $criteria->compare('kelompokId',$this->kelompokId);
         $criteria->compare('jenjangId',$this->jenjangId);
         $criteria->compare('jenisKelamin',$this->jenisKelamin);
+        $criteria->compare('registered',$this->registered);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);
 

@@ -85,6 +85,15 @@
         <?php echo $form->textField($mahasiswa,'phone2',array('size'=>60,'maxlength'=>255)); ?>
         <?php echo $form->error($mahasiswa,'phone2'); ?>
     </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($mahasiswa,'registered'); ?>
+        <?php echo $form->dropDownList($mahasiswa,'registered',array(
+                0 => Yii::t('app','Belum Registrasi'),
+                1 => Yii::t('app','Sudah Registrasi'),
+        )); ?>
+        <?php echo $form->error($mahasiswa,'jenisKelamin'); ?>
+    </div>
 
     <div class="row buttons">
         <?php echo CHtml::submitButton($mahasiswa->isNewRecord ? 'Create' : 'Save'); ?>

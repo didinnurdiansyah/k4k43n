@@ -46,9 +46,12 @@ $('.search-form form').submit(function(){
         array(
             'header' => 'No',
             'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
-            'htmlOptions' => array('width' => '50px'),
+            'htmlOptions' => array('width' => '30px'),
         ),
-        'namaLengkap',
+        array(
+            'name' => 'namaLengkap',
+            'header' => 'Nama'
+        ),
         'nim',
         array(
             'name' =>'jenjangId',
@@ -71,6 +74,16 @@ $('.search-form form').submit(function(){
             'filter' => array(
                 Mahasiswa::LAKI_LAKI => Yii::t('app','Laki-laki'),
                 Mahasiswa::PEREMPUAN => Yii::t('app','Perempuan'),
+            )
+        ),
+        array(
+            'name' =>'registered',
+            'header' => 'Registrasi',
+            'value' => '$data->registered?Yii::t("app","Sudah Registrasi"):Yii::t("app","Belum Registrasi")',
+            'filter' => array(
+                0 => Yii::t('app','Belum Registrasi'),
+                1 => Yii::t('app','Sudah Registrasi'),
+                
             )
         ),
         array(

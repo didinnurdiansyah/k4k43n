@@ -49,7 +49,7 @@
     <?php echo $content; ?>
 
     <div id="footer">
-        Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+        Copyright &copy; <?php echo date('Y'); ?> by <?php echo CHtml::link('Nevisa','http://nevisa.web.id') ?><br/>
         All Rights Reserved.<br/>
         <?php echo Yii::powered(); ?>
     </div><!-- footer -->

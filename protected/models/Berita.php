@@ -55,6 +55,13 @@ class Berita extends ActiveRecord
         return array(
         );
     }
+    
+    public function defaultScope()
+    {
+        return array(
+            'order' => 'created DESC'
+        );
+    }
 
     /**
      * @return array customized attribute labels (name=>label)
