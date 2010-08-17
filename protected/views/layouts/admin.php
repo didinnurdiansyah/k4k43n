@@ -31,6 +31,7 @@
                     array('label' => 'Program KKN','url' => array('admin/programKkn/index')),
                     array('label' => 'Kelompok','url' => array('admin/kelompok/index')),
                     array('label' => 'Mahasiswa','url' => array('admin/mahasiswa/index')),
+                    array('label'=>'Statistik','url'=>array('admin/statistik/index')),
                 ),
                 'htmlOptions'=>array('class'=>'sidemenu'),
             ));
