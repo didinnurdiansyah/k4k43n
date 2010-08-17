@@ -24,6 +24,13 @@ $('.search-form form').submit(function(){
 
 <h2><?php echo Yii::t('app','Management Kelompok') ?></h2>
 
+<div class="note">
+    <?php echo Yii::t('app','Jumlah Maksimal Mahasiswa Perkelompok: <b>{jumlah}</b> orang', array(
+        '{jumlah}' => Kelompok::model()->maxAnggota
+    ))?>
+</div>
+<br/>
+
 <?php echo CHtml::link(Yii::t('app','Advanced Search'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(

@@ -6,6 +6,22 @@ class MahasiswaController extends AdminController
      * @var CActiveRecord the currently loaded data model instance.
      */
     private $_model;
+    
+    public function accessRules()
+    {
+        return array(
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array(
+                    'admin','delete','index','view','create','update',
+                    'dependentSelectJurusan',
+                ),
+                'users' => array('admin'),
+            ),
+            array('deny',  // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
 
     /**
      * Displays a particular model.
@@ -75,7 +91,7 @@ class MahasiswaController extends AdminController
 
             // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax'])) {
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
             }
         } else {
             throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
@@ -104,6 +120,15 @@ class MahasiswaController extends AdminController
         $this->render('admin',array(
             'mahasiswa' => $mahasiswa,
         ));
+    }
+    
+    public function actionDependentSelectJurusan()
+    {
+        echo CHtml::activeDropDownList(Mahasiswa::model(),'jurusanId', 
+            CHtml::listData(Jurusan::model()->findAllByFakultasId($_GET['fakultasId']),'id','nama'),
+            array('empty' => Yii::t('app','Select Jurusan'))
+        );
+        Yii::app()->end();
     }
 
     /**

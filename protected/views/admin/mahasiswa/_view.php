@@ -41,6 +41,22 @@
 	<?php echo CHtml::encode($data->jenisKelamin); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('phone1')); ?>:</b>
+	<?php echo CHtml::encode($data->phone1); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('phone2')); ?>:</b>
+	<?php echo CHtml::encode($data->phone2); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('photoPath')); ?>:</b>
+	<?php echo CHtml::encode($data->photoPath); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('registered')); ?>:</b>
+	<?php echo CHtml::encode($data->registered); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created')); ?>:</b>
 	<?php echo CHtml::encode($data->created); ?>
 	<br />

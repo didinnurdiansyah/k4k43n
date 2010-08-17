@@ -20,7 +20,12 @@ $this->menu=array(
     'attributes'=>array(
         'id',
         'title',
-        'body',
+        //'body',
+        array(
+            'name' => 'body',
+            'value' => $berita->body,
+            //'encode' => false,
+        ),
         'created',
         'modified',
     ),

@@ -11,6 +11,7 @@
  */
 class Jenjang extends ActiveRecord
 {
+    protected $displayField = 'nama';
     /**
      * Returns the static model of the specified AR class.
      * @return Jenjang the static model class
@@ -36,11 +37,11 @@ class Jenjang extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama', 'required'),
-            array('nama', 'length', 'max'=>255),
+            array('nama, kode', 'required'),
+            array('nama, kode', 'length', 'max'=>255),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, nama, created, modified', 'safe', 'on'=>'search'),
+            array('id, nama, kode, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -80,6 +81,7 @@ class Jenjang extends ActiveRecord
         $criteria=new CDbCriteria;
         $criteria->compare('id',$this->id,true);
         $criteria->compare('nama',$this->nama,true);
+        $criteria->compare('kode',$this->nama,true);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);
 

@@ -37,10 +37,15 @@ $('.search-form form').submit(function(){
     'dataProvider'=>$jenjang->search(),
     'filter'=>$jenjang,
     'columns'=>array(
-		'id',
-		'nama',
-		'created',
-		'modified',
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
+        'nama',
+        'kode',
+        'created',
+        'modified',
         array(
             'class'=>'CButtonColumn',
         ),

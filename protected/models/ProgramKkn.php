@@ -94,7 +94,7 @@ class ProgramKkn extends ActiveRecord
     }
     protected function beforeSave()
     {
-        $this->nama = ucwords(strtolower($this->nama));
+        $this->nama = strtoupper($this->nama);
         return parent::beforeSave();
     }
 }

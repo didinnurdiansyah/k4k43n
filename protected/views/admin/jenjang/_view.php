@@ -8,6 +8,10 @@
 	<?php echo CHtml::encode($data->nama); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('kode')); ?>:</b>
+	<?php echo CHtml::encode($data->kode); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created')); ?>:</b>
 	<?php echo CHtml::encode($data->created); ?>
 	<br />

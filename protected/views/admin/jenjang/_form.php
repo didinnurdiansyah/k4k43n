@@ -15,6 +15,12 @@
         <?php echo $form->error($jenjang,'nama'); ?>
     </div>
 
+    <div class="row">
+        <?php echo $form->labelEx($jenjang,'kode'); ?>
+        <?php echo $form->textField($jenjang,'kode',array('size'=>60,'maxlength'=>255)); ?>
+        <?php echo $form->error($jenjang,'kode'); ?>
+    </div>
+
     <div class="row buttons">
         <?php echo CHtml::submitButton($jenjang->isNewRecord ? 'Create' : 'Save'); ?>
     </div>

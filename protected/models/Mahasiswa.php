@@ -23,6 +23,9 @@ class Mahasiswa extends ActiveRecord
      * Returns the static model of the specified AR class.
      * @return Mahasiswa the static model class
      */
+    const PEREMPUAN = 'Laki-laki';
+    const LAKI_LAKI = 'Perempuan'; 
+    
     public static function model($className=__CLASS__)
     {
         return parent::model($className);
@@ -44,10 +47,10 @@ class Mahasiswa extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('namaLengkap, nim, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'required'),
-            array('jenisKelamin', 'numerical', 'integerOnly'=>true),
-            array('namaLengkap, alamatAsal, alamatTinggal', 'length', 'max'=>255),
-            array('fakultasId, jurusanId, kelompokId, jenjangId', 'length', 'max'=>20),
+            array('userId, namaLengkap, phone1, nim, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'required'),
+            array('userId, registered', 'numerical', 'integerOnly'=>true),
+            array('jenisKelamin, namaLengkap, phone1, phone2, alamatAsal, alamatTinggal', 'length', 'max'=>255),
+            array('userId, fakultasId, jurusanId, kelompokId, jenjangId', 'length', 'max'=>20),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, namaLengkap, nim,  alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
@@ -62,6 +65,9 @@ class Mahasiswa extends ActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
+            'jenjang' => array(self::BELONGS_TO, 'Jenjang','jenjangId'),
+            'fakultas' => array(self::BELONGS_TO, 'Fakultas','fakultasId'),
+            'jurusan' => array(self::BELONGS_TO, 'Jurusan','jurusanId'),
         );
     }
 
@@ -81,6 +87,8 @@ class Mahasiswa extends ActiveRecord
             'kelompokId' => Yii::t('app','Kelompok'),
             'jenjangId' => Yii::t('app','Jenjang'),
             'jenisKelamin' => Yii::t('app','Jenis Kelamin'),
+            'phone1' => Yii::t('app','Phone 1'),
+            'phone2' => Yii::t('app','Phone 2'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
         );
@@ -97,8 +105,8 @@ class Mahasiswa extends ActiveRecord
 
         $criteria=new CDbCriteria;
         $criteria->compare('id',$this->id,true);
-        $criteria->compare('namaLengkap',$this->namaLengkap,true);
-        $criteria->compare('nim',$this->namaLengkap);
+        $criteria->compare('namaLengkap',$this->namaLengkap, true);
+        $criteria->compare('nim',$this->nim);
         $criteria->compare('alamatAsal',$this->alamatAsal,true);
         $criteria->compare('alamatTinggal',$this->alamatTinggal,true);
         $criteria->compare('fakultasId',$this->fakultasId);
@@ -118,5 +126,18 @@ class Mahasiswa extends ActiveRecord
     {
         $this->namaLengkap = ucwords(strtolower($this->namaLengkap));
         return parent::beforeSave();
+    }
+    
+    public function getKodeJenjang()
+    {
+        return $this->jenjang?$this->jenjang->kode:'unset';
+    }
+    public function getKodeFakultas()
+    {
+        return $this->fakultas?$this->fakultas->kode:'unset';
+    }
+    public function getKodeJurusan()
+    {
+        return $this->jurusan?$this->jurusan->kode:'unset';
     }
 }

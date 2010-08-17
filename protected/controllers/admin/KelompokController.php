@@ -62,11 +62,9 @@ class KelompokController extends AdminController
     public function actionDependentSelectKecamatan()
     {
         echo CHtml::activeDropDownList(Kelompok::model(),'kecamatanId', 
-            CHtml::listData(Kecamatan::model()->findByKabupatenId($_GET['kabupatenId']),'id','nama'),
+            CHtml::listData(Kecamatan::model()->findAllByKabupatenId($_GET['kabupatenId']),'id','nama'),
             array('empty' => Yii::t('app','Select Kecamatan'))
         );
-        
-        //echo $_GET['kabupatenId'];
         Yii::app()->end();
     }
 
@@ -105,7 +103,7 @@ class KelompokController extends AdminController
 
             // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax'])) {
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
             }
         } else {
             throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');

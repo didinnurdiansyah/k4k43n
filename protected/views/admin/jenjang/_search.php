@@ -16,6 +16,11 @@
     </div>
 
     <div class="row">
+        <?php echo $form->label($jenjang,'kode'); ?>
+        <?php echo $form->textField($jenjang,'kode',array('size'=>60,'maxlength'=>255)); ?>
+    </div>
+
+    <div class="row">
         <?php echo $form->label($jenjang,'created'); ?>
         <?php echo $form->textField($jenjang,'created'); ?>
     </div>

@@ -9,7 +9,6 @@ $this->menu=array(
     array('label'=>Yii::t('app','Create Mahasiswa'), 'url'=>array('create')),
     array('label'=>Yii::t('app','Update Mahasiswa'), 'url'=>array('update', 'id'=>$mahasiswa->id)),
     array('label'=>Yii::t('app','Delete Mahasiswa'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$mahasiswa->id),'confirm'=>'Are you sure you want to delete this item?')),
-    array('label'=>Yii::t('app','Manage Mahasiswa'), 'url'=>array('admin')),
 );
 ?>
 
@@ -28,6 +27,10 @@ $this->menu=array(
         'kelompokId',
         'jenjangId',
         'jenisKelamin',
+        'phone1',
+        'phone2',
+        'photoPath',
+        'registered',
         'created',
         'modified',
     ),

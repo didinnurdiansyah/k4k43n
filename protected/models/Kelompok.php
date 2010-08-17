@@ -16,6 +16,7 @@
  */
 class Kelompok extends ActiveRecord
 {
+    protected $displayField = 'nama';
     /**
      * Returns the static model of the specified AR class.
      * @return Kelompok the static model class
@@ -109,5 +110,15 @@ class Kelompok extends ActiveRecord
     {
         $this->lokasi = ucwords(strtolower($this->lokasi));
         return parent::beforeSave();
+    }
+    
+    public function getNama()
+    {
+        return "[{$this->programKkn->nama}] {$this->lokasi}";
+    }
+    
+    public function getMaxAnggota()
+    {
+        return ceil(Mahasiswa::model()->count() / $this->count());
     }
 }

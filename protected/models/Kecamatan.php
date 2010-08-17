@@ -101,7 +101,7 @@ class Kecamatan extends ActiveRecord
         return parent::beforeSave();
     }
     
-    public function findByKabupatenId($kabupatenId)
+    public function findAllByKabupatenId($kabupatenId)
     {
         return $this->findAllByAttributes(array('kabupatenId' => $kabupatenId));
     }

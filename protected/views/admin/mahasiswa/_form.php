@@ -35,32 +35,55 @@
 
     <div class="row">
         <?php echo $form->labelEx($mahasiswa,'fakultasId'); ?>
-        <?php echo $form->textField($mahasiswa,'fakultasId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php //echo $form->dropDownList($mahasiswa, 'fakultasId',Fakultas::model()->listData)?>
+        <?php echo $form->dropDownList($mahasiswa,'fakultasId',Fakultas::model()->listData,array(
+            'empty' => Yii::t('app','Select Fakultas'),
+            'ajax' => array(
+                'url' => array('dependentSelectJurusan'),
+                'data' => array('fakultasId' => 'js:jQuery(this).val()'),
+                'replace' => '#Mahasiswa_jurusanId'
+            )
+        )); ?>
         <?php echo $form->error($mahasiswa,'fakultasId'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($mahasiswa,'jurusanId'); ?>
-        <?php echo $form->textField($mahasiswa,'jurusanId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->dropDownList($mahasiswa, 'jurusanId',Jurusan::model()->listData)?>
         <?php echo $form->error($mahasiswa,'jurusanId'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($mahasiswa,'kelompokId'); ?>
-        <?php echo $form->textField($mahasiswa,'kelompokId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->dropDownList($mahasiswa, 'kelompokId',Kelompok::model()->listData)?>
         <?php echo $form->error($mahasiswa,'kelompokId'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($mahasiswa,'jenjangId'); ?>
-        <?php echo $form->textField($mahasiswa,'jenjangId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->dropDownList($mahasiswa, 'jenjangId',Jenjang::model()->listData)?>
         <?php echo $form->error($mahasiswa,'jenjangId'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($mahasiswa,'jenisKelamin'); ?>
-        <?php echo $form->textField($mahasiswa,'jenisKelamin'); ?>
+        <?php echo $form->dropDownList($mahasiswa,'jenisKelamin',array(
+            Mahasiswa::LAKI_LAKI => Yii::t('app','Laki-laki'),
+            Mahasiswa::PEREMPUAN => Yii::t('app','Perempuan'),
+        )); ?>
         <?php echo $form->error($mahasiswa,'jenisKelamin'); ?>
+    </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($mahasiswa,'phone1'); ?>
+        <?php echo $form->textField($mahasiswa,'phone1',array('size'=>60,'maxlength'=>255)); ?>
+        <?php echo $form->error($mahasiswa,'phone1'); ?>
+    </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($mahasiswa,'phone2'); ?>
+        <?php echo $form->textField($mahasiswa,'phone2',array('size'=>60,'maxlength'=>255)); ?>
+        <?php echo $form->error($mahasiswa,'phone2'); ?>
     </div>
 
     <div class="row buttons">

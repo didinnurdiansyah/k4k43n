@@ -29,31 +29,44 @@
         <?php echo $form->label($mahasiswa,'alamatTinggal'); ?>
         <?php echo $form->textField($mahasiswa,'alamatTinggal',array('size'=>60,'maxlength'=>255)); ?>
     </div>
-
+    
     <div class="row">
-        <?php echo $form->label($mahasiswa,'fakultasId'); ?>
-        <?php echo $form->textField($mahasiswa,'fakultasId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->labelEx($mahasiswa,'fakultasId'); ?>
+        <?php //echo $form->dropDownList($mahasiswa, 'fakultasId',Fakultas::model()->listData)?>
+        <?php echo $form->dropDownList($mahasiswa,'fakultasId',Fakultas::model()->listData,array(
+            'empty' => Yii::t('app','Select Fakultas'),
+            'ajax' => array(
+                'url' => array('dependentSelectJurusan'),
+                'data' => array('fakultasId' => 'js:jQuery(this).val()'),
+                'replace' => '#Mahasiswa_jurusanId'
+            )
+        )); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->label($mahasiswa,'jurusanId'); ?>
-        <?php echo $form->textField($mahasiswa,'jurusanId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->labelEx($mahasiswa,'jurusanId'); ?>
+        <?php echo $form->dropDownList($mahasiswa, 'jurusanId',Jurusan::model()->listData)?>
+    </div>
+    <?php /*
+    <div class="row">
+        <?php echo $form->labelEx($mahasiswa,'kelompokId'); ?>
+        <?php echo $form->dropDownList($mahasiswa, 'kelompokId',Kelompok::model()->listData)?>
+    </div>
+    */?>
+
+    <div class="row">
+        <?php echo $form->labelEx($mahasiswa,'jenjangId'); ?>
+        <?php echo $form->dropDownList($mahasiswa, 'jenjangId',Jenjang::model()->listData)?>
     </div>
 
     <div class="row">
-        <?php echo $form->label($mahasiswa,'kelompokId'); ?>
-        <?php echo $form->textField($mahasiswa,'kelompokId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->labelEx($mahasiswa,'jenisKelamin'); ?>
+        <?php echo $form->dropDownList($mahasiswa,'jenisKelamin',array(
+            Mahasiswa::LAKI_LAKI => Yii::t('app','Laki-laki'),
+            Mahasiswa::PEREMPUAN => Yii::t('app','Perempuan'),
+        )); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->label($mahasiswa,'jenjangId'); ?>
-        <?php echo $form->textField($mahasiswa,'jenjangId',array('size'=>20,'maxlength'=>20)); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->label($mahasiswa,'jenisKelamin'); ?>
-        <?php echo $form->textField($mahasiswa,'jenisKelamin'); ?>
-    </div>
 
     <div class="row">
         <?php echo $form->label($mahasiswa,'created'); ?>

@@ -101,4 +101,9 @@ class Jurusan extends ActiveRecord
         $this->nama = ucwords(strtolower($this->nama));
         return parent::beforeSave();
     }
+    
+    public function findAllByFakultasId($fakultasId)
+    {
+        return $this->findAllByAttributes(array('fakultasId' => $fakultasId));
+    }
 }

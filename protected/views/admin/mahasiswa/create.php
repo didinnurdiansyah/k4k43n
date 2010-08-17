@@ -6,7 +6,6 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
     array('label' => Yii::t('app','List Mahasiswa'), 'url' => array('index')),
-    array('label' => Yii::t('app','Manage Mahasiswa'), 'url' => array('admin')),
 );
 ?>
 

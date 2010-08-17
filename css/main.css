@@ -10,6 +10,10 @@ a{
     color:#A52A2A;
 }
 
+h2 a{
+    text-decoration:none;
+}
+
 #page
 {
     margin-bottom: 5px;
@@ -41,6 +45,12 @@ a{
     text-align: right;
     background: #8E000C;
     border-top:5px solid #000000;
+}
+
+#footer a
+{
+    font-weight:bold;
+    color:#ffffff;
 }
 
 #logo

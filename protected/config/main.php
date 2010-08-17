@@ -66,7 +66,13 @@ return array(
         'widgetFactory'=>array(
             'widgets'=>array(
                 'CGridView'=>array(
-                    //'cssFile' => false,
+                    'cssFile' => false,
+                ),
+                'CDetailView'=>array(
+                    'cssFile' => false,
+                ),
+                'CListView'=>array(
+                    'cssFile' => false,
                 ),
                 'CActiveForm' => array(
                     'clientOptions' => array(
@@ -102,6 +108,6 @@ return array(
     // using Yii::app()->params['paramName']
     'params'=>array(
         // this is used in contact page
-        'adminEmail'=>'webmaster@example.com',
+        'adminEmail'=>'ata@navisa.web.id',
     ),
 );
