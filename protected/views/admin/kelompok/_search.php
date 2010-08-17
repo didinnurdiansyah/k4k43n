@@ -27,7 +27,8 @@
 
     <div class="row">
         <?php echo $form->label($kelompok,'programKknId'); ?>
-        <?php echo $form->textField($kelompok,'programKknId',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->dropDownList($kelompok,'programKknId',ProgramKkn::model()->listData,
+                                       array('empty'=>Yii::t('app','Pilih Program KKN'))); ?>
     </div>
 
     <div class="row">
