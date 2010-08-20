@@ -129,6 +129,11 @@ class Mahasiswa extends ActiveRecord
         return parent::beforeSave();
     }
     
+    public function findByNIM($nim)
+    {
+        return $this->findByAttributes(array('nim' => $nim));
+    }
+    
     public function getKodeJenjang()
     {
         return $this->jenjang?$this->jenjang->kode:'unset';
@@ -141,4 +146,6 @@ class Mahasiswa extends ActiveRecord
     {
         return $this->jurusan?$this->jurusan->kode:'unset';
     }
+    
+    
 }

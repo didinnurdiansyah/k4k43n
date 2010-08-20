@@ -276,3 +276,14 @@ div.search-form
     text-decoration: underline;
     
 }
+/*
+#portlet-register .portlet-content
+{
+    border:1px solid;
+}
+*/
+#portlet-register .row input
+{
+    /*float:right;*/
+    width: 120px;
+}
