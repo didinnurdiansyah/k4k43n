@@ -6,10 +6,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label'=>Yii::t('app','List Fakultas'), 'url'=>array('index')),
-    array('label'=>Yii::t('app','Create Fakultas'), 'url'=>array('create')),
-    array('label'=>Yii::t('app','View Fakultas'), 'url'=>array('view', 'id'=>$fakultas->id)),
-    array('label'=>Yii::t('app','Manage Fakultas'), 'url'=>array('admin')),
+    array('label'=>Yii::t('app','Daftar Fakultas'), 'url'=>array('index')),
+    array('label'=>Yii::t('app','Tambah Fakultas'), 'url'=>array('create')),
+    array('label'=>Yii::t('app','Detail Fakultas'), 'url'=>array('view', 'id'=>$fakultas->id)),
 );
 ?>
 

@@ -12,8 +12,16 @@ class FakultasController extends AdminController
      */
     public function actionView()
     {
+        $fakultas = $this->loadModel();
+        $jurusan = new Jurusan('search');
+        $jurusan->unsetAttributes();  // clear any default values
+        $jurusan->fakultasId = $fakultas->id;
+        if (isset($_GET['Jurusan'])) {
+            $jurusan->attributes = $_GET['Jurusan'];
+        }
         $this->render('view',array(
-            'fakultas' => $this->loadModel(),
+            'fakultas' => $fakultas,
+            'jurusan' => $jurusan
         ));
     }
 

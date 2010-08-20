@@ -5,11 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','List Fakultas'), 'url' => array('index')),
-    array('label' => Yii::t('app','Manage Fakultas'), 'url' => array('admin')),
+    array('label' => Yii::t('app','Daftar Fakultas'), 'url' => array('index')),
 );
 ?>
 
-<h2><?php echo Yii::t('app','Create New Fakultas') ?></h2>
+<h2><?php echo Yii::t('app','Tambah Fakultas') ?></h2>
 
 <?php echo $this->renderPartial('_form', array('fakultas'=>$fakultas)); ?>

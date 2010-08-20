@@ -4,12 +4,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','Create Fakultas'), 'url' => array('create')),
-    array('label' => Yii::t('app','Manage Fakultas'), 'url' => array('admin')),
+    array('label' => Yii::t('app','Tambah Fakultas'), 'url' => array('create')),
 );
 ?>
 
-<h2><?php echo Yii::t('app','List of Fakultas') ?></h2>
+<h2><?php echo Yii::t('app','Daftar Fakultas') ?></h2>
 
 <?php $this->widget('zii.widgets.CListView', array(
     'dataProvider'=>$dataProvider,

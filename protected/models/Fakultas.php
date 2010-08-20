@@ -96,4 +96,19 @@ class Fakultas extends ActiveRecord
         $this->nama = ucwords(strtolower($this->nama));
         return parent::beforeSave();
     }
+    
+    
+    public function getCountMahasiswa()
+    {
+        return Mahasiswa::model()->count('fakultasId = :id',array('id' => $this->id));
+    }
+    
+    private $_staticMahasiswa;
+    
+    public function getStaticMahasiswa()
+    {
+        return $this->_staticMahasiswa?$this->_staticMahasiswa:$this->_staticMahasiswa = 
+                CHtml::listData($this->findAll(), 'kode', 'countMahasiswa');
+            
+    }
 }

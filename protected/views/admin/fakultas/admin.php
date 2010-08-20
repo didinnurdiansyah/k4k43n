@@ -5,7 +5,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-    array('label' => Yii::t('app','List Fakultas'), 'url' => array('index')),
     array('label' => Yii::t('app','Create Fakultas'), 'url' => array('create')),
 );
 
@@ -23,7 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h2><?php echo Yii::t('app','Management Fakultas') ?></h2>
+<h2><?php echo Yii::t('app','Daftar Fakultas') ?></h2>
 
 <?php echo CHtml::link(Yii::t('app','Advanced Search'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
