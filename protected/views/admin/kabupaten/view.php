@@ -24,3 +24,25 @@ $this->menu=array(
         'modified',
     ),
 )); ?>
+
+<?php echo Yii::t('app','Daftar Kecamatan yang Tersedia')?>
+<?php $this->widget('zii.widgets.grid.CGridView',array(
+    'id'=>'kecamatan-grid',
+    'dataProvider'=>$kecamatan->search(),
+    'filter'=>$kecamatan,
+    'columns'=>array(
+        array(
+            'header'=>'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',
+            'htmlOptions' => array('width' => '50px'),
+        ),
+        'nama',
+        array(
+            'class'=>'CButtonColumn',
+            'viewButtonUrl' => 'array("admin/kecamatan/view","id" => $data->id)',
+            'updateButtonUrl' => 'array("admin/kecamatan/update","id" => $data->id)',
+            'deleteButtonUrl' => 'array("admin/kecamatan/delete","id" => $data->id)',
+              ),
+                     ),
+                                                       ));
+?>

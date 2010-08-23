@@ -12,8 +12,17 @@ class KabupatenController extends AdminController
      */
     public function actionView()
     {
+        $kabupaten = $this->loadModel();
+        $kecamatan = new Kecamatan('search');
+        $kecamatan->unsetAttributes();
+        $kecamatan->kabupatenId = $kabupaten->id;
+        if(isset($_GET['Kabupaten'])){
+            $kecamatan->attributes = $_GET['Kabupaten'];
+        }
         $this->render('view',array(
-            'kabupaten' => $this->loadModel(),
+            //'kabupaten' => $this->loadModel(),
+            'kabupaten'=>$kabupaten,
+            'kecamatan'=>$kecamatan
         ));
     }
 
