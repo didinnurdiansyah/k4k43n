@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 17, 2010 at 06:49 AM
+-- Generation Time: Aug 24, 2010 at 09:41 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.3.3-0.dotdeb.0
 
@@ -32,14 +32,15 @@ CREATE TABLE IF NOT EXISTS `berita` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `berita`
 --
 
 INSERT INTO `berita` (`id`, `title`, `body`, `created`, `modified`) VALUES
-(1, 'Berita baik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \r\n\r\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ', '2010-08-15 22:51:54', '2010-08-17 06:25:10');
+(1, 'Berita baik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \r\n\r\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ', '2010-08-15 22:51:54', '2010-08-17 06:25:10'),
+(2, 'hai', 'cek... cek...', '2010-08-17 09:25:03', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -78,6 +79,7 @@ INSERT INTO `fakultas` (`id`, `nama`, `kode`, `created`, `modified`) VALUES
 CREATE TABLE IF NOT EXISTS `jenjang` (
   `id` bigint(20) NOT NULL auto_increment,
   `nama` varchar(255) NOT NULL,
+  `kode` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY  (`id`)
@@ -87,9 +89,9 @@ CREATE TABLE IF NOT EXISTS `jenjang` (
 -- Dumping data for table `jenjang`
 --
 
-INSERT INTO `jenjang` (`id`, `nama`, `created`, `modified`) VALUES
-(1, 'Strata 1', '2010-08-16 00:03:11', '2010-08-17 04:31:26'),
-(2, 'Strata 2', '2010-08-16 00:03:28', '0000-00-00 00:00:00');
+INSERT INTO `jenjang` (`id`, `nama`, `kode`, `created`, `modified`) VALUES
+(1, 'Strata 1', 'S1', '2010-08-16 00:03:11', '2010-08-17 07:11:14'),
+(2, 'Strata 2', 'S2', '2010-08-16 00:03:28', '2010-08-17 07:11:24');
 
 -- --------------------------------------------------------
 
@@ -345,7 +347,7 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `userId`, `namaLengkap`, `nim`, `alamatAsal`, `alamatTinggal`, `fakultasId`, `jurusanId`, `kelompokId`, `jenjangId`, `jenisKelamin`, `phone1`, `phone2`, `photoPath`, `registered`, `created`, `modified`) VALUES
-(1, 0, 'Angga Kusumah P.', '045065', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(1, 0, 'Angga Kusumah P.', '045065', 'Jl.', 'Jl.', 1, 23, 2, 1, 'Laki-laki', '78675', '', '', 1, '0000-00-00 00:00:00', '2010-08-17 08:39:18'),
 (2, 0, 'Aprianti Fitriana R.', '0705016', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, 0, 'Ani Anjaniah Kamilah', '0705118', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (4, 0, 'Disky Herdian', '0707849', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -406,7 +408,7 @@ INSERT INTO `mahasiswa` (`id`, `userId`, `namaLengkap`, `nim`, `alamatAsal`, `al
 (59, 0, 'Reza Ali Fahmi', '0706232', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (60, 0, 'Kamil Ahmad Hambali', '0706704', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (61, 0, 'Satria Nugraha', '0707270', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(62, 0, ' Ismi Rizka Febriana', '0707652', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(62, 0, ' Ismi Rizka Febriana', '0707652', 'Jl.', 'Jl.', 1, 23, 3, 1, 'Perempuan', '789789', '', '', 0, '0000-00-00 00:00:00', '2010-08-17 09:32:31'),
 (63, 0, 'Dessy Rahmawati', '0704275', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (64, 0, 'Riki Ginanjar', '0704395', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (65, 0, 'Lucky Satria', '0708547', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
