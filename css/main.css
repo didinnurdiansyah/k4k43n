@@ -3,7 +3,6 @@ body
     margin: 0;
     padding: 0;
     color: #555;
-    font: normal 10pt Arial,Helvetica,sans-serif;
     background: #E6E6FA;
 }
 a{
@@ -276,12 +275,7 @@ div.search-form
     text-decoration: underline;
     
 }
-/*
-#portlet-register .portlet-content
-{
-    border:1px solid;
-}
-*/
+
 #portlet-register .row input
 {
     /*float:right;*/

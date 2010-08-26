@@ -25,3 +25,57 @@ $this->menu=array(
         'modified',
     ),
 )); ?>
+
+
+<h2><?php echo Yii::t('app','Prioritas Jurusan')?></h2>
+
+<div class="form">
+
+<?php $form = $this->beginWidget('CActiveForm', array(
+    'id' => 'program-kkn-form',
+    'enableAjaxValidation' => true,
+)); ?>
+
+    <p class="note">Fields with <span class="required">*</span> are required.</p>
+
+    <?php echo $form->errorSummary($prioritas); ?>
+
+    <div class="row">
+        <?php echo $form->labelEx($prioritas,'jurusanId'); ?>
+        <?php echo $form->dropDownList($prioritas,'jurusanId',
+            Jurusan::model()->listData,array('empty' => Yii::t('','Pilih Jurusan'))); ?>
+        <?php echo $form->error($prioritas,'jurusanId'); ?>
+    </div>
+
+    <div class="row buttons">
+        <?php echo CHtml::submitButton('Tambah Prioritas'); ?>
+    </div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->
+
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+    'id'=>'program-kkn-grid',
+    'dataProvider'=>$prioritas->search(),
+    'filter'=>$prioritas,
+    'columns'=>array(
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
+        'jurusan.nama',
+        array(
+            'class'=>'CButtonColumn',
+            'deleteButtonUrl' => 'array("deletePrioritas","id" => $data->jurusan->id, "prioritas_id" => $data->id)',
+        ),
+    ),
+)); ?>
+
+
+
+
+
+

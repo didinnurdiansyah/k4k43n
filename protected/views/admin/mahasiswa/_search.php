@@ -31,7 +31,7 @@
     </div>
     
     <div class="row">
-        <?php echo $form->labelEx($mahasiswa,'fakultasId'); ?>
+        <?php echo $form->label($mahasiswa,'fakultasId'); ?>
         <?php //echo $form->dropDownList($mahasiswa, 'fakultasId',Fakultas::model()->listData)?>
         <?php echo $form->dropDownList($mahasiswa,'fakultasId',Fakultas::model()->listData,array(
             'empty' => Yii::t('app','Select Fakultas'),
@@ -44,7 +44,7 @@
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($mahasiswa,'jurusanId'); ?>
+        <?php echo $form->label($mahasiswa,'jurusanId'); ?>
         <?php echo $form->dropDownList($mahasiswa, 'jurusanId',Jurusan::model()->listData)?>
     </div>
     <?php /*
@@ -55,12 +55,12 @@
     */?>
 
     <div class="row">
-        <?php echo $form->labelEx($mahasiswa,'jenjangId'); ?>
+        <?php echo $form->label($mahasiswa,'jenjangId'); ?>
         <?php echo $form->dropDownList($mahasiswa, 'jenjangId',Jenjang::model()->listData)?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($mahasiswa,'jenisKelamin'); ?>
+        <?php echo $form->label($mahasiswa,'jenisKelamin'); ?>
         <?php echo $form->dropDownList($mahasiswa,'jenisKelamin',array(
             Mahasiswa::LAKI_LAKI => Yii::t('app','Laki-laki'),
             Mahasiswa::PEREMPUAN => Yii::t('app','Perempuan'),

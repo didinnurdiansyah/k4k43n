@@ -12,7 +12,7 @@ return array(
     // preloading 'log' component
     //'preload'=>array('log'),
     //'language' => 'id',
-
+    'defaultController' => 'berita',
     // autoloading model and component classes
     'import'=>array(
         'application.models.*',

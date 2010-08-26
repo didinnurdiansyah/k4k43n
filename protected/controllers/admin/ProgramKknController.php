@@ -12,10 +12,21 @@ class ProgramKknController extends AdminController
      */
     public function actionView()
     {
+        $programKkn = $this->loadModel();
+        $prioritas = new Prioritas;
+        $prioritas->programKknId = $programKkn->id;
+        $this->performAjaxValidation($prioritas);
+        if (isset($_POST['Prioritas'])) { 
+            $prioritas->jurusanId = $_POST['Prioritas']['jurusanId'];
+            $prioritas->save();
+            $this->refresh();
+        }
         $this->render('view',array(
-            'programKkn' => $this->loadModel(),
+            'prioritas' => $prioritas,
+            'programKkn' => $programKkn,
         ));
     }
+
 
     /**
      * Creates a new model.
@@ -81,6 +92,21 @@ class ProgramKknController extends AdminController
             throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
         }
     }
+    
+    public function actionDeletePrioritas()
+    {
+        if (Yii::app()->request->isPostRequest) {
+            $prioritas = Prioritas::model()->findByPk($_GET['prioritas_id']);
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            $prioritas->delete();
+            if (!isset($_GET['ajax'])) {
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('view','id' => $_GET['id']));
+            }
+            
+        } else {
+            throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+        }
+    }
 
     /**
      * Lists all models.
@@ -129,7 +155,7 @@ class ProgramKknController extends AdminController
      */
     protected function performAjaxValidation($programKkn)
     {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'program-kkn-form') { 
+        if (isset($_POST['ajax'])) { 
             echo CActiveForm::validate($programKkn);
             Yii::app()->end();
         }
