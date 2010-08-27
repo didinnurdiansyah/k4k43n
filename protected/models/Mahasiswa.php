@@ -68,6 +68,7 @@ class Mahasiswa extends ActiveRecord
             'jenjang' => array(self::BELONGS_TO, 'Jenjang','jenjangId'),
             'fakultas' => array(self::BELONGS_TO, 'Fakultas','fakultasId'),
             'jurusan' => array(self::BELONGS_TO, 'Jurusan','jurusanId'),
+            'kelompok' => array(self::BELONGS_TO, 'Kelompok','kelompokId'),
         );
     }
 
@@ -127,6 +128,11 @@ class Mahasiswa extends ActiveRecord
     {
         $this->namaLengkap = ucwords(strtolower($this->namaLengkap));
         return parent::beforeSave();
+    }
+    
+    public function findByUserId($userId)
+    {
+        return $this->findByAttributes(array('userId' => $userId));
     }
     
     public function findByNIM($nim)

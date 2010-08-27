@@ -2,35 +2,39 @@
 
 class DashboardController extends Controller
 {
-	public function actionIndex()
-	{
-		$this->render('index');
-	}
+    
+    public function filters()
+    {
+        return array(
+            'accessControl', // perform access control for CRUD operations
+        );
+    }
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
-	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
+    /**
+     * Specifies the access control rules.
+     * This method is used by the 'accessControl' filter.
+     * @return array access control rules
+     */
+    public function accessRules()
+    {
+        return array(
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('index'),
+                'users' => array('@'),
+            ),
+            array('deny',  // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
+    public function actionIndex()
+    {
+        $mahasiswa = Mahasiswa::model()->findByUserId(Yii::()->user->id);
+        if($mahasiswa === null) {
+            throw CHttpException(404,Yii::t('app','Halaman Tidak ditemukan');
+        }
+        $this->render('index',array(
+            'mahasiswa' => $mahasiswa,
+        ));
+    }
 }

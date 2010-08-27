@@ -22,15 +22,12 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<div class="note">
-    <?php echo Yii::t('app','Jumlah Rata-rata Mahasiswa perkelompok: <b>{jumlah}</b> orang', array(
-        '{jumlah}' => ceil(Mahasiswa::model()->count() / Kelompok::model()->count())
-    ))?>
-</div>
-<br/>
-
 <h2><?php echo Yii::t('app','Management Mahasiswa') ?></h2>
-
+<div class="loud">
+<?php echo Yii::t('app','Jumlah Rata-rata Mahasiswa perkelompok: <b>{jumlah}</b> orang', array(
+    '{jumlah}' => ceil(Mahasiswa::model()->count() / Kelompok::model()->count())
+))?>
+</div>
 <?php echo CHtml::link(Yii::t('app','Advanced Search'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(

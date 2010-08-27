@@ -63,7 +63,8 @@ class Kelompok extends ActiveRecord
             'kabupaten' => array(self::BELONGS_TO, 'Kabupaten', 'kabupatenId'),
             'kecamatan' => array(self::BELONGS_TO, 'Kecamatan', 'kecamatanId'),
             'anggota' => array(self::HAS_MANY, 'Mahasiswa','kelompokId'),
-            'programKkn'=>array(self::BELONGS_TO,'ProgramKkn','programKknId'),
+            'programKkn' => array(self::BELONGS_TO,'ProgramKkn','programKknId'),
+            'anggota' => array(self::HAS_MANY, 'Mahasiswa','kelompokId'),
         );
     }
 
