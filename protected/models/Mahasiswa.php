@@ -26,6 +26,12 @@ class Mahasiswa extends ActiveRecord
     const PEREMPUAN = 'Perempuan';
     const LAKI_LAKI = 'Laki-laki'; 
     
+    public $password;
+    public $confirmPassword;
+    public $email;
+    public $verifyCode;
+    public $file;
+    
     public static function model($className=__CLASS__)
     {
         return parent::model($className);
@@ -47,10 +53,16 @@ class Mahasiswa extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('userId, namaLengkap, phone1, nim, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'required'),
+            array('password, confirmPassword, email, namaLengkap, phone1, nim, alamatAsal, alamatTinggal, fakultasId, jurusanId, jenjangId, jenisKelamin', 'required'),
             array('userId, registered', 'numerical', 'integerOnly'=>true),
+            array('nim', 'numerical'),
+            array('email','email'),
             array('jenisKelamin, namaLengkap, phone1, phone2, alamatAsal, alamatTinggal', 'length', 'max'=>255),
-            array('userId, fakultasId, jurusanId, kelompokId, jenjangId', 'length', 'max'=>20),
+            array('userId, fakultasId, nim, jurusanId, kelompokId, jenjangId', 'length', 'max'=>20),
+            array('confirmPassword', 'compare', 'compareAttribute'=>'password'),
+            array('verifyCode', 'captcha', 'allowEmpty'=>!extension_loaded('gd')),
+            array('file', 'file', 'types'=>'jpg, jpeg, png, gif','allowEmpty' => true),
+            
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, namaLengkap, nim, registered, alamatAsal, alamatTinggal, fakultasId, jurusanId, kelompokId, jenjangId, jenisKelamin, created, modified', 'safe', 'on'=>'search'),
@@ -69,6 +81,7 @@ class Mahasiswa extends ActiveRecord
             'fakultas' => array(self::BELONGS_TO, 'Fakultas','fakultasId'),
             'jurusan' => array(self::BELONGS_TO, 'Jurusan','jurusanId'),
             'kelompok' => array(self::BELONGS_TO, 'Kelompok','kelompokId'),
+            'user' => array(self::BELONGS_TO, 'User','userId'),
         );
     }
 
@@ -90,6 +103,8 @@ class Mahasiswa extends ActiveRecord
             'jenisKelamin' => Yii::t('app','Jenis Kelamin'),
             'phone1' => Yii::t('app','Phone 1'),
             'phone2' => Yii::t('app','Phone 2'),
+            'password' => Yii::t('app','Password'),
+            'confirmPassword' => Yii::t('app','Confirm Password'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
         );
@@ -127,7 +142,27 @@ class Mahasiswa extends ActiveRecord
     protected function beforeSave()
     {
         $this->namaLengkap = ucwords(strtolower($this->namaLengkap));
+        $this->saveUser();
         return parent::beforeSave();
+    }
+    
+    protected function afterSave()
+    {
+        return parent::afterSave();
+    }
+    
+    private function saveUser()
+    {
+        if ($this->user === null) {
+            $this->user = new User;
+        }
+        $this->user->username = $this->nim;
+        $this->user->email = $this->email;
+        $this->user->password = $this->password;
+        if ($this->user->save()) {
+            $this->userId = $this->user->id;
+        }
+        
     }
     
     public function findByUserId($userId)

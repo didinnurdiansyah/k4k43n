@@ -86,11 +86,11 @@ return array(
             'class' => 'application.extensions.mailer.EMailer',
             'Mailer' => 'smtp',
             'SMTPAuth' => true,
-            'Host' => 'mail.javan.co.id',
-            'Username' => 'ata+javan.co.id',
-            'Password' => 'ata@javan.co.id',
+            'Host' => 'mail.nevisa.web.id',
+            'Username' => 'kkn+nevisa.web.id',
+            'Password' => 'kkn',
             'From' => 'ata@nevisa.co.id',
-            'FromName' => 'Penjaga Kebon Binatang'
+            'FromName' => 'LPPM'
         ),
     ),
     

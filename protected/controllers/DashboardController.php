@@ -2,6 +2,7 @@
 
 class DashboardController extends Controller
 {
+    public $layout = '//layouts/dashboard';
     
     public function filters()
     {
@@ -29,12 +30,14 @@ class DashboardController extends Controller
     }
     public function actionIndex()
     {
-        $mahasiswa = Mahasiswa::model()->findByUserId(Yii::()->user->id);
+        $mahasiswa = Mahasiswa::model()->findByUserId(Yii::app()->user->id);
         if($mahasiswa === null) {
-            throw CHttpException(404,Yii::t('app','Halaman Tidak ditemukan');
+            throw new CHttpException(404,Yii::t('app','Halaman Tidak ditemukan'));
         }
         $this->render('index',array(
             'mahasiswa' => $mahasiswa,
         ));
     }
+    
+    
 }

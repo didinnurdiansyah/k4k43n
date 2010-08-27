@@ -37,6 +37,7 @@
                 array('label'=>Yii::t('app','About'), 'url'=>array('/site/page', 'view'=>'about')),
                 array('label'=>Yii::t('app','Contact'), 'url'=>array('/site/contact')), 
                 array('label'=>Yii::t('app','Administrator'), 'url'=>array('/admin'), 'visible'=>Yii::app()->user->name === 'admin'),
+                array('label'=>Yii::t('app','Registrasi'), 'url'=>array('/mahasiswa/register'), 'visible'=>Yii::app()->user->isGuest),
                 array('label'=>Yii::t('app','Login'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                 array('label'=>Yii::t('app','Logout ({user})',array('{user}' => Yii::app()->user->name)), 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
             ),

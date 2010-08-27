@@ -34,4 +34,9 @@ class UserIdentity extends CUserIdentity
         }
         return false; 
     }
+    
+    public function getId()
+    {
+        return $this->_id;
+    }
 }

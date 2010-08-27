@@ -99,6 +99,9 @@ class User extends ActiveRecord
     {
         $this->username = strtolower($this->username);
         $this->email = strtolower($this->email);
+        if($this->isNewRecord) {
+            $this->password = md5($this->password);
+        }
         return parent::beforeSave();
     }
 }

@@ -93,7 +93,7 @@ class SiteController extends Controller
                 if(Yii::app()->user->name === 'admin') {
                     $this->redirect(array('admin/default'));
                 } else {
-                    $this->redirect(array('dashboard'));
+                    $this->redirect(array('dashboard/index'));
                 }
             }
         }
