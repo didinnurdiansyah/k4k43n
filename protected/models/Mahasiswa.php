@@ -23,8 +23,8 @@ class Mahasiswa extends ActiveRecord
      * Returns the static model of the specified AR class.
      * @return Mahasiswa the static model class
      */
-    const PEREMPUAN = 'Perempuan';
-    const LAKI_LAKI = 'Laki-laki'; 
+    const PEREMPUAN = 0;
+    const LAKI_LAKI = 1; 
     
     public $password;
     public $confirmPassword;
