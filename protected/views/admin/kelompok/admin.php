@@ -28,6 +28,14 @@ $('.search-form form').submit(function(){
     <?php echo Yii::t('app','Jumlah Maksimal Mahasiswa Perkelompok: <b>{jumlah}</b> orang', array(
         '{jumlah}' => Kelompok::model()->maxAnggota
     ))?>
+    <br/>
+    <?php echo Yii::t('app','Jumlah Maksimal Laki-laki Perkelompok: <b>{jumlah}</b> orang', array(
+        '{jumlah}' => Kelompok::model()->maxLakiLaki
+    ))?>
+    <br/>
+    <?php echo Yii::t('app','Jumlah Maksimal Laki-laki Perkelompok: <b>{jumlah}</b> orang', array(
+        '{jumlah}' => Kelompok::model()->maxPerempuan
+    ))?>
 </div>
 <br/>
 

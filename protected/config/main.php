@@ -41,7 +41,13 @@ return array(
             ),
         ),
         
-        'db'=> include('database.php'),
+        'db'=> array(
+            'connectionString' => 'mysql:host=localhost;dbname=kkn_dev',
+            'emulatePrepare' => true,
+            'username' => 'root',
+            'password' => 'root',
+            'charset' => 'utf8',
+        ),
         
         'errorHandler'=>array(
             // use 'site/error' action to display errors

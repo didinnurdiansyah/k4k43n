@@ -114,7 +114,7 @@ class Mahasiswa extends ActiveRecord
      * Retrieves a list of models based on the current search/filter conditions.
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
      */
-    public function search($pageSize)
+    public function search($pageSize = 10)
     {
         // Warning: Please modify the following code to remove attributes that
         // should not be searched.
@@ -177,6 +177,17 @@ class Mahasiswa extends ActiveRecord
     {
         return $this->findByAttributes(array('nim' => $nim));
     }
+    
+    public function countLakiLaki()
+    {
+        return $this->count('jenisKelamin = :jk',array('jk' => self::LAKI_LAKI));
+    }
+    
+    public function countPerempuan()
+    {
+        return $this->count('jenisKelamin = :jk',array('jk' => self::PEREMPUAN));
+    }
+    
     
     public function getKodeJenjang()
     {

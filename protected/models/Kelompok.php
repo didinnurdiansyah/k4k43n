@@ -122,4 +122,14 @@ class Kelompok extends ActiveRecord
     {
         return ceil(Mahasiswa::model()->count() / $this->count());
     }
+    
+    public function getMaxLakiLaki()
+    {
+        return ceil(Mahasiswa::model()->countLakiLaki() / $this->count());
+    }
+    
+    public function getMaxPerempuan()
+    {
+        return ceil(Mahasiswa::model()->countPerempuan() / $this->count());
+    }
 }
