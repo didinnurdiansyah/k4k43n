@@ -1,5 +1,5 @@
 <?php
-array (
+return array (
   1 => 
   array (
     'id' => 1,
@@ -2053,4 +2053,4 @@ array (
     'created' => false,
     'modified' => false,
   ),
-)
+);

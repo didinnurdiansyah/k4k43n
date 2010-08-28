@@ -7,9 +7,15 @@ class MahasiswaTest extends CDbTestCase
     );
 
     
-    public function testCreate($mahasiswas)
+    public function testCreate()
     {
-        
+        foreach($this->mahasiswas as $m){
+            $mahasiswa = new Mahasiswa();
+            $mahasiswa->attributes = $m;
+            $mahasiswa->password = 'test';
+            $mahasiswa->email = 'ada@mail.com';
+            $mahasiswa->save(false);
+        }
     }
     
 }
