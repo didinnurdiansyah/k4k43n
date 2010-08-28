@@ -114,7 +114,7 @@ class Mahasiswa extends ActiveRecord
      * Retrieves a list of models based on the current search/filter conditions.
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
      */
-    public function search()
+    public function search($pageSize)
     {
         // Warning: Please modify the following code to remove attributes that
         // should not be searched.
@@ -136,6 +136,9 @@ class Mahasiswa extends ActiveRecord
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => $pageSize
+            )
         ));
     }
     

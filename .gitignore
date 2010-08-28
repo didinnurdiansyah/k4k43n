@@ -1,4 +1,4 @@
 #
 *.kpf
-kkn.geany
-.geanyprj
+*.geany
+*.geanyprj

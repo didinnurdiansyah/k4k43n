@@ -30,11 +30,18 @@ class DashboardController extends Controller
     }
     public function actionIndex()
     {
-        $mahasiswa = Mahasiswa::model()->findByUserId(Yii::app()->user->id);
-        if($mahasiswa === null) {
+        $currentMahasiswa = Mahasiswa::model()->findByUserId(Yii::app()->user->id);
+        
+        
+        if($currentMahasiswa === null) {
             throw new CHttpException(404,Yii::t('app','Halaman Tidak ditemukan'));
         }
+        
+        $mahasiswa = new Mahasiswa('search');
+        $mahasiswa->kelompokId = $currentMahasiswa->kelompokId;
+        
         $this->render('index',array(
+            'currentMahasiswa' => $currentMahasiswa,
             'mahasiswa' => $mahasiswa,
         ));
     }
