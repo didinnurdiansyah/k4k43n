@@ -118,6 +118,7 @@ class Kelompok extends ActiveRecord
         return "[{$this->programKkn->nama}] {$this->lokasi}";
     }
     
+    
     public function getMaxAnggota()
     {
         return ceil(Mahasiswa::model()->count() / $this->count());

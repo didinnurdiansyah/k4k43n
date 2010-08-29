@@ -173,6 +173,8 @@ class Mahasiswa extends ActiveRecord
         return $this->findByAttributes(array('userId' => $userId));
     }
     
+    //public function findByKelompokID($)
+    
     public function findByNIM($nim)
     {
         return $this->findByAttributes(array('nim' => $nim));
@@ -201,6 +203,9 @@ class Mahasiswa extends ActiveRecord
     {
         return $this->jurusan?$this->jurusan->kode:'unset';
     }
-    
+    public function getDisplayJenisKelamin()
+    {
+        return $this->jenisKelamin==self::LAKI_LAKI?'Laki-laki':'Perempuan';
+    }
     
 }
