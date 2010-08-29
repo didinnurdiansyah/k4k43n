@@ -143,7 +143,7 @@ class Kelompok extends ActiveRecord
     
     public function getNama()
     {
-        return "[{$this->programKkn->nama}] {$this->lokasi}";
+        return "[{$this->programKkn->nama}] {$this->lokasi}";// someting
     }
     
     public function countMaxAnggota()
