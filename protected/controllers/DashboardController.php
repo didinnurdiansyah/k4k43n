@@ -45,6 +45,6 @@ class DashboardController extends Controller
             'mahasiswa' => $mahasiswa,
         ));
     }
-    
+   
     
 }

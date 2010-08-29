@@ -35,6 +35,35 @@ $this->menu=array(
         'modified',
     ),
 )); ?>
+<h2><?php echo Yii::t('app','Daftar Mahasiswa di Kelompok')?></h2>
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+    'id'=>'mahasiswa-grid',
+    'dataProvider'=>$mahasiswa->search(20),
+    'columns'=>array(
+        array(
+            'header' => 'No',
+            'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
+            'htmlOptions' => array('width' => '50px'),
+        ),
+        'namaLengkap',
+        'displayJenisKelamin',
+        array(
+            'name'=>'jurusanId',
+            'value'=>'$data->jurusan->nama',
+              ),
+        /*array(
+            'name' => '',
+            'htmlOptions' => array('width' => '75px'),
+        ),*/
+        /*array(
+            'class'=>'CButtonColumn',
+            'viewButtonUrl' => 'array("jurusan/view","id" => $data->id)',
+            'updateButtonUrl' => 'array("jurusan/update","id" => $data->id)',
+            'deleteButtonUrl' => 'array("jurusan/delete","id" => $data->id)',
+        ),*/
+    ),
+)); ?>
 
 <label>Location</label>: <br/>
 <div id="map_canvas" style="height:200px"></div>
