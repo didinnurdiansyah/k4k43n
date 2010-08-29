@@ -144,6 +144,7 @@ class Kelompok extends ActiveRecord
     public function getNama()
     {
         return "[{$this->programKkn->nama}] {$this->lokasi}";
+        echo "test";
     }
     
     
