@@ -63,7 +63,19 @@ class MahasiswaController extends Controller
 
     public function actionUpdate()
     {
-        $this->render('update');
+        $mahasiswa = Mahasiswa::model()->findByUserId(Yii::app()->user->id);
+        
+        
+        if(isset($_POST['Mahasiswa'])){
+            unset($_POST['Mahasiswa']['password']);
+            $mahasiswa->attributes=$_POST['Mahasiswa'];
+            if ($mahasiswa->save()) {
+                $this->redirect(array('mahasiswa/view'));
+            }
+        }
+        $this->render('update',array(
+            'mahasiswa'=>$mahasiswa,
+        ));
     }
     
     public function actionDependentSelectJurusan()
@@ -82,5 +94,15 @@ class MahasiswaController extends Controller
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
+    }
+     public function actionView()
+    {
+        $currentMahasiswa = Mahasiswa::model()->findByUserId(Yii::app()->user->id);
+        //$this->render('view');
+        //$user = new User;
+        //$mahasiswa->userId = $user->id;
+        $this->render('view',array(
+            'mahasiswa'=>$currentMahasiswa,
+            ));
     }
 }

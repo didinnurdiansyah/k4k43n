@@ -28,8 +28,17 @@ class KelompokController extends AdminController
      */
     public function actionView()
     {
+        $kelompok = $this->loadModel();
+        $mahasiswa = new Mahasiswa('search');
+        $mahasiswa->unsetAttributes();
+        $mahasiswa->kelompokId = $kelompok->id;
+        
+        if(isset($_GET['Mahasiswa'])){
+            $mahasiswa->attributes = $_GET['Mahasiswa'];
+        }
         $this->render('view',array(
-            'kelompok' => $this->loadModel(),
+            'kelompok' => $kelompok,
+            'mahasiswa'=>$mahasiswa,
         ));
     }
 
@@ -40,6 +49,7 @@ class KelompokController extends AdminController
     public function actionCreate()
     {
         $kelompok = new Kelompok;
+        
 
         // Uncomment the following line if AJAX validation is needed
         $this->performAjaxValidation($kelompok);
