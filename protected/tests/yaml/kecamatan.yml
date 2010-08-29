@@ -1,0 +1,108 @@
+1:
+  id: 2
+  nama: Cikalong Wetan
+  kabupatenId: 6
+  created: 2010-08-15 22:03:12
+  modified: 0000-00-00 00:00:00
+2:
+  id: 3
+  nama: Lembang
+  kabupatenId: 6
+  created: 2010-08-15 22:03:59
+  modified: 0000-00-00 00:00:00
+3:
+  id: 4
+  nama: Gununghalu
+  kabupatenId: 6
+  created: 2010-08-15 22:05:32
+  modified: 0000-00-00 00:00:00
+4:
+  id: 5
+  nama: Cipeundeuy
+  kabupatenId: 6
+  created: 2010-08-15 22:06:03
+  modified: 0000-00-00 00:00:00
+5:
+  id: 6
+  nama: Cililin
+  kabupatenId: 6
+  created: 2010-08-15 22:06:34
+  modified: 0000-00-00 00:00:00
+6:
+  id: 7
+  nama: Desa Sukamanah Kecamatan Rongga
+  kabupatenId: 6
+  created: 2010-08-15 22:07:25
+  modified: 0000-00-00 00:00:00
+7:
+  id: 8
+  nama: Desa Batujajar Timur Kecamatan Batujajar
+  kabupatenId: 6
+  created: 2010-08-15 22:08:00
+  modified: 0000-00-00 00:00:00
+8:
+  id: 9
+  nama: Desa Nyenang Kecamatan Cipeundeuy
+  kabupatenId: 6
+  created: 2010-08-15 22:08:42
+  modified: 0000-00-00 00:00:00
+9:
+  id: 10
+  nama: Cipatat
+  kabupatenId: 6
+  created: 2010-08-15 22:09:15
+  modified: 0000-00-00 00:00:00
+10:
+  id: 11
+  nama: Cimahi Tengah
+  kabupatenId: 4
+  created: 2010-08-15 22:16:17
+  modified: 0000-00-00 00:00:00
+11:
+  id: 12
+  nama: Cigugur Tengah
+  kabupatenId: 4
+  created: 2010-08-15 22:20:06
+  modified: 0000-00-00 00:00:00
+12:
+  id: 13
+  nama: Baros
+  kabupatenId: 4
+  created: 2010-08-15 22:24:20
+  modified: 0000-00-00 00:00:00
+13:
+  id: 14
+  nama: Sucinaraja
+  kabupatenId: 8
+  created: 2010-08-15 22:31:59
+  modified: 0000-00-00 00:00:00
+14:
+  id: 15
+  nama: Wanaraja
+  kabupatenId: 8
+  created: 2010-08-15 22:33:13
+  modified: 0000-00-00 00:00:00
+15:
+  id: 16
+  nama: Pangatikan
+  kabupatenId: 8
+  created: 2010-08-15 22:33:45
+  modified: 0000-00-00 00:00:00
+16:
+  id: 17
+  nama: Sukasari
+  kabupatenId: 3
+  created: 2010-08-15 22:38:22
+  modified: 0000-00-00 00:00:00
+17:
+  id: 18
+  nama: Andir
+  kabupatenId: 3
+  created: 2010-08-15 22:38:52
+  modified: 0000-00-00 00:00:00
+18:
+  id: 19
+  nama: Sukajadi
+  kabupatenId: 3
+  created: 2010-08-15 22:39:31
+  modified: 0000-00-00 00:00:00

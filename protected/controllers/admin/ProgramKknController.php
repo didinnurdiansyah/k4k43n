@@ -17,7 +17,8 @@ class ProgramKknController extends AdminController
         $prioritas->programKknId = $programKkn->id;
         $this->performAjaxValidation($prioritas);
         if (isset($_POST['Prioritas'])) { 
-            $prioritas->jurusanId = $_POST['Prioritas']['jurusanId'];
+            //$prioritas->jurusanId = $_POST['Prioritas']['jurusanId'];
+            $prioritas->attributes = $_POST['Prioritas'];
             $prioritas->save();
             $this->refresh();
         }

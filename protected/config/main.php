@@ -28,8 +28,8 @@ return array(
         // uncomment the following to enable URLs in path-format
         'urlManager'=>array(
             'urlFormat'=>'path',
-            'showScriptName' => false,
-            'urlSuffix' => '.html',
+            //'showScriptName' => false,
+            //'urlSuffix' => '.html',
             'rules'=>array(
                 'admin' => 'admin/default/index',
                 'admin/<controller:\w+>/<id:\d+>'=>'admin/<controller>/view',

@@ -1,26 +1,147 @@
-<?php
-
-return array(
-	/*
-	'sample1'=>array(
-		'lokasi' => '',
-		'kabupatenId' => '',
-		'kecamatanId' => '',
-		'programKknId' => '',
-		'latitude' => '',
-		'longitude' => '',
-		'created' => '',
-		'modified' => '',
-	),
-	'sample2'=>array(
-		'lokasi' => '',
-		'kabupatenId' => '',
-		'kecamatanId' => '',
-		'programKknId' => '',
-		'latitude' => '',
-		'longitude' => '',
-		'created' => '',
-		'modified' => '',
-	),
-	*/
+<?php 
+return array (
+  1 => 
+  array (
+    'id' => 2,
+    'lokasi' => 'Jl. Amd No. 33 Ciraja Desa Mandalasari',
+    'kabupatenId' => 6,
+    'kecamatanId' => 2,
+    'programKknId' => 6,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281885065,
+    'modified' => 1281891190,
+  ),
+  2 => 
+  array (
+    'id' => 3,
+    'lokasi' => 'Desa Wangunsari Rt 01 Rw. 09',
+    'kabupatenId' => 6,
+    'kecamatanId' => 3,
+    'programKknId' => 6,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281885122,
+    'modified' => false,
+  ),
+  3 => 
+  array (
+    'id' => 4,
+    'lokasi' => 'Kp. Paratag Rt. 02 Rw. 21 Desa Gununghalu',
+    'kabupatenId' => 6,
+    'kecamatanId' => 4,
+    'programKknId' => 6,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281885242,
+    'modified' => false,
+  ),
+  4 => 
+  array (
+    'id' => 5,
+    'lokasi' => 'Cigugur Tengah Sdn Cimindi 2',
+    'kabupatenId' => 4,
+    'kecamatanId' => 11,
+    'programKknId' => 4,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281885431,
+    'modified' => 1281885527,
+  ),
+  5 => 
+  array (
+    'id' => 6,
+    'lokasi' => 'Sdn Bina Harapan Cibaligo No. 6 Cimindi',
+    'kabupatenId' => 4,
+    'kecamatanId' => 12,
+    'programKknId' => 4,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281885687,
+    'modified' => false,
+  ),
+  6 => 
+  array (
+    'id' => 7,
+    'lokasi' => 'Sdn Kebonsari 1',
+    'kabupatenId' => 4,
+    'kecamatanId' => 13,
+    'programKknId' => 4,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281885936,
+    'modified' => false,
+  ),
+  7 => 
+  array (
+    'id' => 8,
+    'lokasi' => 'Sadang',
+    'kabupatenId' => 8,
+    'kecamatanId' => 14,
+    'programKknId' => 2,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281886475,
+    'modified' => false,
+  ),
+  8 => 
+  array (
+    'id' => 9,
+    'lokasi' => 'Wanaraja',
+    'kabupatenId' => 8,
+    'kecamatanId' => 15,
+    'programKknId' => 2,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281886518,
+    'modified' => false,
+  ),
+  9 => 
+  array (
+    'id' => 10,
+    'lokasi' => 'Sukarasa',
+    'kabupatenId' => 8,
+    'kecamatanId' => 16,
+    'programKknId' => 2,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281886565,
+    'modified' => false,
+  ),
+  10 => 
+  array (
+    'id' => 11,
+    'lokasi' => 'Kelurahan Sarijadi &quot;a&quot;',
+    'kabupatenId' => 3,
+    'kecamatanId' => 17,
+    'programKknId' => 3,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281886872,
+    'modified' => false,
+  ),
+  11 => 
+  array (
+    'id' => 12,
+    'lokasi' => 'Kelurahan Campaka',
+    'kabupatenId' => 3,
+    'kecamatanId' => 18,
+    'programKknId' => 3,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281886909,
+    'modified' => false,
+  ),
+  12 => 
+  array (
+    'id' => 13,
+    'lokasi' => 'Kelurahan Sukawarna',
+    'kabupatenId' => 3,
+    'kecamatanId' => 19,
+    'programKknId' => 3,
+    'latitude' => -6.906659,
+    'longitude' => 107.605591,
+    'created' => 1281886950,
+    'modified' => false,
+  ),
 );

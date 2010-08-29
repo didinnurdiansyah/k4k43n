@@ -39,13 +39,28 @@ $this->menu=array(
     <p class="note">Fields with <span class="required">*</span> are required.</p>
 
     <?php echo $form->errorSummary($prioritas); ?>
-
+    
+    <div class="row">
+        <?php echo $form->labelEx($prioritas,'level'); ?>
+        <?php echo $form->dropDownList($prioritas,'level',
+            array(
+                1 => 'Level 1',
+                2 => 'Level 2',
+                3 => 'Level 3',
+                4 => 'Level 4',
+                5 => 'Level 5'
+            )); ?>
+        <?php echo $form->error($prioritas,'level'); ?>
+    </div>
+    
+    
     <div class="row">
         <?php echo $form->labelEx($prioritas,'jurusanId'); ?>
         <?php echo $form->dropDownList($prioritas,'jurusanId',
-            Jurusan::model()->listData,array('empty' => Yii::t('','Pilih Jurusan'))); ?>
+            Jurusan::model()->listData,array('empty' => Yii::t('app','Pilih Jurusan'))); ?>
         <?php echo $form->error($prioritas,'jurusanId'); ?>
     </div>
+    
 
     <div class="row buttons">
         <?php echo CHtml::submitButton('Tambah Prioritas'); ?>
@@ -66,6 +81,7 @@ $this->menu=array(
             'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',  
             'htmlOptions' => array('width' => '50px'),
         ),
+        'level',
         'jurusan.nama',
         array(
             'class'=>'CButtonColumn',

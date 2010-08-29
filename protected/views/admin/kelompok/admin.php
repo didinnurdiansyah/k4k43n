@@ -26,15 +26,15 @@ $('.search-form form').submit(function(){
 
 <div class="note">
     <?php echo Yii::t('app','Jumlah Maksimal Mahasiswa Perkelompok: <b>{jumlah}</b> orang', array(
-        '{jumlah}' => Kelompok::model()->maxAnggota
+        '{jumlah}' => Kelompok::model()->countMaxAnggota()
     ))?>
     <br/>
     <?php echo Yii::t('app','Jumlah Maksimal Laki-laki Perkelompok: <b>{jumlah}</b> orang', array(
-        '{jumlah}' => Kelompok::model()->maxLakiLaki
+        '{jumlah}' => Kelompok::model()->countMaxLakiLaki()
     ))?>
     <br/>
     <?php echo Yii::t('app','Jumlah Maksimal Laki-laki Perkelompok: <b>{jumlah}</b> orang', array(
-        '{jumlah}' => Kelompok::model()->maxPerempuan
+        '{jumlah}' => Kelompok::model()->countMaxPerempuan()
     ))?>
 </div>
 <br/>
