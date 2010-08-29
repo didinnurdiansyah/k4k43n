@@ -1,0 +1,1825 @@
+1:
+  id: 1
+  namaLengkap: Angga Kusumah P.
+  nim: 045065
+  alamatAsal: Jl.
+  alamatTinggal: Jl.
+  fakultasId: 1
+  jurusanId: 23
+  kelompokId: 2
+  jenjangId: 1
+  phone1: 78675
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 2010-08-28 23:10:03
+2:
+  id: 2
+  namaLengkap: Aprianti Fitriana R.
+  nim: 0705016
+  alamatAsal: Jl. Jalan
+  alamatTinggal: Jl.
+  fakultasId: 1
+  jurusanId: 25
+  kelompokId: 2
+  jenjangId: 0
+  phone1: 0857667567
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 2010-08-28 00:13:12
+3:
+  id: 3
+  namaLengkap: Ani Anjaniah Kamilah
+  nim: 0705118
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+4:
+  id: 4
+  namaLengkap: Disky Herdian
+  nim: 0707849
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+5:
+  id: 5
+  namaLengkap: Fadjar Agung W.
+  nim: 0705849
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+6:
+  id: 6
+  namaLengkap: Yopi Rosdiana
+  nim: 054005
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+7:
+  id: 7
+  namaLengkap: Rusmiyanti
+  nim: 0706682
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+8:
+  id: 8
+  namaLengkap: Ahmad Hamdan
+  nim: 0703737
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+9:
+  id: 9
+  namaLengkap: Rika Wahyuni
+  nim: 0704453
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+10:
+  id: 10
+  namaLengkap: Wida Widaningsih
+  nim: 0705347
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+11:
+  id: 11
+  namaLengkap: Rendi Yogaswara
+  nim: 0703796
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+12:
+  id: 12
+  namaLengkap: Supriadi
+  nim: 0707053
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+13:
+  id: 13
+  namaLengkap: Taufan Setio Hadi  P.
+  nim: 0705642
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+14:
+  id: 14
+  namaLengkap: Fusti Yunita
+  nim: 0706796
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+15:
+  id: 15
+  namaLengkap: Ahmad Hamdan
+  nim: 0703737
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+16:
+  id: 16
+  namaLengkap: Rika Wahyuni
+  nim: 0704453
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+17:
+  id: 17
+  namaLengkap: Wida Widaningsih
+  nim: 0705347
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+18:
+  id: 18
+  namaLengkap: Rendi Yogaswara
+  nim: 0703796
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+19:
+  id: 19
+  namaLengkap: Supriadi
+  nim: 0707053
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+20:
+  id: 20
+  namaLengkap: Taufan Setio Hadi  P.
+  nim: 0705642
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+21:
+  id: 21
+  namaLengkap: Fusti Yunita
+  nim: 0706796
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+22:
+  id: 22
+  namaLengkap: Gustiana Rikho
+  nim: 0700069
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+23:
+  id: 23
+  namaLengkap: Nina Rosalina
+  nim: 0705053
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+24:
+  id: 24
+  namaLengkap: Melasari Susanti
+  nim: 0705127
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+25:
+  id: 25
+  namaLengkap: Arlhian Fahar
+  nim: 0703897
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+26:
+  id: 26
+  namaLengkap: Khaerul Syabar
+  nim: 0707674
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+27:
+  id: 27
+  namaLengkap: Farchan Firmansyah
+  nim: 0706575
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+28:
+  id: 28
+  namaLengkap: Karima Huril Aini
+  nim: 0706690
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+29:
+  id: 29
+  namaLengkap: Ahmad Hamdan
+  nim: 0703737
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+30:
+  id: 30
+  namaLengkap: Rika Wahyuni
+  nim: 0704453
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+31:
+  id: 31
+  namaLengkap: Wida Widaningsih
+  nim: 0705347
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+32:
+  id: 32
+  namaLengkap: Rendi Yogaswara
+  nim: 0703796
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+33:
+  id: 33
+  namaLengkap: Supriadi
+  nim: 0707053
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+34:
+  id: 34
+  namaLengkap: Taufan Setio Hadi  P.
+  nim: 0705642
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+35:
+  id: 35
+  namaLengkap: Fusti Yunita
+  nim: 0706796
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+36:
+  id: 36
+  namaLengkap: Gustiana Rikho
+  nim: 0700069
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+37:
+  id: 37
+  namaLengkap: Nina Rosalina
+  nim: 0705053
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+38:
+  id: 38
+  namaLengkap: Melasari Susanti
+  nim: 0705127
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+39:
+  id: 39
+  namaLengkap: Arlhian Fahar
+  nim: 0703897
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+40:
+  id: 40
+  namaLengkap: Khaerul Syabar
+  nim: 0707674
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+41:
+  id: 41
+  namaLengkap: Farchan Firmansyah
+  nim: 0706575
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+42:
+  id: 42
+  namaLengkap: Karima Huril Aini
+  nim: 0706690
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+43:
+  id: 43
+  namaLengkap: Ari Hikmah R.
+  nim: 0705025
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+44:
+  id: 44
+  namaLengkap: Feby Inggriyani
+  nim: 0703802
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+45:
+  id: 45
+  namaLengkap: Indra Kurnianto
+  nim: 0705250
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+46:
+  id: 46
+  namaLengkap: Mala Robani Zohra
+  nim: 0706728
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+47:
+  id: 47
+  namaLengkap: Nurul Hadi Sutanto
+  nim: 0707720
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+48:
+  id: 48
+  namaLengkap: Mamay Hamdani
+  nim: 0705829
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+49:
+  id: 49
+  namaLengkap: Siti Aisyah Al Adzani
+  nim: 0706542
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+50:
+  id: 50
+  namaLengkap: Muh. Muhtar
+  nim: 0700619
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+51:
+  id: 51
+  namaLengkap: Andini Kelana Putri
+  nim: 0705085
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+52:
+  id: 52
+  namaLengkap: Tiwi Kartiwi
+  nim: 0705297
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+53:
+  id: 53
+  namaLengkap: Qomarudin
+  nim: 055088
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+54:
+  id: 54
+  namaLengkap: Tatang Kusnandar
+  nim: 0707682
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+55:
+  id: 55
+  namaLengkap: Bayu Saputra
+  nim: 0706754
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+56:
+  id: 56
+  namaLengkap: Mutia Andini
+  nim: 0706963
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+57:
+  id: 57
+  namaLengkap: Latifah Az Zahra
+  nim: 0700202
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+58:
+  id: 58
+  namaLengkap: Melani Septor
+  nim: 0700742
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+59:
+  id: 59
+  namaLengkap: Reza Ali Fahmi
+  nim: 0706232
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+60:
+  id: 60
+  namaLengkap: Kamil Ahmad Hambali
+  nim: 0706704
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+61:
+  id: 61
+  namaLengkap: Satria Nugraha
+  nim: 0707270
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+62:
+  id: 62
+  namaLengkap:  Ismi Rizka Febriana
+  nim: 0707652
+  alamatAsal: Jl.
+  alamatTinggal: Jl.
+  fakultasId: 1
+  jurusanId: 23
+  kelompokId: 3
+  jenjangId: 1
+  jenisKelamin: 0
+  phone1: 789789
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 2010-08-17 09:32:31
+63:
+  id: 63
+  namaLengkap: Dessy Rahmawati
+  nim: 0704275
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+64:
+  id: 64
+  namaLengkap: Riki Ginanjar
+  nim: 0704395
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+65:
+  id: 65
+  namaLengkap: Lucky Satria
+  nim: 0708547
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+66:
+  id: 66
+  namaLengkap: Nindin Sudarna
+  nim: 0706532
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+67:
+  id: 67
+  namaLengkap: Dian Ramdani
+  nim: 0705030
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+68:
+  id: 68
+  namaLengkap: Adi Sotrisman
+  nim: 0706527
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+69:
+  id: 69
+  namaLengkap: Uni Nuraeni
+  nim: 0700167
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+70:
+  id: 70
+  namaLengkap: Neliana
+  nim: 0703764
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+71:
+  id: 71
+  namaLengkap: Bilqis Andini
+  nim: 0706792
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+72:
+  id: 72
+  namaLengkap: Ade Tito Septian
+  nim: 0705055
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+73:
+  id: 73
+  namaLengkap: MZ. Abdurohman
+  nim: 067494
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+74:
+  id: 74
+  namaLengkap: Arie Setiabudi
+  nim: 0707953
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+75:
+  id: 75
+  namaLengkap: Dian Zaini Arief
+  nim: 0703916
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+76:
+  id: 76
+  namaLengkap: Nicke Oktaviani S.
+  nim: 0703984
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+77:
+  id: 77
+  namaLengkap: Atih Ireana Mahadaniar
+  nim: 0706789
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+78:
+  id: 78
+  namaLengkap: Feny Candra Gunawan
+  nim: 0706609
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+79:
+  id: 79
+  namaLengkap: Lilik Indriani
+  nim: 0700534
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+80:
+  id: 80
+  namaLengkap: Intan Permana
+  nim: 0700848
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+81:
+  id: 81
+  namaLengkap: R. Deasy Mandasari
+  nim: 0707171
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+82:
+  id: 82
+  namaLengkap: Widyoharsono Waluyo
+  nim: 0706208
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+83:
+  id: 83
+  namaLengkap: Sani Husni Sabar
+  nim: 0707215
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+84:
+  id: 84
+  namaLengkap: Ade Agustian
+  nim: 060778
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+85:
+  id: 85
+  namaLengkap: Kharisma Purwasakti
+  nim: 0704082
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+86:
+  id: 86
+  namaLengkap: Gustika Dwi Herdiyanti
+  nim: 0704633
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+87:
+  id: 87
+  namaLengkap: Desti Dwijayanti
+  nim: 0705210
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+88:
+  id: 88
+  namaLengkap: Rini Hardini H.
+  nim: 0708545
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+89:
+  id: 89
+  namaLengkap: Vina Benita
+  nim: 0902704
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+90:
+  id: 90
+  namaLengkap: Hari Dwi Sukarmana
+  nim: 0707991
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+91:
+  id: 91
+  namaLengkap: Adi Yajidi
+  nim: 0705827
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+92:
+  id: 92
+  namaLengkap: Eka Adipura
+  nim: 0700002
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+93:
+  id: 93
+  namaLengkap: Rohani Magdalena Sinaga
+  nim: 0700282
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+94:
+  id: 94
+  namaLengkap: Desy Purwati
+  nim: 070824
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+95:
+  id: 95
+  namaLengkap: Diana Rahayu
+  nim: 0706953
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+96:
+  id: 96
+  namaLengkap: Eri Febriansyah F.
+  nim: 0704171
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+97:
+  id: 97
+  namaLengkap: Arief Priansyah N.
+  nim: 0700604
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+98:
+  id: 98
+  namaLengkap: Dendi Nurwega
+  nim: 0705687
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+99:
+  id: 99
+  namaLengkap: Garby Mukti P.
+  nim: 0707625
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+100:
+  id: 100
+  namaLengkap: Dendy Noviandi Pratama
+  nim: 0704395
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+101:
+  id: 101
+  namaLengkap: Citra Nur Anggraeni Aprilia
+  nim: 0703702
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+102:
+  id: 102
+  namaLengkap: Yulis Setiowati
+  nim: 0703151
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+103:
+  id: 103
+  namaLengkap: Hesti Meisyah
+  nim: 0707056
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+104:
+  id: 104
+  namaLengkap: Angga Febriana
+  nim: 0706997
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+105:
+  id: 105
+  namaLengkap: Reki Siaga A.
+  nim: 0705023
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+106:
+  id: 106
+  namaLengkap: Ade Nur Zaman
+  nim: 0705231
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+107:
+  id: 107
+  namaLengkap: Laili Fazri
+  nim: 0706600
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+108:
+  id: 108
+  namaLengkap: Nenny Hindatisnawati 
+  nim: 0704226
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+109:
+  id: 109
+  namaLengkap: Nindiah Sri Wahyuni
+  nim: 0702929
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+110:
+  id: 110
+  namaLengkap: Larasati Martha
+  nim: 0706677
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+111:
+  id: 111
+  namaLengkap: Andri Irawan
+  nim: 0705176
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+112:
+  id: 112
+  namaLengkap: Suharyadi
+  nim: 0706628
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+113:
+  id: 113
+  namaLengkap: Silvius Yoris Sefire
+  nim: 0709300
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00
+114:
+  id: 114
+  namaLengkap: Yunus Hunaeni
+  nim: 0704707
+  alamatAsal: 
+  alamatTinggal: 
+  fakultasId: 0
+  jurusanId: 0
+  kelompokId: 0
+  jenjangId: 0
+  phone1: 
+  phone2: 
+  photoPath: 
+  registered: 0
+  created: 0000-00-00 00:00:00
+  modified: 0000-00-00 00:00:00

@@ -1,4 +1,4 @@
-<?php
+<?php 
 return array (
   1 => 
   array (
@@ -14,9 +14,9 @@ return array (
     'phone1' => 78675,
     'phone2' => NULL,
     'photoPath' => NULL,
-    'registered' => 1,
+    'registered' => 0,
     'created' => false,
-    'modified' => 1282928627,
+    'modified' => 1283011803,
   ),
   2 => 
   array (
@@ -28,11 +28,11 @@ return array (
     'fakultasId' => 1,
     'jurusanId' => 25,
     'kelompokId' => 2,
-    'jenjangId' => 1,
+    'jenjangId' => 0,
     'phone1' => 12545911,
     'phone2' => NULL,
     'photoPath' => NULL,
-    'registered' => 1,
+    'registered' => 0,
     'created' => false,
     'modified' => 1282929192,
   ),

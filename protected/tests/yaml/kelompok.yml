@@ -1,0 +1,120 @@
+1:
+  id: 2
+  lokasi: Jl. Amd No. 33 Ciraja Desa Mandalasari
+  kabupatenId: 6
+  kecamatanId: 2
+  programKknId: 6
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:11:05
+  modified: 2010-08-15 23:53:10
+2:
+  id: 3
+  lokasi: Desa Wangunsari Rt 01 Rw. 09
+  kabupatenId: 6
+  kecamatanId: 3
+  programKknId: 6
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:12:02
+  modified: 0000-00-00 00:00:00
+3:
+  id: 4
+  lokasi: Kp. Paratag Rt. 02 Rw. 21 Desa Gununghalu
+  kabupatenId: 6
+  kecamatanId: 4
+  programKknId: 6
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:14:02
+  modified: 0000-00-00 00:00:00
+4:
+  id: 5
+  lokasi: Cigugur Tengah Sdn Cimindi 2
+  kabupatenId: 4
+  kecamatanId: 11
+  programKknId: 4
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:17:11
+  modified: 2010-08-15 22:18:47
+5:
+  id: 6
+  lokasi: Sdn Bina Harapan Cibaligo No. 6 Cimindi
+  kabupatenId: 4
+  kecamatanId: 12
+  programKknId: 4
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:21:27
+  modified: 0000-00-00 00:00:00
+6:
+  id: 7
+  lokasi: Sdn Kebonsari 1
+  kabupatenId: 4
+  kecamatanId: 13
+  programKknId: 4
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:25:36
+  modified: 0000-00-00 00:00:00
+7:
+  id: 8
+  lokasi: Sadang
+  kabupatenId: 8
+  kecamatanId: 14
+  programKknId: 2
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:34:35
+  modified: 0000-00-00 00:00:00
+8:
+  id: 9
+  lokasi: Wanaraja
+  kabupatenId: 8
+  kecamatanId: 15
+  programKknId: 2
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:35:18
+  modified: 0000-00-00 00:00:00
+9:
+  id: 10
+  lokasi: Sukarasa
+  kabupatenId: 8
+  kecamatanId: 16
+  programKknId: 2
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:36:05
+  modified: 0000-00-00 00:00:00
+10:
+  id: 11
+  lokasi: Kelurahan Sarijadi &quot;a&quot;
+  kabupatenId: 3
+  kecamatanId: 17
+  programKknId: 3
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:41:12
+  modified: 0000-00-00 00:00:00
+11:
+  id: 12
+  lokasi: Kelurahan Campaka
+  kabupatenId: 3
+  kecamatanId: 18
+  programKknId: 3
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:41:49
+  modified: 0000-00-00 00:00:00
+12:
+  id: 13
+  lokasi: Kelurahan Sukawarna
+  kabupatenId: 3
+  kecamatanId: 19
+  programKknId: 3
+  latitude: -6.906659
+  longitude: 107.605591
+  created: 2010-08-15 22:42:30
+  modified: 0000-00-00 00:00:00

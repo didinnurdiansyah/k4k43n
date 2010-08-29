@@ -42,6 +42,7 @@ class Jurusan extends ActiveRecord
             array('nama, kode, fakultasId', 'required'),
             array('nama, kode', 'length', 'max'=>255),
             array('fakultasId', 'length', 'max'=>20),
+            array('nama, kode','unique'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, nama, kode, fakultasId, created, modified', 'safe', 'on'=>'search'),

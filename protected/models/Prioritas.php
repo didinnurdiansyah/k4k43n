@@ -37,11 +37,12 @@ class Prioritas extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('programKknId, jurusanId', 'required'),
+            array('programKknId, level, jurusanId', 'required'),
             array('programKknId, jurusanId', 'length', 'max'=>20),
+            array('level', 'length', 'max'=>2),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, programKknId, jurusanId, created, modified', 'safe', 'on'=>'search'),
+            array('id, level, programKknId, jurusanId, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -64,6 +65,7 @@ class Prioritas extends ActiveRecord
     {
         return array(
             'id' => Yii::t('app','ID'),
+            'level' => Yii::t('app','Level Prioritas'),
             'programKknId' => Yii::t('app','Program Kkn'),
             'jurusanId' => Yii::t('app','Jurusan'),
             'created' => Yii::t('app','Created'),
@@ -82,10 +84,13 @@ class Prioritas extends ActiveRecord
 
         $criteria=new CDbCriteria;
         $criteria->compare('id',$this->id,true);
+        $criteria->compare('id',$this->level,true);
         $criteria->compare('programKknId',$this->programKknId,true);
         $criteria->compare('jurusanId',$this->jurusanId,true);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);
+        
+        $criteria->order = 'level';
 
         return new CActiveDataProvider(get_class($this), array(
             'criteria'=>$criteria,

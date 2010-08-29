@@ -64,7 +64,7 @@ class Kelompok extends ActiveRecord
             'kecamatan' => array(self::BELONGS_TO, 'Kecamatan', 'kecamatanId'),
             'anggota' => array(self::HAS_MANY, 'Mahasiswa','kelompokId'),
             'programKkn' => array(self::BELONGS_TO,'ProgramKkn','programKknId'),
-            'anggota' => array(self::HAS_MANY, 'Mahasiswa','kelompokId'),
+            'mahasiswa' => array(self::HAS_MANY, 'Mahasiswa','kelompokId'),
         );
     }
 
@@ -113,22 +113,50 @@ class Kelompok extends ActiveRecord
         return parent::beforeSave();
     }
     
+    /**
+     * kelompok yang di tampilkan memiliki criteria
+     * 1. Menjadi prioritas dan jumlah mahasiswa dengan jenis kelamin
+     * sama dengan mahasiswa yang mendaftarr kurang dari atau sama dengan 
+     * jumlah maksimal
+     */
+    public function findAvailableKelompok($mahasiswa, $level = 1)
+    {
+        if (!is_object($mahasiswa)) {
+            $mahasiswa = Mahasiswa::model()->findByPk($mahasiswa);
+        }
+        
+        if($mahasiswa->jenisKelamin === Mahasiswa::LAKI_LAKI) {
+            $jkMax = $this->countMaxLakiLaki();
+        } else {
+            $jkMax = $this->countMaxPerempuan();
+        }
+        
+        $ = $this->countLakiLaki();
+        $perempuan = $this->countPerempuan();
+        
+        $criteria = CDbCriteria;
+        $criteria->condition = '';
+        $criteria->with = array('mahasiswa');
+        return $this->findAll($criteria);
+    }
+    
+    
     public function getNama()
     {
         return "[{$this->programKkn->nama}] {$this->lokasi}";
     }
     
-    public function getMaxAnggota()
+    public function countMaxAnggota()
     {
         return ceil(Mahasiswa::model()->count() / $this->count());
     }
     
-    public function getMaxLakiLaki()
+    public function countMaxLakiLaki()
     {
         return ceil(Mahasiswa::model()->countLakiLaki() / $this->count());
     }
     
-    public function getMaxPerempuan()
+    public function countMaxPerempuan()
     {
         return ceil(Mahasiswa::model()->countPerempuan() / $this->count());
     }

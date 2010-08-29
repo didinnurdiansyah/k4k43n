@@ -97,4 +97,8 @@ class ProgramKkn extends ActiveRecord
         $this->nama = strtoupper($this->nama);
         return parent::beforeSave();
     }
+    
+    public function findArrayPrioritasJurusanId()
+    {
+    }
 }
