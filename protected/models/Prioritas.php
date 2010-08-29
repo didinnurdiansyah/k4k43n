@@ -100,6 +100,11 @@ class Prioritas extends ActiveRecord
         ));
     }
     
+    protected function beforeSave()
+    {
+        return parent::beforeSave();
+    }
+    
     protected function beforeValidate()
     {
         $prioritas = $this->findByAttributes(array(
@@ -110,6 +115,6 @@ class Prioritas extends ActiveRecord
             $this->addError('jurusanId',Yii::t('app','Jurusan ini sudah ada'));
             return false;
         }
-        return true;
+        return parent::beforeValidate();
     }
 }
