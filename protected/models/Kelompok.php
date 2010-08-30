@@ -131,7 +131,7 @@ class Kelompok extends ActiveRecord
             $jkMax = $this->countMaxPerempuan();
         }
         
-        $lakilaki = $this->countLakiLaki();
+        $ = $this->countLakiLaki();
         $perempuan = $this->countPerempuan();
         
         $criteria = CDbCriteria;
@@ -143,10 +143,8 @@ class Kelompok extends ActiveRecord
     
     public function getNama()
     {
-        return "[{$this->programKkn->nama}] {$this->lokasi}";
-        echo "test";
+        return "[{$this->programKkn->nama}] {$this->lokasi}";// someting
     }
-    
     
     public function countMaxAnggota()
     {
