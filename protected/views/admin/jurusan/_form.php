@@ -26,6 +26,12 @@
         <?php echo $form->dropDownList($jurusan,'fakultasId',Fakultas::model()->listData); ?>
         <?php echo $form->error($jurusan,'fakultasId'); ?>
     </div>
+    
+    <div class="row">
+        <?php echo $form->labelEx($jurusan,'jenjangId'); ?>
+        <?php echo $form->dropDownList($jurusan,'jenjangId',Jenjang::model()->listData); ?>
+        <?php echo $form->error($jurusan,'jenjangId'); ?>
+    </div>
 
     <div class="row buttons">
         <?php echo CHtml::submitButton($jurusan->isNewRecord ? 'Create' : 'Save'); ?>

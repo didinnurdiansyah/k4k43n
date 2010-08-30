@@ -35,7 +35,6 @@
 
     <div class="row">
         <?php echo $form->labelEx($mahasiswa,'fakultasId'); ?>
-        <?php //echo $form->dropDownList($mahasiswa, 'fakultasId',Fakultas::model()->listData)?>
         <?php echo $form->dropDownList($mahasiswa,'fakultasId',Fakultas::model()->listData,array(
             'empty' => Yii::t('app','Select Fakultas'),
             'ajax' => array(

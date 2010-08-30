@@ -46,12 +46,17 @@ $('.search-form form').submit(function(){
         'nama',
         array(
             'name' => 'kode',
-            'htmlOptions' => array('width' => '75px'),
+            'htmlOptions' => array('width' => '50px'),
         ),
         array(
             'name' => 'fakultasId',
             'value' => '$data->fakultas->nama',
             'filter' => Fakultas::model()->listData,
+        ),
+        array(
+            'name' => 'jenjangId',
+            'value' => '$data->jenjang->nama',
+            'filter' => Jenjang::model()->listData,
         ),
         array(
             'class'=>'CButtonColumn',

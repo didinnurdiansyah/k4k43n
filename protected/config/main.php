@@ -95,7 +95,7 @@ return array(
             'Host' => 'mail.nevisa.web.id',
             'Username' => 'kkn+nevisa.web.id',
             'Password' => 'kkn',
-            'From' => 'ata@nevisa.co.id',
+            'From' => 'noreply@ngomik.com',
             'FromName' => 'LPPM'
         ),
     ),

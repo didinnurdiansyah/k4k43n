@@ -53,6 +53,18 @@ $this->menu=array(
         <?php echo $form->error($prioritas,'level'); ?>
     </div>
     
+    <div class="row">
+        <?php echo $form->labelEx($prioritas,'fakultasId'); ?>
+        <?php echo $form->dropDownList($prioritas,'fakultasId',Fakultas::model()->listData,array(
+            'empty' => Yii::t('app','Select Fakultas'),
+            'ajax' => array(
+                'url' => array('dependentSelectJurusan'),
+                'data' => array('fakultasId' => 'js:jQuery(this).val()'),
+                'replace' => '#Prioritas_jurusanId'
+            )
+        )); ?>
+        <?php echo $form->error($prioritas,'fakultasId'); ?>
+    </div>
     
     <div class="row">
         <?php echo $form->labelEx($prioritas,'jurusanId'); ?>
@@ -61,9 +73,14 @@ $this->menu=array(
         <?php echo $form->error($prioritas,'jurusanId'); ?>
     </div>
     
-
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Tambah Prioritas'); ?>
+        <?php echo CHtml::ajaxSubmitButton('Tambah Prioritas',
+            array('addPrioritas','id' => $programKkn->id),
+            array('success' => "js:function(){
+                jQuery.fn.yiiGridView.update('prioritas-grid', {
+                    data: jQuery(this).serialize()
+                })}"
+            )); ?>
     </div>
 
 <?php $this->endWidget(); ?>
@@ -72,9 +89,8 @@ $this->menu=array(
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-    'id'=>'program-kkn-grid',
+    'id'=>'prioritas-grid',
     'dataProvider'=>$prioritas->search(),
-    'filter'=>$prioritas,
     'columns'=>array(
         array(
             'header' => 'No',
@@ -86,6 +102,8 @@ $this->menu=array(
         array(
             'class'=>'CButtonColumn',
             'deleteButtonUrl' => 'array("deletePrioritas","id" => $data->jurusan->id, "prioritas_id" => $data->id)',
+            'viewButtonOptions' => array('style' => 'display:none'),
+            'updateButtonOptions' => array('style' => 'display:none'),
         ),
     ),
 )); ?>

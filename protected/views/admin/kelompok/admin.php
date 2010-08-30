@@ -33,7 +33,7 @@ $('.search-form form').submit(function(){
         '{jumlah}' => Kelompok::model()->countMaxLakiLaki()
     ))?>
     <br/>
-    <?php echo Yii::t('app','Jumlah Maksimal Laki-laki Perkelompok: <b>{jumlah}</b> orang', array(
+    <?php echo Yii::t('app','Jumlah Maksimal Perempuan Perkelompok: <b>{jumlah}</b> orang', array(
         '{jumlah}' => Kelompok::model()->countMaxPerempuan()
     ))?>
 </div>

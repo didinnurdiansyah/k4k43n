@@ -6,6 +6,22 @@ class ProgramKknController extends AdminController
      * @var CActiveRecord the currently loaded data model instance.
      */
     private $_model;
+    
+    public function accessRules()
+    {
+        return array(
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array(
+                    'admin','delete','index','view','create','update',
+                    'addPrioritas','dependentSelectJurusan','deletePrioritas'
+                ),
+                'users' => array('admin'),
+            ),
+            array('deny',  // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
 
     /**
      * Displays a particular model.
@@ -16,16 +32,30 @@ class ProgramKknController extends AdminController
         $prioritas = new Prioritas;
         $prioritas->programKknId = $programKkn->id;
         $this->performAjaxValidation($prioritas);
-        if (isset($_POST['Prioritas'])) { 
-            //$prioritas->jurusanId = $_POST['Prioritas']['jurusanId'];
-            $prioritas->attributes = $_POST['Prioritas'];
-            $prioritas->save();
-            $this->refresh();
-        }
         $this->render('view',array(
             'prioritas' => $prioritas,
             'programKkn' => $programKkn,
         ));
+    }
+    
+    public function actionDependentSelectJurusan()
+    {
+        echo CHtml::activeDropDownList(Prioritas::model(),'jurusanId', 
+            CHtml::listData(Jurusan::model()->findAllByFakultasId($_GET['fakultasId']),'id','nama'),
+            array('empty' => Yii::t('app','Select Jurusan'))
+        );
+        Yii::app()->end();
+    }
+    
+    public function actionAddPrioritas()
+    {
+        $prioritas = new Prioritas;
+        $prioritas->programKknId = $this->loadModel()->id;
+        if (isset($_POST['Prioritas'])) { 
+            $prioritas->attributes = $_POST['Prioritas'];
+            $prioritas->save();
+        }
+        Yii::app()->end();
     }
 
 

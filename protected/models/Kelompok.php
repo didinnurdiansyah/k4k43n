@@ -119,7 +119,7 @@ class Kelompok extends ActiveRecord
      * sama dengan mahasiswa yang mendaftarr kurang dari atau sama dengan 
      * jumlah maksimal
      */
-    public function findAvailableKelompok($mahasiswa, $level = 1)
+    public function searchAvailableKelompok($mahasiswa, $level = 1)
     {
         if (!is_object($mahasiswa)) {
             $mahasiswa = Mahasiswa::model()->findByPk($mahasiswa);
@@ -131,13 +131,14 @@ class Kelompok extends ActiveRecord
             $jkMax = $this->countMaxPerempuan();
         }
         
-        $ = $this->countLakiLaki();
-        $perempuan = $this->countPerempuan();
-        
         $criteria = CDbCriteria;
-        $criteria->condition = '';
+        $criteria->condition = 'count(mahasiswa)';
+        $criteria->params = array('');
         $criteria->with = array('mahasiswa');
-        return $this->findAll($criteria);
+        
+        return new CActiveDataProvider(get_class($this), array(
+            'criteria'=>$criteria,
+        ));
     }
     
     
