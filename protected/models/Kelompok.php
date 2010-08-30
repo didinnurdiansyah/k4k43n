@@ -131,8 +131,10 @@ class Kelompok extends ActiveRecord
             $jkMax = $this->countMaxPerempuan();
         }
         
+        
+        
         $criteria = CDbCriteria;
-        $criteria->condition = 'count(mahasiswa)';
+        $criteria->condition = 'count()';
         $criteria->params = array('');
         $criteria->with = array('mahasiswa');
         
