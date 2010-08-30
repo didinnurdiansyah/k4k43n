@@ -4,6 +4,7 @@ return array (
   array (
     'id' => 2,
     'nama' => 'Administrasi Pendidikan',
+    'jenjangId' => 1,
     'kode' => 'AP',
     'fakultasId' => 2,
     'created' => 1281874737,
@@ -13,6 +14,7 @@ return array (
   array (
     'id' => 3,
     'nama' => 'Psik. Pend. &amp; Bimbingan',
+    'jenjangId' => 1,
     'kode' => 'PB',
     'fakultasId' => 2,
     'created' => 1281874799,
@@ -22,6 +24,7 @@ return array (
   array (
     'id' => 4,
     'nama' => 'Pendidikan Luar Sekolah',
+    'jenjangId' => 1,
     'kode' => 'LS',
     'fakultasId' => 2,
     'created' => 1281874858,
@@ -31,6 +34,7 @@ return array (
   array (
     'id' => 5,
     'nama' => 'Pendidikan Luar Biasa',
+    'jenjangId' => 1,
     'kode' => 'LB',
     'fakultasId' => 2,
     'created' => 1281874996,
@@ -40,6 +44,7 @@ return array (
   array (
     'id' => 6,
     'nama' => 'Teknologi Pendidikan',
+    'jenjangId' => 1,
     'kode' => 'TP',
     'fakultasId' => 2,
     'created' => 1281875039,
@@ -49,6 +54,7 @@ return array (
   array (
     'id' => 7,
     'nama' => 'Pendidikan Guru Sekolah Dasar',
+    'jenjangId' => 1,
     'kode' => 'GD',
     'fakultasId' => 2,
     'created' => 1281875083,
@@ -58,6 +64,7 @@ return array (
   array (
     'id' => 8,
     'nama' => 'Pendidikan Guru Taman Kanak-Kanak',
+    'jenjangId' => 1,
     'kode' => 'GT',
     'fakultasId' => 2,
     'created' => 1281875129,
@@ -67,6 +74,7 @@ return array (
   array (
     'id' => 9,
     'nama' => 'Psikologi',
+    'jenjangId' => 1,
     'kode' => 'PG',
     'fakultasId' => 2,
     'created' => 1281875159,
@@ -76,6 +84,7 @@ return array (
   array (
     'id' => 10,
     'nama' => 'Pendidikan Moral Pancasila dan Kewarganegaraan (PMPKN)',
+    'jenjangId' => 1,
     'kode' => 'KN',
     'fakultasId' => 3,
     'created' => 1281875256,
@@ -85,6 +94,7 @@ return array (
   array (
     'id' => 11,
     'nama' => 'Pendidikan Sejarah',
+    'jenjangId' => 1,
     'kode' => 'SJ',
     'fakultasId' => 3,
     'created' => 1281875328,
@@ -94,6 +104,7 @@ return array (
   array (
     'id' => 12,
     'nama' => 'Pendidikan Geografi',
+    'jenjangId' => 1,
     'kode' => 'GG',
     'fakultasId' => 3,
     'created' => 1281875354,
@@ -103,6 +114,7 @@ return array (
   array (
     'id' => 13,
     'nama' => 'Pendidikan Ekonomi',
+    'jenjangId' => 1,
     'kode' => 'PE',
     'fakultasId' => 3,
     'created' => 1281875409,
@@ -112,6 +124,7 @@ return array (
   array (
     'id' => 14,
     'nama' => 'Pendididkan Akutansi',
+    'jenjangId' => 1,
     'kode' => 'PA',
     'fakultasId' => 3,
     'created' => 1281875456,
@@ -121,6 +134,7 @@ return array (
   array (
     'id' => 15,
     'nama' => 'Pendidikan Tata Niaga',
+    'jenjangId' => 1,
     'kode' => 'TN',
     'fakultasId' => 3,
     'created' => 1281875486,
@@ -130,6 +144,7 @@ return array (
   array (
     'id' => 16,
     'nama' => 'Pendidikan Administrasi Perkantoran',
+    'jenjangId' => 1,
     'kode' => 'MK',
     'fakultasId' => 3,
     'created' => 1281875540,
@@ -139,6 +154,7 @@ return array (
   array (
     'id' => 17,
     'nama' => 'Pendidikan Ekonomi Dan Koperasi',
+    'jenjangId' => 1,
     'kode' => 'KP',
     'fakultasId' => 3,
     'created' => 1281875605,
@@ -148,6 +164,7 @@ return array (
   array (
     'id' => 18,
     'nama' => 'Manajemen',
+    'jenjangId' => 1,
     'kode' => 'MJ',
     'fakultasId' => 3,
     'created' => 1281875642,
@@ -157,6 +174,7 @@ return array (
   array (
     'id' => 19,
     'nama' => 'Akutansi',
+    'jenjangId' => 1,
     'kode' => 'AK',
     'fakultasId' => 3,
     'created' => 1281875675,
@@ -166,6 +184,7 @@ return array (
   array (
     'id' => 20,
     'nama' => 'Manajemen Pemasaran Turisme',
+    'jenjangId' => 1,
     'kode' => 'MP',
     'fakultasId' => 3,
     'created' => 1281875752,
@@ -175,6 +194,7 @@ return array (
   array (
     'id' => 21,
     'nama' => 'Manajemen Industri Katering',
+    'jenjangId' => 1,
     'kode' => 'MI',
     'fakultasId' => 3,
     'created' => 1281875814,
@@ -184,6 +204,7 @@ return array (
   array (
     'id' => 22,
     'nama' => 'Manajemen Resort dan Leisure',
+    'jenjangId' => 1,
     'kode' => 'MR',
     'fakultasId' => 3,
     'created' => 1281875859,
@@ -193,6 +214,7 @@ return array (
   array (
     'id' => 23,
     'nama' => 'Pendididkan Biologi',
+    'jenjangId' => 1,
     'kode' => 'BI',
     'fakultasId' => 1,
     'created' => 1281875901,
@@ -202,6 +224,7 @@ return array (
   array (
     'id' => 24,
     'nama' => 'Pendididkan Fisika',
+    'jenjangId' => 1,
     'kode' => 'FI',
     'fakultasId' => 1,
     'created' => 1281875928,
@@ -211,6 +234,7 @@ return array (
   array (
     'id' => 25,
     'nama' => 'Pendididkan Kimia',
+    'jenjangId' => 1,
     'kode' => 'KI',
     'fakultasId' => 1,
     'created' => 1281875950,
@@ -220,6 +244,7 @@ return array (
   array (
     'id' => 26,
     'nama' => 'Pendidikan Matematika',
+    'jenjangId' => 1,
     'kode' => 'MT',
     'fakultasId' => 1,
     'created' => 1281875979,
@@ -229,6 +254,7 @@ return array (
   array (
     'id' => 27,
     'nama' => 'Pendididkan Ilmu Komputer',
+    'jenjangId' => 1,
     'kode' => 'IK',
     'fakultasId' => 1,
     'created' => 1281876019,
@@ -238,6 +264,7 @@ return array (
   array (
     'id' => 28,
     'nama' => 'Biologi',
+    'jenjangId' => 1,
     'kode' => 'BI',
     'fakultasId' => 1,
     'created' => 1281876045,
@@ -247,6 +274,7 @@ return array (
   array (
     'id' => 29,
     'nama' => 'Fisika',
+    'jenjangId' => 1,
     'kode' => 'FI',
     'fakultasId' => 1,
     'created' => 1281876063,
@@ -256,6 +284,7 @@ return array (
   array (
     'id' => 30,
     'nama' => 'Kimia',
+    'jenjangId' => 1,
     'kode' => 'KI',
     'fakultasId' => 1,
     'created' => 1281876084,
@@ -265,6 +294,7 @@ return array (
   array (
     'id' => 31,
     'nama' => 'Matematika',
+    'jenjangId' => 1,
     'kode' => 'MT',
     'fakultasId' => 1,
     'created' => 1281876108,
@@ -274,6 +304,7 @@ return array (
   array (
     'id' => 32,
     'nama' => 'Ilmu Komputer',
+    'jenjangId' => 1,
     'kode' => 'IK',
     'fakultasId' => 1,
     'created' => 1281876128,
@@ -283,6 +314,7 @@ return array (
   array (
     'id' => 33,
     'nama' => 'Pendidikan Bahasa Indonesia',
+    'jenjangId' => 1,
     'kode' => 'IN',
     'fakultasId' => 4,
     'created' => 1281878932,
@@ -292,6 +324,7 @@ return array (
   array (
     'id' => 34,
     'nama' => 'Pendidikan Bahasa Daerah',
+    'jenjangId' => 1,
     'kode' => 'DR',
     'fakultasId' => 4,
     'created' => 1281879024,
@@ -301,6 +334,7 @@ return array (
   array (
     'id' => 35,
     'nama' => 'Pendidikan Bahasa Inggris',
+    'jenjangId' => 1,
     'kode' => 'IG',
     'fakultasId' => 4,
     'created' => 1281879063,
@@ -310,6 +344,7 @@ return array (
   array (
     'id' => 36,
     'nama' => 'Pendidikan Bahasa Jerman',
+    'jenjangId' => 1,
     'kode' => 'JR',
     'fakultasId' => 4,
     'created' => 1281879105,
@@ -319,6 +354,7 @@ return array (
   array (
     'id' => 37,
     'nama' => 'Pendidikan Bahasa Arab',
+    'jenjangId' => 1,
     'kode' => 'AR',
     'fakultasId' => 4,
     'created' => 1281879161,
@@ -328,6 +364,7 @@ return array (
   array (
     'id' => 38,
     'nama' => 'Pendidikan Bahasa Jepang',
+    'jenjangId' => 1,
     'kode' => 'JP',
     'fakultasId' => 4,
     'created' => 1281879187,
@@ -337,6 +374,7 @@ return array (
   array (
     'id' => 39,
     'nama' => 'Pendidikan Bahasa Perancis',
+    'jenjangId' => 1,
     'kode' => 'PR',
     'fakultasId' => 4,
     'created' => 1281879212,
@@ -346,6 +384,7 @@ return array (
   array (
     'id' => 40,
     'nama' => 'Pendidikan Seni Musik',
+    'jenjangId' => 1,
     'kode' => 'SM',
     'fakultasId' => 4,
     'created' => 1281879262,
@@ -355,6 +394,7 @@ return array (
   array (
     'id' => 41,
     'nama' => 'Pendidikan Seni Tari',
+    'jenjangId' => 1,
     'kode' => 'ST',
     'fakultasId' => 4,
     'created' => 1281879282,
@@ -364,6 +404,7 @@ return array (
   array (
     'id' => 42,
     'nama' => 'Pendidikan Seni Rupa dan Kerajinan',
+    'jenjangId' => 1,
     'kode' => 'RK',
     'fakultasId' => 4,
     'created' => 1281879319,
@@ -373,6 +414,7 @@ return array (
   array (
     'id' => 43,
     'nama' => 'Bahasa dan Sastra Indonesia',
+    'jenjangId' => 1,
     'kode' => 'IN',
     'fakultasId' => 4,
     'created' => 1281879357,
@@ -382,6 +424,7 @@ return array (
   array (
     'id' => 44,
     'nama' => 'Bahasa dan Sastra Inggris',
+    'jenjangId' => 1,
     'kode' => 'IG',
     'fakultasId' => 4,
     'created' => 1281879395,
@@ -391,6 +434,7 @@ return array (
   array (
     'id' => 45,
     'nama' => 'Pendididkan Teknik Bangunan',
+    'jenjangId' => 1,
     'kode' => 'TB',
     'fakultasId' => 5,
     'created' => 1281879483,
@@ -400,6 +444,7 @@ return array (
   array (
     'id' => 46,
     'nama' => 'Pendididkan Teknik Sipil',
+    'jenjangId' => 1,
     'kode' => 'TS',
     'fakultasId' => 5,
     'created' => 1281879514,
@@ -409,6 +454,7 @@ return array (
   array (
     'id' => 47,
     'nama' => 'Pendididkan Teknik Arsitektur',
+    'jenjangId' => 1,
     'kode' => 'TA',
     'fakultasId' => 5,
     'created' => 1281879556,
@@ -418,6 +464,7 @@ return array (
   array (
     'id' => 48,
     'nama' => 'Pendididkan Teknik Mesin',
+    'jenjangId' => 1,
     'kode' => 'TM',
     'fakultasId' => 5,
     'created' => 1281879579,
@@ -427,6 +474,7 @@ return array (
   array (
     'id' => 49,
     'nama' => 'Pendidikan Listrik Tenaga',
+    'jenjangId' => 1,
     'kode' => 'LT',
     'fakultasId' => 5,
     'created' => 1281879612,
@@ -436,6 +484,7 @@ return array (
   array (
     'id' => 50,
     'nama' => 'Pendididkan Elektronika Komputer',
+    'jenjangId' => 1,
     'kode' => 'EK',
     'fakultasId' => 5,
     'created' => 1281879667,
@@ -445,6 +494,7 @@ return array (
   array (
     'id' => 51,
     'nama' => 'Pendididkan Tata Boga',
+    'jenjangId' => 1,
     'kode' => 'BG',
     'fakultasId' => 5,
     'created' => 1281879719,
@@ -454,6 +504,7 @@ return array (
   array (
     'id' => 52,
     'nama' => 'Pendididkan Tata Busana',
+    'jenjangId' => 1,
     'kode' => 'BU',
     'fakultasId' => 5,
     'created' => 1281880138,
@@ -463,6 +514,7 @@ return array (
   array (
     'id' => 53,
     'nama' => 'Teknik Sipil',
+    'jenjangId' => 1,
     'kode' => 'TS',
     'fakultasId' => 5,
     'created' => 1281880184,
@@ -472,6 +524,7 @@ return array (
   array (
     'id' => 54,
     'nama' => 'Teknik Arsitektur',
+    'jenjangId' => 1,
     'kode' => 'TA',
     'fakultasId' => 5,
     'created' => 1281880214,
@@ -481,6 +534,7 @@ return array (
   array (
     'id' => 55,
     'nama' => 'Teknik Perumahan',
+    'jenjangId' => 1,
     'kode' => 'TR',
     'fakultasId' => 5,
     'created' => 1281880253,
@@ -490,6 +544,7 @@ return array (
   array (
     'id' => 56,
     'nama' => 'Teknik Mesin',
+    'jenjangId' => 1,
     'kode' => 'TM',
     'fakultasId' => 5,
     'created' => 1281880290,
@@ -499,6 +554,7 @@ return array (
   array (
     'id' => 57,
     'nama' => 'Teknik Elektro',
+    'jenjangId' => 1,
     'kode' => 'TE',
     'fakultasId' => 5,
     'created' => 1281880376,
@@ -508,6 +564,7 @@ return array (
   array (
     'id' => 58,
     'nama' => 'Pendidikan Teknik Produksi dan Perancangan',
+    'jenjangId' => 1,
     'kode' => 'PP',
     'fakultasId' => 5,
     'created' => 1281880454,
@@ -517,6 +574,7 @@ return array (
   array (
     'id' => 59,
     'nama' => 'Pendidikan Teknik Otomotif',
+    'jenjangId' => 1,
     'kode' => 'OT',
     'fakultasId' => 5,
     'created' => 1281880578,
@@ -526,6 +584,7 @@ return array (
   array (
     'id' => 60,
     'nama' => 'Pendidikan Teknik Refrigasi dan Tata Udara',
+    'jenjangId' => 1,
     'kode' => 'RT',
     'fakultasId' => 5,
     'created' => 1281880676,
@@ -535,6 +594,7 @@ return array (
   array (
     'id' => 61,
     'nama' => 'Pendididkan Olahraga',
+    'jenjangId' => 1,
     'kode' => 'OR',
     'fakultasId' => 6,
     'created' => 1281880756,
@@ -544,6 +604,7 @@ return array (
   array (
     'id' => 62,
     'nama' => 'Pendidikan kesehatan dan Rekreasi',
+    'jenjangId' => 1,
     'kode' => 'KR',
     'fakultasId' => 6,
     'created' => 1281880802,
@@ -553,6 +614,7 @@ return array (
   array (
     'id' => 63,
     'nama' => 'Pendidikan Kepelatihan',
+    'jenjangId' => 1,
     'kode' => 'KP',
     'fakultasId' => 6,
     'created' => 1281880847,
@@ -562,6 +624,7 @@ return array (
   array (
     'id' => 64,
     'nama' => 'Pendidikan Guru Penjas',
+    'jenjangId' => 1,
     'kode' => 'GJ',
     'fakultasId' => 6,
     'created' => 1281880886,
@@ -571,6 +634,7 @@ return array (
   array (
     'id' => 65,
     'nama' => 'ilmu Keolahragaan',
+    'jenjangId' => 1,
     'kode' => 'IO',
     'fakultasId' => 6,
     'created' => 1281880911,
@@ -580,15 +644,17 @@ return array (
   array (
     'id' => 66,
     'nama' => 'Administrasi Pendidikan',
+    'jenjangId' => 2,
     'kode' => 'AP',
     'fakultasId' => 7,
     'created' => 1281880979,
-    'modified' => false,
+    'modified' => 1283181717,
   ),
   66 => 
   array (
     'id' => 67,
     'nama' => 'Pengembangan Kurikulum',
+    'jenjangId' => 2,
     'kode' => 'TK',
     'fakultasId' => 7,
     'created' => 1281881006,
@@ -598,6 +664,7 @@ return array (
   array (
     'id' => 68,
     'nama' => 'Bimbingan dan Konseling',
+    'jenjangId' => 2,
     'kode' => 'BK',
     'fakultasId' => 7,
     'created' => 1281881045,
@@ -607,6 +674,7 @@ return array (
   array (
     'id' => 69,
     'nama' => 'Pendidikan Luar Sekolah',
+    'jenjangId' => 2,
     'kode' => 'LS',
     'fakultasId' => 7,
     'created' => 1281881089,
@@ -616,6 +684,7 @@ return array (
   array (
     'id' => 70,
     'nama' => 'Pendidikan Umum',
+    'jenjangId' => 2,
     'kode' => 'PU',
     'fakultasId' => 7,
     'created' => 1281881256,
@@ -625,6 +694,7 @@ return array (
   array (
     'id' => 71,
     'nama' => 'Pendidikan Kebutuhan Khusus',
+    'jenjangId' => 2,
     'kode' => 'KK',
     'fakultasId' => 7,
     'created' => 1281881290,
@@ -634,6 +704,7 @@ return array (
   array (
     'id' => 72,
     'nama' => 'Pendidikan IPA',
+    'jenjangId' => 2,
     'kode' => 'PA',
     'fakultasId' => 7,
     'created' => 1281881349,
@@ -643,6 +714,7 @@ return array (
   array (
     'id' => 73,
     'nama' => 'Pendidikan Matematika',
+    'jenjangId' => 2,
     'kode' => 'MT',
     'fakultasId' => 7,
     'created' => 1281881409,
@@ -652,6 +724,7 @@ return array (
   array (
     'id' => 74,
     'nama' => 'Pendidikan Bahasa Indonesia',
+    'jenjangId' => 2,
     'kode' => 'IN',
     'fakultasId' => 7,
     'created' => 1281881498,
@@ -661,6 +734,7 @@ return array (
   array (
     'id' => 75,
     'nama' => 'Pendidikan Bahasa Inggris',
+    'jenjangId' => 2,
     'kode' => 'IG',
     'fakultasId' => 7,
     'created' => 1281881537,
@@ -670,6 +744,7 @@ return array (
   array (
     'id' => 76,
     'nama' => 'Pendidikan Bahasa Jepang',
+    'jenjangId' => 2,
     'kode' => 'JP',
     'fakultasId' => 7,
     'created' => 1281881565,
@@ -679,6 +754,7 @@ return array (
   array (
     'id' => 77,
     'nama' => 'Pendidikan Bahasa Perancis',
+    'jenjangId' => 2,
     'kode' => 'PR',
     'fakultasId' => 7,
     'created' => 1281881601,
@@ -688,6 +764,7 @@ return array (
   array (
     'id' => 78,
     'nama' => 'Pendidikan IPS',
+    'jenjangId' => 2,
     'kode' => 'SS',
     'fakultasId' => 7,
     'created' => 1281881627,
@@ -697,6 +774,7 @@ return array (
   array (
     'id' => 79,
     'nama' => 'Pendidikan Kewarganegaraan',
+    'jenjangId' => 2,
     'kode' => 'KN',
     'fakultasId' => 7,
     'created' => 1281881680,
@@ -706,6 +784,7 @@ return array (
   array (
     'id' => 80,
     'nama' => 'Pendidikan Kesenian',
+    'jenjangId' => 2,
     'kode' => 'KS',
     'fakultasId' => 7,
     'created' => 1281881720,
@@ -715,6 +794,7 @@ return array (
   array (
     'id' => 81,
     'nama' => 'Pendidikan Teknik Kejuruan',
+    'jenjangId' => 2,
     'kode' => 'KJ',
     'fakultasId' => 7,
     'created' => 1281881761,
@@ -724,6 +804,7 @@ return array (
   array (
     'id' => 82,
     'nama' => 'Pendidikan Olahraga',
+    'jenjangId' => 2,
     'kode' => 'OR',
     'fakultasId' => 7,
     'created' => 1281881796,
@@ -733,6 +814,7 @@ return array (
   array (
     'id' => 83,
     'nama' => 'Magister Manajemen Bisnis',
+    'jenjangId' => 2,
     'kode' => 'MB',
     'fakultasId' => 7,
     'created' => 1281881853,
@@ -742,6 +824,7 @@ return array (
   array (
     'id' => 84,
     'nama' => 'Linguistik',
+    'jenjangId' => 2,
     'kode' => 'LG',
     'fakultasId' => 7,
     'created' => 1281881879,

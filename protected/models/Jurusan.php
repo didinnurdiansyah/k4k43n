@@ -39,13 +39,12 @@ class Jurusan extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nama, kode, fakultasId', 'required'),
+            array('nama, kode, jenjangId, fakultasId', 'required'),
             array('nama, kode', 'length', 'max'=>255),
             array('fakultasId', 'length', 'max'=>20),
-            array('nama, kode','unique'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, nama, kode, fakultasId, created, modified', 'safe', 'on'=>'search'),
+            array('id, nama, kode, jenjangId, fakultasId, created, modified', 'safe', 'on'=>'search'),
         );
     }
 
@@ -58,6 +57,7 @@ class Jurusan extends ActiveRecord
         // class name for the relations automatically generated below.
         return array(
             'fakultas' => array(self::BELONGS_TO, 'Fakultas','fakultasId'),
+            'jenjang' => array(self::BELONGS_TO, 'Jenjang','jenjangId'),
         );
     }
 
@@ -71,6 +71,7 @@ class Jurusan extends ActiveRecord
             'nama' => Yii::t('app','Nama'),
             'kode' => Yii::t('app','Kode'),
             'fakultasId' => Yii::t('app','Fakultas'),
+            'jenjangId' => Yii::t('app','Jenjang'),
             'created' => Yii::t('app','Created'),
             'modified' => Yii::t('app','Modified'),
         );
@@ -90,6 +91,7 @@ class Jurusan extends ActiveRecord
         $criteria->compare('nama',$this->nama,true);
         $criteria->compare('kode',$this->kode,true);
         $criteria->compare('fakultasId',$this->fakultasId);
+        $criteria->compare('jenjangId',$this->jenjangId);
         $criteria->compare('created',$this->created,true);
         $criteria->compare('modified',$this->modified,true);
 

@@ -12,6 +12,7 @@
  */
 class Prioritas extends ActiveRecord
 {
+    public $fakultasId;
     /**
      * Returns the static model of the specified AR class.
      * @return Prioritas the static model class
@@ -37,7 +38,7 @@ class Prioritas extends ActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('programKknId, level, jurusanId', 'required'),
+            array('programKknId, fakultasId, level, jurusanId', 'required'),
             array('programKknId, jurusanId', 'length', 'max'=>20),
             array('level', 'length', 'max'=>2),
             // The following rule is used by search().
