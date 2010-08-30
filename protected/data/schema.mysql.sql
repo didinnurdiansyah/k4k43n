@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 30, 2010 at 10:43 PM
+-- Generation Time: Aug 30, 2010 at 11:02 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.3.3-0.dotdeb.0
 
@@ -349,8 +349,8 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `userId`, `namaLengkap`, `nim`, `alamatAsal`, `alamatTinggal`, `fakultasId`, `jurusanId`, `kelompokId`, `jenjangId`, `jenisKelamin`, `phone1`, `phone2`, `photoPath`, `registered`, `created`, `modified`) VALUES
-(1, NULL, 'Angga Kusumah P.', '045065', 'Jl.', 'Jl.', 1, 23, 2, 1, NULL, '78675', '', '', 0, '0000-00-00 00:00:00', '2010-08-28 23:10:03'),
-(2, NULL, 'Aprianti Fitriana R.', '0705016', 'Jl. Jalan', 'Jl.', 1, 25, 2, 0, NULL, '0857667567', '', '', 0, '0000-00-00 00:00:00', '2010-08-28 00:13:12'),
+(1, NULL, 'Angga Kusumah P.', '045065', 'Jl.', 'Jl.', 1, 23, 0, 1, NULL, '78675', '', '', 0, '0000-00-00 00:00:00', '2010-08-28 23:10:03'),
+(2, NULL, 'Aprianti Fitriana R.', '0705016', 'Jl. Jalan', 'Jl.', 1, 25, 0, 0, NULL, '0857667567', '', '', 0, '0000-00-00 00:00:00', '2010-08-28 00:13:12'),
 (3, NULL, 'Ani Anjaniah Kamilah', '0705118', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (4, NULL, 'Disky Herdian', '0707849', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (5, NULL, 'Fadjar Agung W.', '0705849', '', '', 0, 0, 0, 0, NULL, '', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
