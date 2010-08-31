@@ -106,4 +106,6 @@ class Kecamatan extends ActiveRecord
         return $this->findAllByAttributes(array('kabupatenId' => $kabupatenId));
     }
     
+    
+    
 }

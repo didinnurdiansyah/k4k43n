@@ -94,4 +94,10 @@ class Kabupaten extends ActiveRecord
         return parent::beforeSave();
     
     }
+    
+    protected function afterDelete()
+    {
+        parent::afterDelete();
+        Kecamatan::model()->deleteAll('kabupatenId='.$this->id);
+    }
 }

@@ -13,11 +13,13 @@ class KabupatenController extends AdminController
     public function actionView()
     {
         $kabupaten = $this->loadModel();
-        $kecamatan = new Kecamatan('search');
+        $kecamatan = new Kecamatan();
         $kecamatan->unsetAttributes();
         $kecamatan->kabupatenId = $kabupaten->id;
+
         if(isset($_GET['Kabupaten'])){
             $kecamatan->attributes = $_GET['Kabupaten'];
+            
         }
         $this->render('view',array(
             //'kabupaten' => $this->loadModel(),
@@ -78,10 +80,11 @@ class KabupatenController extends AdminController
      */
     public function actionDelete()
     {
+        $kabupaten = $this->loadModel();
         if (Yii::app()->request->isPostRequest) {
             // we only allow deletion via POST request
-            $this->loadModel()->delete();
-
+            $kabupaten->delete();
+            //CA_Debug::output_yii_models($Product);
             // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
             if (!isset($_GET['ajax'])) {
                 $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));

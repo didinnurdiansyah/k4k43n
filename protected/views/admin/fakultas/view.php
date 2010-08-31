@@ -46,9 +46,9 @@ $this->menu=array(
         ),
         array(
             'class'=>'CButtonColumn',
-            'viewButtonUrl' => 'array("jurusan/view","id" => $data->id)',
-            'updateButtonUrl' => 'array("jurusan/update","id" => $data->id)',
-            'deleteButtonUrl' => 'array("jurusan/delete","id" => $data->id)',
+            'viewButtonUrl' => 'array("admin/jurusan/view","id" => $data->id)',
+            'updateButtonUrl' => 'array("admin/jurusan/update","id" => $data->id)',
+            'deleteButtonUrl' => 'array("admin/jurusan/delete","id" => $data->id)',
         ),
     ),
 )); ?>

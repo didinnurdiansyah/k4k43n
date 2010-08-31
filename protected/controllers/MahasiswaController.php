@@ -64,14 +64,15 @@ class MahasiswaController extends Controller
     public function actionUpdate()
     {
         $mahasiswa = Mahasiswa::model()->findByUserId(Yii::app()->user->id);
-        
+        //$mahasiswa = new Mahasiswa;
         
         if(isset($_POST['Mahasiswa'])){
             unset($_POST['Mahasiswa']['password']);
             $mahasiswa->attributes=$_POST['Mahasiswa'];
-            if ($mahasiswa->save()) {
-                $this->redirect(array('mahasiswa/view'));
+            if($mahasiswa->save()){
+                $this->redirect('mahasiswa/view');
             }
+            //var_dump($_POST['Mahasiswa']);
         }
         $this->render('update',array(
             'mahasiswa'=>$mahasiswa,

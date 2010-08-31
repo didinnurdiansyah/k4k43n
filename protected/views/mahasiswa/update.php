@@ -14,10 +14,6 @@ $this->breadcrumbs=array(
     'id' => 'mahasiswa-form',
     'enableAjaxValidation' => true,
 )); ?>
-
-
-        <p class="note">Fields with <span class="required">*</span> are required.</p>
-        <?php echo $form->errorSummary($mahasiswa); ?>
         
         <fieldset>
             <legend><?php echo Yii::t('app','Informasi Mahasiswa')?></legend>
