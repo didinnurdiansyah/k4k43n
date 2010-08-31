@@ -111,4 +111,10 @@ class Fakultas extends ActiveRecord
                 CHtml::listData($this->findAll(), 'kode', 'countMahasiswa');
             
     }
+    
+    protected function afterDelete()
+    {
+        parent::afterDelete();
+        Jurusan::model()->deleteAll('fakultasId='.$this->id);
+    }
 }
